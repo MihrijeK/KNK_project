@@ -142,4 +142,40 @@ public class AdminDashboard implements Initializable{
         colBtn.setCellFactory(cellFactory);
         showStaffTable.getColumns().add(colBtn);
     }
+
+    ObservableList<Staff> staffObservableList = FXCollections.observableArrayList();
+    private void setSaffTableViewContent(TableColumn<Staff, Integer> col_id,TableColumn<Staff, String> col_fname,TableColumn<Staff, String> col_lname,TableColumn<Staff, Integer> col_prsNum,TableColumn<Staff,
+            String> col_position,TableColumn<Staff, Date> col_bday,TableColumn<Staff, String> col_phone,TableColumn<Staff, Integer> col_salary){
+        col_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        col_fname.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        col_lname.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        col_prsNum.setCellValueFactory(new PropertyValueFactory<>("personalNumber"));
+        col_position.setCellValueFactory(new PropertyValueFactory<>("position"));
+        col_bday.setCellValueFactory(new PropertyValueFactory<>("birthdate"));
+        col_phone.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        col_salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+
+        try {
+            String query = "SELECT * FROM staff";
+            Statement s = connection.createStatement();
+            ResultSet r = s.executeQuery(query);
+
+            while (r.next()){
+                staffObservableList.add(new Staff(r.getInt("id"),
+                        r.getString("first_name"),
+                        r.getString("last_name"),
+                        r.getInt("personal_number"),
+                        r.getString("position"),
+                        r.getString("gender"),
+                        r.getDate("birthdate"),
+                        r.getString("phone_number"),
+                        r.getInt("salary"),
+                        r.getString("passwordd")));
+            };
+            addButtonToTable();
+            showStaffTable.setItems(staffObservableList);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
