@@ -178,4 +178,33 @@ public class AdminDashboard implements Initializable{
             e.printStackTrace();
         }
     }
+
+    ObservableList<Rooms> roomsObservableListView  = FXCollections.observableArrayList();
+    private void setRoomsTableViewContetn(TableColumn<Rooms, Integer> roomNumber,TableColumn<Rooms, Integer> floorNumber,TableColumn<Rooms, Integer> capacity,TableColumn<Rooms, Integer> bedNumber,
+                                          TableColumn<Rooms, String> roomType ,TableColumn<Rooms, Double> price){
+        roomNumber.setCellValueFactory(new PropertyValueFactory<>("room_number"));
+        floorNumber.setCellValueFactory(new PropertyValueFactory<>("floor_number"));
+        capacity.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+        bedNumber.setCellValueFactory(new PropertyValueFactory<>("bed_number"));
+        roomType.setCellValueFactory(new PropertyValueFactory<>("room_type"));
+        price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        try {
+            String query = "SELECT * FROM rooms";
+            Statement s = connection.createStatement();
+            ResultSet r = s.executeQuery(query);
+
+            while (r.next()){
+                roomsObservableListView.add(new Rooms(r.getInt("room_number"),
+                        r.getInt("floor_number"),
+                        r.getInt("capacity"),
+                        r.getInt("bed_number"),
+                        r.getString("room_type"),
+                        r.getDouble("price")));
+            };
+            roomsTableView.setItems(roomsObservableListView);
+            addEditRoomBtn();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
