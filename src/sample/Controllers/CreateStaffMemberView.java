@@ -105,4 +105,43 @@ public class CreateStaffMemberView {
 
         return query.toString();
     }
+
+    public void createButton(Staff staff) throws Exception {
+        if(Male.isSelected()){
+
+        }else if(Female.isSelected()){
+            System.out.println("female");
+        }
+        Statement statement = connection.createStatement();
+        int affectedRows = statement.executeUpdate(staffQuery(staff),Statement.RETURN_GENERATED_KEYS);
+        if(affectedRows<=0) throw new Exception("Failed");
+        System.out.println("Done");
+        first_name.clear();
+        last_name.clear();
+        personal_number.clear();
+        phone_number.clear();
+        password.clear();
+    }
+
+    public ObservableList choiceBoxValues() throws SQLException {
+        ObservableList<String> observableList = FXCollections.observableArrayList();
+        String query = "SELECT * FROM positions";
+        Statement stm = connection.createStatement();
+        ResultSet rs = stm.executeQuery(query);
+        while(rs.next()){
+            observableList.add(rs.getString("position"));
+        }
+        return observableList;
+    }
+
+    public String setSalary(String position) throws SQLException {
+        double salary = 0;
+        String query = "SELECT * FROM positions WHERE position = '"+position+"';";
+        Statement stm = connection.createStatement();
+        ResultSet rs = stm.executeQuery(query);
+        while(rs.next()){
+            salary = rs.getDouble("salary");
+        }
+        return Double.toString(salary);
+    }
 }
