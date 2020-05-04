@@ -75,4 +75,34 @@ public class CreateStaffMemberView {
         cancleCreation.setOnAction(e-> stage.close());
         stage.showAndWait();
     }
+
+    public Staff createStaffObj(TextField firstname,TextField lastname,TextField personalnumber,TextField phonenumber,String gender,Label salary,PasswordField passwordd){
+        String fName = firstname.getText();
+        String lName = lastname.getText();
+        String persNumber = personalnumber.getText();
+        int prs = Integer.parseInt(persNumber);
+        String phnNumber = phonenumber.getText();
+        String salaryy = salary.getText();
+        double sal = Double.parseDouble(salary.getText());
+        String psw = passwordd.getText();
+
+        Staff staff = new Staff(1,fName,lName,prs,phnNumber,gender,java.util.Calendar.getInstance().getTime(),"Boss",sal,psw);
+        return staff;
+    }
+
+    public String staffQuery(Staff stf) throws Exception {
+        StringBuilder query = new StringBuilder();
+
+        query.append("INSERT INTO staff(first_name,last_name,personal_number,position,birthdate,phone_number,salary,passwordd) VALUES(");
+        query.append("'"+stf.getFirstName()+"'");
+        query.append(", '"+stf.getLastName()+"'");
+        query.append(", "+stf.getPersonalNumber());
+        query.append(", '"+stf.getPosition()+"'");
+        query.append(",'2019-05-01'");
+        query.append(", '"+stf.getPhoneNumber()+"'");
+        query.append(", "+stf.getSalary());
+        query.append(", '"+stf.getPassword()+"');");
+
+        return query.toString();
+    }
 }
