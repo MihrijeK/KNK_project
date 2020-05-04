@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,34 +201,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00001" summary="Klasa statike per konektim.">
-      <created>1588622141371</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1588622141371</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Shtimi i gjinise ne objektet tek helpers">
-      <created>1588622217996</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1588622217996</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Krijimi i fxml Files per admin">
-      <created>1588624169969</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1588624169969</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Admin Updated">
-      <created>1588624266305</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1588624266305</updated>
     </task>
     <task id="LOCAL-00005" summary="Admin Updated">
       <created>1588624301381</created>
@@ -519,7 +496,56 @@
       <option name="project" value="LOCAL" />
       <updated>1588625656898</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Krijimi i EditRoomsView">
+      <created>1588625770281</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625770281</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Krijimi i EditRoomsView controllerit">
+      <created>1588625798873</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625798873</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Updated">
+      <created>1588625818708</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625818708</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Metoda per ekzekutim te queryt">
+      <created>1588625834520</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625834521</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Krijimi i EditStaffMemberView">
+      <created>1588625873956</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625873956</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Krijimi i EditStaffMemberView controllerit">
+      <created>1588625904725</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625904725</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Updated">
+      <created>1588625919686</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625919686</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -528,18 +554,12 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Shtimi i gjinise ne objektet tek helpers" />
-    <MESSAGE value="Krijimi i fxml Files per admin" />
-    <MESSAGE value="Admin Updated" />
-    <MESSAGE value="Krijimi i controllerit AdminDashboard" />
-    <MESSAGE value="Implementimi i initialize" />
     <MESSAGE value="Metoda per funksionim te butonave" />
     <MESSAGE value="Metoda per shtimin e nje butoni ne tableview" />
     <MESSAGE value="Metoda per popullimin e staff TableView" />
     <MESSAGE value="Metoda per popullimin e rooms tableView" />
     <MESSAGE value="Metoda per shtimin e butonit edit ne room table view" />
     <MESSAGE value="FXML file per Add New Staff Member" />
-    <MESSAGE value="Updated" />
     <MESSAGE value="Krijimi i contollerit per AddNewRoomView" />
     <MESSAGE value="Metoda per diplay scene" />
     <MESSAGE value="metod per krijimin e objektit" />
@@ -553,7 +573,13 @@
     <MESSAGE value="Metoda per display scene" />
     <MESSAGE value="Metoda per krijim te objektit dhe querys" />
     <MESSAGE value="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen" />
+    <MESSAGE value="Krijimi i EditRoomsView" />
+    <MESSAGE value="Krijimi i EditRoomsView controllerit" />
+    <MESSAGE value="Metoda per ekzekutim te queryt" />
+    <MESSAGE value="Krijimi i EditStaffMemberView" />
+    <MESSAGE value="Krijimi i EditStaffMemberView controllerit" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="178" key="#Project_Structure" timestamp="1588622490736">
@@ -572,25 +598,25 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588623490498" />
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1588624260565">
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1588626035130">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624260565" />
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588626035130" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587844835672" />
-    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1588624260565">
+    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1588626035130">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624260565" />
+    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588626035130" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587844835672" />
-    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1588624260565">
+    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1588626035129">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624260565" />
+    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588626035129" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587844835672" />
-    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1588624260565">
+    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1588626035130">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624260565" />
+    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588626035130" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587844835672" />
     <state x="2507" y="129" key="SettingsEditor" timestamp="1588623769274">
       <screen x="1920" y="0" width="1920" height="1040" />
