@@ -125,8 +125,26 @@
             </VBox>
             </children>
         </AnchorPane>
+        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ecdad1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                    <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <bottom>
+                    <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0" spacing="15.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+                    <children>
+                    <Button fx:id="CreateMemberBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Add staff member">
+                        <padding>
+                            <Insets left="50.0" />
+                        </padding>
+                        <graphic>
+                            <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../images/home.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
 
-
-        </AnchorPane>
-    </children>
 </AnchorPane>

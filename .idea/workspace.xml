@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Admin Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Views/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/AdminDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +242,42 @@
       <option name="project" value="LOCAL" />
       <updated>1588624320984</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Admin Updated">
+      <created>1588624331971</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588624331971</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Admin Updated">
+      <created>1588624342859</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588624342859</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Admin Updated">
+      <created>1588624353615</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588624353615</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Admin Updated">
+      <created>1588624370112</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588624370112</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Admin Updated">
+      <created>1588624381139</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588624381139</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -265,10 +301,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587829629658" />
-    <state x="2564" y="114" key="CommitChangelistDialog2" timestamp="1588624369715">
+    <state x="2564" y="114" key="CommitChangelistDialog2" timestamp="1588624380692">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2564" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624369715" />
+    <state x="2564" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624380692" />
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1588623490498">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
