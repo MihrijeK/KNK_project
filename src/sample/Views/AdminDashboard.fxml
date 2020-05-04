@@ -168,5 +168,32 @@
                     </HBox>
                     </bottom>
                     <center>
+                        <AnchorPane fx:id="showStaffPane" prefHeight="672.0" prefWidth="942.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+                            <children>
+                                <TableView fx:id="showStaffTable" prefHeight="673.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columns>
+                                        <TableColumn fx:id="col_id" prefWidth="55.0" text="ID" />
+                                        <TableColumn fx:id="col_fname" prefWidth="95.0" text="First Name" />
+                                        <TableColumn fx:id="col_lname" prefWidth="99.0" text="Last Name" />
+                                        <TableColumn fx:id="col_prsNum" prefWidth="143.0" text="Personal Number" />
+                                        <TableColumn fx:id="col_position" prefWidth="85.0" text="Position" />
+                                        <TableColumn fx:id="col_bday" prefWidth="88.0" text="Birthdate" />
+                                        <TableColumn fx:id="col_phone" prefWidth="126.0" text="Phone Number" />
+                                        <TableColumn fx:id="col_salary" prefWidth="96.0" text="Salary" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                        <top>
+                            <Label text="STAFF MEMBERS" BorderPane.alignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                            </Label>
+                        </top>
+                    </BorderPane>
+                    </children>
+                </AnchorPane>
 
 </AnchorPane>
