@@ -53,4 +53,26 @@ public class CreateStaffMemberView {
         }
 
     }
+
+    public void display() throws IOException, SQLException {
+
+        String finalGender= "Male";
+        createNewStaffMember.setOnAction(e->{
+            try {
+                createButton(createStaffObj(first_name,last_name,personal_number,phone_number, finalGender,salary,password));
+                System.out.println(position.getValue());
+                salary.setText(setSalary((String) position.getValue()));
+                System.out.println(salary.getText());
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText(null);
+                alert.setContentText("User Created succesuffly");
+                alert.showAndWait();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        cancleCreation.setOnAction(e-> stage.close());
+        stage.showAndWait();
+    }
 }
