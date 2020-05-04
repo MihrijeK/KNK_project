@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Upddate">
-      <change beforePath="$PROJECT_DIR$/src/sample/Views/CreateStaffMemberView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/CreateStaffMemberView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -472,7 +470,56 @@
       <option name="project" value="LOCAL" />
       <updated>1588625466737</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Upddate">
+      <created>1588625481446</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625481446</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Krijimi controllerit CreateStaffMemberView">
+      <created>1588625528087</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625528087</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Deklarimi i fieldave">
+      <created>1588625545691</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625545691</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Konstruktori">
+      <created>1588625560293</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625560293</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Metoda per display scene">
+      <created>1588625578837</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625578837</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Metoda per krijim te objektit dhe querys">
+      <created>1588625600061</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625600061</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen">
+      <created>1588625656898</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1588625656898</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -481,7 +528,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Klasa statike per konektim." />
     <MESSAGE value="Shtimi i gjinise ne objektet tek helpers" />
     <MESSAGE value="Krijimi i fxml Files per admin" />
     <MESSAGE value="Admin Updated" />
@@ -495,15 +541,19 @@
     <MESSAGE value="FXML file per Add New Staff Member" />
     <MESSAGE value="Updated" />
     <MESSAGE value="Krijimi i contollerit per AddNewRoomView" />
-    <MESSAGE value="Deklarimi i fieldave" />
-    <MESSAGE value="Konstruktori" />
     <MESSAGE value="Metoda per diplay scene" />
     <MESSAGE value="metod per krijimin e objektit" />
     <MESSAGE value="Metod per query" />
     <MESSAGE value="funskionaliteti i butonit addnew" />
     <MESSAGE value="Krijimi i view CreateStaffMemberView" />
     <MESSAGE value="Upddate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upddate" />
+    <MESSAGE value="Krijimi controllerit CreateStaffMemberView" />
+    <MESSAGE value="Deklarimi i fieldave" />
+    <MESSAGE value="Konstruktori" />
+    <MESSAGE value="Metoda per display scene" />
+    <MESSAGE value="Metoda per krijim te objektit dhe querys" />
+    <MESSAGE value="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Metoda per funksionalitet tte butonit, metoda per me i mbush choicebox metoda per me mbush salary labelen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="178" key="#Project_Structure" timestamp="1588622490736">
