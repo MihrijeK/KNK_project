@@ -71,4 +71,18 @@ public class AddNewRoomView {
         return rms;
     }
 
+    public String roomsQuery(Rooms room) throws Exception {
+        StringBuilder query = new StringBuilder();
+
+        query.append("INSERT INTO rooms VALUES(");
+        query.append(room.getRoom_number());
+        query.append(", "+room.getFloor_number());
+        query.append(", "+room.getCapacity());
+        query.append(", "+room.getBed_number());
+        query.append(", '"+room.getRoom_type()+"'");
+        query.append(", "+room.getPrice()+");");
+
+        return query.toString();
+    }
+
 }
