@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Klasa statike per konektim.">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Shtimi i gjinise ne objektet tek helpers">
+      <change afterPath="$PROJECT_DIR$/src/sample/Views/AdminDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/Guests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Guests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Staff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +97,16 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/javafx.web.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\lib" />
       <recent name="C:\Users\xhana\IdeaProjects\KnkProject\lib" />
     </key>
   </component>
@@ -204,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588622141371</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Shtimi i gjinise ne objektet tek helpers">
+      <created>1588622217996</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588622217996</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -214,21 +226,26 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Klasa statike per konektim." />
-    <option name="LAST_COMMIT_MESSAGE" value="Klasa statike per konektim." />
+    <MESSAGE value="Shtimi i gjinise ne objektet tek helpers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i gjinise ne objektet tek helpers" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2472" y="178" key="#Project_Structure" timestamp="1588622490736">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="178" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588622490736" />
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1587829629658">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587829629658" />
-    <state x="2564" y="114" key="CommitChangelistDialog2" timestamp="1588622140918">
+    <state x="2564" y="114" key="CommitChangelistDialog2" timestamp="1588622217623">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2564" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588622140918" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1588018074671">
+    <state x="2564" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588622217623" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1588623490498">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588018074671" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588623490498" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1588015057558">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -249,12 +266,20 @@
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588015057558" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587844835672" />
+    <state x="2507" y="129" key="SettingsEditor" timestamp="1588623769274">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2507" y="129" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588623769274" />
     <state x="2576" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587901516211">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587852451271" />
     <state x="2576" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587901516211" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587753502559" />
+    <state x="2583" y="282" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1588624071320">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2583" y="282" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588624071320" />
     <state x="2536" y="240" width="672" height="677" key="run.anything.popup" timestamp="1587815364791">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -263,5 +288,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587821784526" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
