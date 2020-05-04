@@ -46,4 +46,17 @@ public class AddNewRoomView {
         }
     }
 
+    public void display() throws IOException, SQLException {
+        addNewRoom.setOnAction(e-> {
+            try {
+                createButton(createRoomsObj(roomNumber,floorNumber,roomCapacity,bedNumber,roomType,Price));
+                System.out.println("DONE");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        cancleButton.setOnAction(e->stage.close());
+        stage.showAndWait();
+    }
+
 }
