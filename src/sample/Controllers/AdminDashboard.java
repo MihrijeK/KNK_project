@@ -105,4 +105,41 @@ public class AdminDashboard implements Initializable{
             });
         }
     }
+
+    private void addButtonToTable() {
+        TableColumn<Staff, Void> colBtn = new TableColumn("Edit");
+
+        Callback<TableColumn<Staff, Void>, TableCell<Staff, Void>> cellFactory = new Callback<TableColumn<Staff, Void>, TableCell<Staff, Void>>() {
+            @Override
+            public TableCell<Staff, Void> call(final TableColumn<Staff, Void> param) {
+                final TableCell<Staff, Void> cell = new TableCell<Staff, Void>() {
+                    private final Button btn = new Button("Edit");
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            Staff data = getTableView().getItems().get(getIndex());
+                            EditStaffMemberView ew = null;
+                            try {
+                                ew = new EditStaffMemberView(data);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            ew.display();
+                        });
+                    }
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+        colBtn.setCellFactory(cellFactory);
+        showStaffTable.getColumns().add(colBtn);
+    }
 }
