@@ -59,4 +59,16 @@ public class AddNewRoomView {
         stage.showAndWait();
     }
 
+    public Rooms createRoomsObj(TextField roomNumber, TextField floorNumber, TextField roomCapacity, TextField bedNumber, TextField roomType, TextField Price){
+        int room_number = Integer.parseInt(roomNumber.getText());
+        int floor_number = Integer.parseInt(floorNumber.getText());
+        int capacity = Integer.parseInt(roomCapacity.getText());
+        int bed_number = Integer.parseInt(bedNumber.getText());
+        String room_type = roomType.getText();
+        double price = Double.parseDouble(Price.getText());
+
+        Rooms rms = new Rooms(room_number,floor_number,capacity,bed_number,room_type,price);
+        return rms;
+    }
+
 }
