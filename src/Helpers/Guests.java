@@ -7,8 +7,8 @@ public class Guests extends Person {
 
     public Guests(){}
 
-    public Guests(int id,String firstName, String lastName, int personalNumber, String phoneNumber, Date birthdate,Date registeredDate){
-        super(id,firstName,lastName,personalNumber,phoneNumber,birthdate);
+    public Guests(int id,String firstName, String lastName, int personalNumber, String phoneNumber,String gender, Date birthdate,Date registeredDate){
+        super(id,firstName,lastName,personalNumber,phoneNumber,gender,birthdate);
         this.registeredDate = registeredDate;
     }
     public Date getRegisteredDate() {

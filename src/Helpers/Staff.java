@@ -9,8 +9,8 @@ public class Staff extends Person {
 
     public Staff(){}
 
-    public Staff(int id,String firstName, String lastName, int personalNumber, String phoneNumber, Date birthdate,String position,double salary,String password){
-        super(id,firstName,lastName,personalNumber,phoneNumber,birthdate);
+    public Staff(int id,String firstName, String lastName, int personalNumber, String phoneNumber, String gender,Date birthdate,String position,double salary,String password){
+        super(id,firstName,lastName,personalNumber,phoneNumber,gender,birthdate);
         this.position = position;
         this.salary = salary;
         this.password = password;

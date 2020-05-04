@@ -8,18 +8,23 @@ public class Person {
     private String lastName;
     private int personalNumber;
     private String phoneNumber;
+    private String gender;
     private Date   birthdate;
 
     public Person(){}
 
-    public Person(int id,String firstName,String lastName,int personalNumber,String phoneNumber,Date   birthdate){
+    public Person(int id,String firstName,String lastName,int personalNumber,String phoneNumber,String gender,Date   birthdate){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.personalNumber = personalNumber;
         this.phoneNumber = phoneNumber;
+        this.gender = gender;
         this.birthdate = birthdate;
     }
+
+
+
     public int getId() {
         return id;
     }
@@ -66,5 +71,13 @@ public class Person {
 
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

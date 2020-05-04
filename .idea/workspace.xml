@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Klasa statike per konektim.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseConnection/dbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnection/dbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/Guests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Guests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Staff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +197,14 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
     </task>
+    <task id="LOCAL-00001" summary="Klasa statike per konektim.">
+      <created>1588622141371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588622141371</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -204,12 +213,18 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Klasa statike per konektim." />
+    <option name="LAST_COMMIT_MESSAGE" value="Klasa statike per konektim." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1587829629658">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587829629658" />
+    <state x="2564" y="114" key="CommitChangelistDialog2" timestamp="1588622140918">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2564" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588622140918" />
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1588018074671">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
