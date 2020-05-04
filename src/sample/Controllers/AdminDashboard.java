@@ -207,4 +207,47 @@ public class AdminDashboard implements Initializable{
             e.printStackTrace();
         }
     }
+
+    private void addEditRoomBtn() {
+        TableColumn<Rooms, Void> colBtn = new TableColumn("Edit");
+
+        Callback<TableColumn<Rooms, Void>, TableCell<Rooms, Void>> cellFactory = new Callback<TableColumn<Rooms, Void>, TableCell<Rooms, Void>>() {
+            @Override
+            public TableCell<Rooms, Void> call(final TableColumn<Rooms, Void> param) {
+                final TableCell<Rooms, Void> cell = new TableCell<Rooms, Void>() {
+                    private final Button btn = new Button("Edit");
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            Rooms data = getTableView().getItems().get(getIndex());
+                            EditRoomsView ew = null;
+                            try {
+                                ew = new EditRoomsView(data);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                ew.display();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (SQLException e) {
+                                e.printStackTrace();
+                            }
+                        });
+                    }
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+        colBtn.setCellFactory(cellFactory);
+        roomsTableView.getColumns().add(colBtn);
+    }
 }
