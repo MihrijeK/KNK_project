@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 import java.lang.String;
 
 
-public class AdminDashboard{
+public class AdminDashboard implements Initializable{
     private Connection connection = dbConnection.getConnection();
 
     @FXML private Button overviewBtn;
@@ -61,6 +61,15 @@ public class AdminDashboard{
     @FXML private TableColumn<Rooms, Integer> bedNumber;
     @FXML private TableColumn<Rooms, String> roomType;
     @FXML private TableColumn<Rooms, Double> price;
+
     public AdminDashboard() throws Exception {
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setSaffTableViewContent(col_id,col_fname,col_lname,col_prsNum,col_position,col_bday,col_phone,col_salary);
+        setRoomsTableViewContetn(roomNumber,floorNumber,capacity,bedNumber,roomType,price);
+
+    }
+
 }
