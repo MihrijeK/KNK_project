@@ -85,4 +85,17 @@ public class AddNewRoomView {
         return query.toString();
     }
 
+    public void createButton(Rooms rooms) throws Exception {
+        Statement statement = connection.createStatement();
+        int affectedRows = statement.executeUpdate(roomsQuery(rooms));
+        if(affectedRows<=0) throw new Exception("Failed");
+        System.out.println("Done");
+        roomNumber.clear();
+        floorNumber.clear();
+        roomCapacity.clear();
+        bedNumber.clear();
+        roomType.clear();
+        Price.clear();
+    }
+}
 }
