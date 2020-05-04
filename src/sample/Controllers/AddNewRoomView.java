@@ -17,4 +17,17 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class AddNewRoomView {}
+public class AddNewRoomView {
+    private Connection connection = dbConnection.getConnection();
+    private final Stage stage;
+    @FXML private TextField roomNumber;
+    @FXML private TextField floorNumber;
+    @FXML private TextField roomCapacity;
+    @FXML private TextField bedNumber;
+    @FXML private TextField roomType;
+    @FXML private TextField Price;
+    @FXML private Button addNewRoom;
+    @FXML private Button cancleButton;
+
+    public AddNewRoomView() throws Exception {}
+}
