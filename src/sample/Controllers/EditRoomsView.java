@@ -69,3 +69,11 @@ public class EditRoomsView {
         cancleButton.setOnAction(e->stage.close());
         stage.showAndWait();
     }
+    public void updateRoom(int room_number,int floor_number,int capacity,int bed_number,String room_type,double price) throws Exception {
+        String query = "UPDATE rooms SET room_number = "+room_number+" ,floor_number = "+floor_number+",capacity = "+capacity+",bed_number = "+bed_number+",room_type = '"+room_type+"'," +
+                "price = "+price+" WHERE room_number = "+ room_number+";";
+
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(query);
+    }
+}
