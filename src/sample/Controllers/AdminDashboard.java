@@ -72,4 +72,37 @@ public class AdminDashboard implements Initializable{
 
     }
 
+    public void handleButtonAction(ActionEvent actionEvent)throws Exception {
+        if(actionEvent.getSource() == overviewBtn){
+            overviewPane.toFront();
+        }else if(actionEvent.getSource() == staffBtn){
+            staffPane.toFront();
+            CreateMemberBtn.setOnAction(e-> {
+                CreateStaffMemberView cw = null;
+                try {
+                    cw = new CreateStaffMemberView();
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+                try {
+                    cw.display();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            });
+        }else if(actionEvent.getSource() == roomsBtn){
+            roomsPane.toFront();
+            btnAddNewRoom.setOnAction(e->{
+                try {
+                    AddNewRoomView addNewRoomView = new AddNewRoomView();
+                    addNewRoomView.display();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            });
+        }
+    }
 }
