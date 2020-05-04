@@ -34,4 +34,23 @@ public class CreateStaffMemberView {
     @FXML private RadioButton Female;
 
     private final Stage stage;
+
+    public CreateStaffMemberView() throws Exception {
+        stage = new Stage();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/CreateStaffMemberView.fxml"));
+            loader.setController(this);
+
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Edit staff member");
+            stage.setScene(scene);
+            position.setItems(choiceBoxValues());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
