@@ -195,5 +195,30 @@
                     </BorderPane>
                     </children>
                 </AnchorPane>
+                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                    <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="btnAddNewRoom" mnemonicParsing="false" text="Add New" />
+                                <Button fx:id="btnUpdate" mnemonicParsing="false" text="Update" />
+                                <Button fx:id="btnDelete" mnemonicParsing="false" text="Delete" />
+                            </children>
+                        </HBox>
+                    </bottom>
+                    <center>
+                        <TableView fx:id="roomsTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <columns>
+                                <TableColumn fx:id="roomNumber" prefWidth="110.0" text="Room Number" />
+                                <TableColumn fx:id="floorNumber" minWidth="0.0" prefWidth="95.0" text="Floor Number" />
+                                <TableColumn fx:id="capacity" minWidth="0.0" prefWidth="95.0" text="Capacity" />
+                                <TableColumn fx:id="bedNumber" minWidth="0.0" prefWidth="95.0" text="Bed Number" />
+                                <TableColumn fx:id="roomType" minWidth="0.0" prefWidth="95.0" text="Room Type" />
+                                <TableColumn fx:id="price" minWidth="0.0" prefWidth="95.0" text="Price" />
+                            </columns>
+                        </TableView>
+                    </center>
+                    <top>
 
 </AnchorPane>
