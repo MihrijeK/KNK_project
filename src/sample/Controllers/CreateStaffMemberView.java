@@ -18,4 +18,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class CreateStaffMemberView {}
+public class CreateStaffMemberView {
+    private Connection connection = dbConnection.getConnection();
+    @FXML private TextField first_name;
+    @FXML private TextField last_name;
+    @FXML private TextField personal_number;
+    @FXML private TextField phone_number;
+    @FXML private DatePicker birthday;
+    @FXML private ChoiceBox position;
+    @FXML private Label salary;
+    @FXML private PasswordField password;
+    @FXML private Button createNewStaffMember;
+    @FXML private Button cancleCreation;
+    @FXML private RadioButton Male;
+    @FXML private RadioButton Female;
+
+    private final Stage stage;
+}
