@@ -29,5 +29,21 @@ public class AddNewRoomView {
     @FXML private Button addNewRoom;
     @FXML private Button cancleButton;
 
-    public AddNewRoomView() throws Exception {}
+    public AddNewRoomView() throws Exception {
+        stage = new Stage();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddNewRoomView.fxml"));
+            loader.setController(this);
+
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Edit staff member");
+            stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
