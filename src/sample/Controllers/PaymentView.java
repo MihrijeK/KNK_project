@@ -104,5 +104,7 @@ public class PaymentView implements Initializable {
                 "inner join reservations r on r.payment_id = p.id \n" +
                 "set p.price = "+total+", p.payment_method = '"+metodaEzgjedhur+"', p.is_payed = 1, p.pay_date = now() \n" +
                 "where p.guest_id="+user;
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(PaymentQuery);
     }
 }
