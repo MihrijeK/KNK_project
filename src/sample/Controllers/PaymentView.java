@@ -98,6 +98,11 @@ public class PaymentView implements Initializable {
     }
 
     public void paguaj(ActionEvent actionEvent) throws Exception {
-        
+        RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
+        String metodaEzgjedhur = selectedMethod.getText();
+        String PaymentQuery = "update payments p \n" +
+                "inner join reservations r on r.payment_id = p.id \n" +
+                "set p.price = "+total+", p.payment_method = '"+metodaEzgjedhur+"', p.is_payed = 1, p.pay_date = now() \n" +
+                "where p.guest_id="+user;
     }
 }
