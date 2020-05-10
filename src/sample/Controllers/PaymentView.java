@@ -63,7 +63,10 @@ public class PaymentView implements Initializable {
             connection = dbConnection.getConnection();
 
             //Rezervimet qe i ka bere klienti ne fjale
-            ResultSet tabela = connection.createStatement().executeQuery("");
+            ResultSet tabela = connection.createStatement().executeQuery("select dh.room_number, dh.room_type, dh.price from rooms dh \n" +
+                    "inner join reservations r on r.room_id=dh.room_number " +
+                    "inner join payments p on p.id = r.payment_id "+
+                    "where r.guest_id = "+user +" and p.is_payed = 0;");
 
             while(tabela.next()){
             }
