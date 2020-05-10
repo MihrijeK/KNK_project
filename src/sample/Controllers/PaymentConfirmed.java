@@ -21,7 +21,7 @@ public class PaymentConfirmed implements Initializable {
     }
     public void closeMe(ActionEvent actionEvent) {
         Node  source = (Node)  actionEvent.getSource();
-        Stage stage  = (Stage) sourc.getScene().getWindow();
+        Stage stage  = (Stage) source.getScene().getWindow();
         stage.close();
     }
 }
