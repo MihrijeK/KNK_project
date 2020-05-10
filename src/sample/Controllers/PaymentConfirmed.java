@@ -12,6 +12,8 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class PaymentConfirmed implements Initializable {
+    
+    @FXML private Button cancelButton;
 
     
 }
