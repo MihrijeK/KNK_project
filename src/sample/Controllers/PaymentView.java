@@ -59,7 +59,22 @@ public class PaymentView implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        try {
+            connection = dbConnection.getConnection();
+
+            //Rezervimet qe i ka bere klienti ne fjale
+            ResultSet tabela = connection.createStatement().executeQuery("");
+
+            while(tabela.next()){
+            }
+
+            //Emri i atij qe po paguan
+            ResultSet nameLastname = connection.createStatement().executeQuery("select first_name, last_name from guests\n" +
+                    " where id="+user);
+
+        } catch (Exception ex) {
+            Logger.getLogger(PaymentView.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void paguaj(ActionEvent actionEvent) throws Exception {
