@@ -69,6 +69,9 @@ public class PaymentView implements Initializable {
                     "where r.guest_id = "+user +" and p.is_payed = 0;");
 
             while(tabela.next()){
+                oblist.add(new Rooms(tabela.getInt("room_number"),
+                        tabela.getString("room_type"), tabela.getDouble("price")));
+                total += tabela.getDouble("price");
             }
 
             //Emri i atij qe po paguan
