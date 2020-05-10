@@ -15,5 +15,9 @@ public class PaymentConfirmed implements Initializable {
     
     @FXML private Button cancelButton;
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+    }
     
 }
