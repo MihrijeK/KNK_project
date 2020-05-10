@@ -109,7 +109,7 @@ public class PaymentView implements Initializable {
         
         Stage stage = new Stage();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Views/paymentConfirmed.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/paymentConfirmed.fxml"));
 
             Parent root = loader.load();
             Scene scene = new Scene(root);
