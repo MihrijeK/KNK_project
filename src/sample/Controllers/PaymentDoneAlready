@@ -36,5 +36,16 @@ public class PaymentDoneAlready implements Initializable {
         Stage stage  = (Stage) source.getScene().getWindow();
         stage.close();
     }
+    
+    public String isEmpty() throws Exception {
+        connection = dbConnection.getConnection();
+        ResultSet tabela = connection.createStatement().executeQuery("select dh.room_number, dh.room_type, dh.price from rooms dh \n" +
+                "inner join reservations r on r.room_id=dh.room_number " +
+                "inner join payments p on p.id = r.payment_id "+
+                "where r.guest_id = "+user +" and p.is_payed = 0;")
+        if(!tabela.next()){
+            return "true";
+        }
+    }
 
 }
