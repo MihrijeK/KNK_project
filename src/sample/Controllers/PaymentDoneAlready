@@ -28,7 +28,13 @@ public class PaymentDoneAlready implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+    
+    }
+    
+    public void closeMe(ActionEvent actionEvent) {
+        Node source = (Node) actionEvent.getSource();
+        Stage stage  = (Stage) source.getScene().getWindow();
+        stage.close();
     }
 
 }
