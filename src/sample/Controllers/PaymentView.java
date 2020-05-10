@@ -85,6 +85,11 @@ public class PaymentView implements Initializable {
         } catch (Exception ex) {
             Logger.getLogger(PaymentView.class.getName()).log(Level.SEVERE, null, ex);
         }
+        firstColumn.setCellValueFactory(new PropertyValueFactory<>("room_number"));
+        secondColumn.setCellValueFactory(new PropertyValueFactory<>("room_type"));
+        thirdColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        tableView.setItems(oblist);
     }
 
     public void paguaj(ActionEvent actionEvent) throws Exception {
