@@ -90,6 +90,11 @@ public class PaymentView implements Initializable {
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         tableView.setItems(oblist);
+        
+        toggle = new ToggleGroup();
+        this.cash.setToggleGroup(toggle);
+        this.creditCard.setToggleGroup(toggle);
+        this.gift.setToggleGroup(toggle);
     }
 
     public void paguaj(ActionEvent actionEvent) throws Exception {
