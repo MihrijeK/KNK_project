@@ -1,0 +1,15 @@
+package sample.Controllers;
+
+
+public class PaymentDoneAlready implements Initializable {
+
+    @FXML
+    private Button exitButton;
+    private int user =3;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+    }
+
+}
