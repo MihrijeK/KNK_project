@@ -19,5 +19,6 @@ public class PaymentConfirmed implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
     }
-    
+    public void closeMe(ActionEvent actionEvent) {
+    }
 }
