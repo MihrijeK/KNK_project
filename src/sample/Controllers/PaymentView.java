@@ -81,7 +81,7 @@ public class PaymentView implements Initializable {
                 String rezultati = nameLastname.getString("first_name") + " " + nameLastname.getString("last_name");
                 emriMbiemri.setText(rezultati);
             }
-
+            totali.setText(total + "€");
         } catch (Exception ex) {
             Logger.getLogger(PaymentView.class.getName()).log(Level.SEVERE, null, ex);
         }
