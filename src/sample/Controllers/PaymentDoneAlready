@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
 
 public class PaymentDoneAlready implements Initializable {
 
+    private Connection connection;
     @FXML
     private Button exitButton;
     private int user =3;
