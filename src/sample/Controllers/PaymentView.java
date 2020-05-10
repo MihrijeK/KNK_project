@@ -106,5 +106,20 @@ public class PaymentView implements Initializable {
                 "where p.guest_id="+user;
         Statement statement = connection.createStatement();
         statement.executeUpdate(PaymentQuery);
+        
+        Stage stage = new Stage();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Views/paymentConfirmed.fxml"));
+
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Payment confirmed");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
