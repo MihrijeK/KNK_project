@@ -14,6 +14,10 @@ public class roomsController implements Initializable {
       @FXML private TableColumn<Rooms,CheckBox> reservationCol;
       @FXML private Button makeReservation;
       
+      dbConnection connectionClass = new dbConnection();
+      Connection connection;
+
+      ObservableList<Rooms> roomList=FXCollections.observableArrayList();
       
       @Override
       public void initialize(URL url, ResourceBundle resourceBundle) {
