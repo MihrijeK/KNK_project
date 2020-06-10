@@ -31,6 +31,14 @@ public class roomsController implements Initializable {
         SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
         Date firstDate=format.parse(newFirstDate);
         Date lastDate=format.parse(newLastDate);
+            
+        if(firstDate.compareTo(lastDate)<0){
+            loadAvailableRooms(newFirstDate,newLastDate,connection);
+         }else{
+            Alert alertBox=new Alert(Alert.AlertType.INFORMATION);
+            alertBox.setContentText("Dates you entered are not valid!");
+            alertBox.showAndWait();
+         }
       }
       
       public void onMakeReservationButtonClicked(ActionEvent actionEvent){
