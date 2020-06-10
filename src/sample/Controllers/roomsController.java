@@ -23,4 +23,12 @@ public class roomsController implements Initializable {
       public void initialize(URL url, ResourceBundle resourceBundle) {
 
       }
+      
+      public void findButtonClicked(ActionEvent actionEvent) {
+        
+      }
+      
+      public void onMakeReservationButtonClicked(ActionEvent actionEvent){
+        
+      }
     }
