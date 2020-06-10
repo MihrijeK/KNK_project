@@ -25,7 +25,12 @@ public class roomsController implements Initializable {
       }
       
       public void findButtonClicked(ActionEvent actionEvent) {
-        
+        String newFirstDate=firstDatePickerField.getValue().toString();
+        String newLastDate=lastDatePickerField.getValue().toString();
+
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        Date firstDate=format.parse(newFirstDate);
+        Date lastDate=format.parse(newLastDate);
       }
       
       public void onMakeReservationButtonClicked(ActionEvent actionEvent){
