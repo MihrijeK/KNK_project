@@ -21,7 +21,15 @@ public class roomsController implements Initializable {
       
       @Override
       public void initialize(URL url, ResourceBundle resourceBundle) {
+         try {
+            connection= connectionClass.getConnection();
 
+            setDefaultDate();
+            String defaultFirstDate=firstDatePickerField.getValue().toString();
+            String defaultLastDate=lastDatePickerField.getValue().toString();
+            loadAvailableRooms(defaultFirstDate,defaultLastDate,connection);
+
+            }catch(Exception e){}
       }
       
       public void findButtonClicked(ActionEvent actionEvent) {
