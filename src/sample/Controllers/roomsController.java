@@ -32,6 +32,11 @@ public class roomsController implements Initializable {
         
       }
       
+      public void onCancelButtonClicked(ActionEvent actionEvent){
+        TableView.TableViewSelectionModel<Rooms> selectionModel=tableView.getSelectionModel();
+        selectionModel.clearSelection();
+      }
+      
       private void setDefaultDate(){
         Instant week=Instant.now().plus(7,ChronoUnit.DAYS);
         LocalDate currentLocalDate=LocalDate.now();
