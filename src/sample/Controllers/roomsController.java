@@ -25,20 +25,25 @@ public class roomsController implements Initializable {
       }
       
       public void findButtonClicked(ActionEvent actionEvent) {
-        String newFirstDate=firstDatePickerField.getValue().toString();
-        String newLastDate=lastDatePickerField.getValue().toString();
+        try {
+            String newFirstDate=firstDatePickerField.getValue().toString();
+            String newLastDate=lastDatePickerField.getValue().toString();
 
-        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
-        Date firstDate=format.parse(newFirstDate);
-        Date lastDate=format.parse(newLastDate);
-            
-        if(firstDate.compareTo(lastDate)<0){
-            loadAvailableRooms(newFirstDate,newLastDate,connection);
-         }else{
-            Alert alertBox=new Alert(Alert.AlertType.INFORMATION);
-            alertBox.setContentText("Dates you entered are not valid!");
-            alertBox.showAndWait();
-         }
+            SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+            Date firstDate=format.parse(newFirstDate);
+            Date lastDate=format.parse(newLastDate);
+
+            if(firstDate.compareTo(lastDate)<0){
+                loadAvailableRooms(newFirstDate,newLastDate,connection);
+            }else{
+                Alert alertBox=new Alert(Alert.AlertType.INFORMATION);
+                alertBox.setContentText("Dates you entered are not valid!");
+                alertBox.showAndWait();
+            }
+
+        }catch (Exception e){
+
+        }
       }
       
       public void onMakeReservationButtonClicked(ActionEvent actionEvent){
