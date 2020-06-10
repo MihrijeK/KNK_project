@@ -31,4 +31,12 @@ public class roomsController implements Initializable {
       public void onMakeReservationButtonClicked(ActionEvent actionEvent){
         
       }
+      
+      private void setDefaultDate(){
+        Instant week=Instant.now().plus(7,ChronoUnit.DAYS);
+        LocalDate currentLocalDate=LocalDate.now();
+        LocalDate localDateFromAWeek=LocalDate.ofInstant(week, ZoneOffset.UTC);
+        firstDatePickerField.setValue(currentLocalDate);
+        lastDatePickerField.setValue(localDateFromAWeek);
+    }
     }
