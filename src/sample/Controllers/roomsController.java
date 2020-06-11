@@ -120,4 +120,13 @@ public class roomsController implements Initializable {
               roomTypeCol.setCellValueFactory(new PropertyValueFactory<>("room_type"));
               priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
         }
+            
+        private void onClickSelect(){
+        tableView.addEventFilter(MouseEvent.MOUSE_PRESSED, event -> {
+            Node node = event.getPickResult().getIntersectedNode();
+
+            while (node != null && node != tableView && !(node instanceof TableRow)) {
+                node = node.getParent();
+            }
+        }
     }
