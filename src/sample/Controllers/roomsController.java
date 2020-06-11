@@ -55,7 +55,14 @@ public class roomsController implements Initializable {
       }
       
       public void onMakeReservationButtonClicked(ActionEvent actionEvent){
-        
+        TableView.TableViewSelectionModel<Rooms> selectionModel=tableView.getSelectionModel();
+        ObservableList<Rooms> roomsToBook = selectionModel.getSelectedItems();
+
+        if(roomsToBook.isEmpty()){
+            Alert noRoomsSelected=new Alert(Alert.AlertType.INFORMATION);
+            noRoomsSelected.setContentText("No rooms selected!\nSelect a room to make a reservation.");
+            noRoomsSelected.showAndWait();
+        }
       }
       
       public void onCancelButtonClicked(ActionEvent actionEvent){
