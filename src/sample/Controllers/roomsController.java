@@ -70,7 +70,15 @@ public class roomsController implements Initializable {
                 Pane newScreen = loader.load();
                 ReservationsController reservationsController=loader.getController();
                 reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue().toString(),lastDatePickerField.getValue().toString());
-      }
+      
+                Scene scene=new Scene(newScreen);
+                Stage stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
       
       public void onCancelButtonClicked(ActionEvent actionEvent){
         TableView.TableViewSelectionModel<Rooms> selectionModel=tableView.getSelectionModel();
