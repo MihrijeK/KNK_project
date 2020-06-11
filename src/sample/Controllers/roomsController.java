@@ -92,4 +92,16 @@ public class roomsController implements Initializable {
         firstDatePickerField.setValue(currentLocalDate);
         lastDatePickerField.setValue(localDateFromAWeek);
     }
+            
+        private void loadAvailableRooms(String firstDate,String lastDate,Connection connection) throws Exception{
+        roomList.clear();
+        String query="select * \n" +
+                "from rooms r\n" +
+                "where r.room_number not in(select r.room_number \n" +
+                "from reservations res inner join rooms r on res.room_id=r.room_number\n" +
+                "where checkin_date='"+firstDate+"' or checkout_date='"+lastDate+"')";
+
+        Statement stmt=connection.createStatement();
+        ResultSet rs=stmt.executeQuery(query);
+        }
     }
