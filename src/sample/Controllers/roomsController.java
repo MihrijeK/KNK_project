@@ -108,5 +108,9 @@ public class roomsController implements Initializable {
                   roomList.add(new Rooms(rs.getInt("room_number"),rs.getInt("floor_number"),rs.getInt("capacity"),
                     rs.getInt("bed_number"),rs.getString("room_type"),rs.getDouble("price")));
               }
+              
+              tableView.setPlaceholder(new Label("No rooms available"));
+              tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+              onClickSelect();
         }
     }
