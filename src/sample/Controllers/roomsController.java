@@ -62,7 +62,14 @@ public class roomsController implements Initializable {
             Alert noRoomsSelected=new Alert(Alert.AlertType.INFORMATION);
             noRoomsSelected.setContentText("No rooms selected!\nSelect a room to make a reservation.");
             noRoomsSelected.showAndWait();
-        }
+        }else{
+            try {
+                URL url = new File("src/views/reservation.fxml").toURI().toURL();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(url);
+                Pane newScreen = loader.load();
+                ReservationsController reservationsController=loader.getController();
+                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue().toString(),lastDatePickerField.getValue().toString());
       }
       
       public void onCancelButtonClicked(ActionEvent actionEvent){
