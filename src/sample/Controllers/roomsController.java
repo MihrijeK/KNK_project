@@ -112,5 +112,12 @@ public class roomsController implements Initializable {
               tableView.setPlaceholder(new Label("No rooms available"));
               tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
               onClickSelect();
+              
+              roomNumberCol.setCellValueFactory(new PropertyValueFactory<>("room_number"));
+              roomFloorCol.setCellValueFactory(new PropertyValueFactory<>("floor_number"));
+              capacityCol.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+              bedsCol.setCellValueFactory(new PropertyValueFactory<>("bed_number"));
+              roomTypeCol.setCellValueFactory(new PropertyValueFactory<>("room_type"));
+              priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
         }
     }
