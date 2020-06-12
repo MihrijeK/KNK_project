@@ -46,4 +46,14 @@ public class AddRoomServicesType{
         }
     }    
         
+      public void createButton(Service_Type St) throws Exception {
+        Statement statement = connection.createStatement();
+        int affectedRows = statement.executeUpdate(serviceTypeQuery(St),Statement.RETURN_GENERATED_KEYS);
+        if(affectedRows<=0) throw new Exception("Failed");
+        System.out.println("Done");
+        serviceName.clear();
+        Price.clear();
+        quantity.clear();
+    }
+        
 }
