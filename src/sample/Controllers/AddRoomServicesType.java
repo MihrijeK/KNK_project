@@ -29,10 +29,10 @@ public class AddRoomServicesType{
     @FXML private Button addNewServiceType;
     @FXML private Button cancleButton;
         
-    public AddServicesTybe() throws Exception {
+    public AddServicesType() throws Exception {
         stage = new Stage();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../sample.Views/AddServicesTybe.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../sample.Views/AddServicesType.fxml"));
             loader.setController(this);
 
             Parent root = loader.load();
@@ -54,6 +54,18 @@ public class AddRoomServicesType{
         Service_Type stype = new Service_Type(1,Service_name,Price,qty);
         return stype;
       }
+        
+      public String serviceTypeQuery(Service_Type St) throws Exception {
+        StringBuilder query = new StringBuilder();
+
+        query.append("INSERT INTO services_type(service_name,price,quantity) VALUES(");
+        query.append("'"+St.getService_name()+"'");
+        query.append(", "+St.getPrice()+"'");
+        query.append(", "+St.getQuantity()+"'");
+
+        return query.toString();
+    }
+  
         
       public void createButton(Service_Type St) throws Exception {
         Statement statement = connection.createStatement();
