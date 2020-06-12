@@ -1,27 +1,27 @@
-package Controllers;
+package controllers;
 
 public class roomsController implements Initializable {
-      @FXML private DatePicker firstDatePickerField;
-      @FXML private DatePicker lastDatePickerField;
-      @FXML private Button findButtonId;
-      @FXML private TableView<Rooms> tableView;
-      @FXML private TableColumn<Rooms,Integer> roomNumberCol;
-      @FXML private TableColumn<Rooms,Integer> roomFloorCol;
-      @FXML private TableColumn<Rooms,Integer> capacityCol;
-      @FXML private TableColumn<Rooms,Integer> bedsCol;
-      @FXML private TableColumn<Rooms,String> roomTypeCol;
-      @FXML private TableColumn<Rooms,Integer> priceCol;
-      @FXML private TableColumn<Rooms,CheckBox> reservationCol;
-      @FXML private Button makeReservation;
-      
-      dbConnection connectionClass = new dbConnection();
-      Connection connection;
+    @FXML private DatePicker firstDatePickerField;
+    @FXML private DatePicker lastDatePickerField;
+    @FXML private Button findButtonId;
+    @FXML private TableView<Rooms> tableView;
+    @FXML private TableColumn<Rooms,Integer> roomNumberCol;
+    @FXML private TableColumn<Rooms,Integer> roomFloorCol;
+    @FXML private TableColumn<Rooms,Integer> capacityCol;
+    @FXML private TableColumn<Rooms,Integer> bedsCol;
+    @FXML private TableColumn<Rooms,String> roomTypeCol;
+    @FXML private TableColumn<Rooms,Integer> priceCol;
+    @FXML private Button makeReservation;
+    @FXML private Button cancelButton;
 
-      ObservableList<Rooms> roomList=FXCollections.observableArrayList();
-      
-      @Override
-      public void initialize(URL url, ResourceBundle resourceBundle) {
-         try {
+    dbConnection connectionClass = new dbConnection();
+    Connection connection;
+
+    ObservableList<Rooms> roomList=FXCollections.observableArrayList();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
             connection= connectionClass.getConnection();
 
             setDefaultDate();
@@ -29,10 +29,11 @@ public class roomsController implements Initializable {
             String defaultLastDate=lastDatePickerField.getValue().toString();
             loadAvailableRooms(defaultFirstDate,defaultLastDate,connection);
 
-            }catch(Exception e){}
-      }
-      
-      public void findButtonClicked(ActionEvent actionEvent) {
+        }catch(Exception e){}
+
+    }
+
+    public void findButtonClicked(ActionEvent actionEvent) {
         try {
             String newFirstDate=firstDatePickerField.getValue().toString();
             String newLastDate=lastDatePickerField.getValue().toString();
@@ -52,9 +53,9 @@ public class roomsController implements Initializable {
         }catch (Exception e){
 
         }
-      }
-      
-      public void onMakeReservationButtonClicked(ActionEvent actionEvent){
+    }
+
+    public void onMakeReservationButtonClicked(ActionEvent actionEvent){
         TableView.TableViewSelectionModel<Rooms> selectionModel=tableView.getSelectionModel();
         ObservableList<Rooms> roomsToBook = selectionModel.getSelectedItems();
 
@@ -69,8 +70,8 @@ public class roomsController implements Initializable {
                 loader.setLocation(url);
                 Pane newScreen = loader.load();
                 ReservationsController reservationsController=loader.getController();
-                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue().toString(),lastDatePickerField.getValue().toString());
-      
+                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue(),lastDatePickerField.getValue());
+
                 Scene scene=new Scene(newScreen);
                 Stage stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -79,57 +80,68 @@ public class roomsController implements Initializable {
                 System.out.println(e.getMessage());
             }
         }
-      
-      public void onCancelButtonClicked(ActionEvent actionEvent){
+    }
+
+    public void onCancelButtonClicked(ActionEvent actionEvent){
         TableView.TableViewSelectionModel<Rooms> selectionModel=tableView.getSelectionModel();
         selectionModel.clearSelection();
-      }
-      
-      private void setDefaultDate(){
+    }
+
+    private void setDefaultDate(){
         Instant week=Instant.now().plus(7,ChronoUnit.DAYS);
         LocalDate currentLocalDate=LocalDate.now();
         LocalDate localDateFromAWeek=LocalDate.ofInstant(week, ZoneOffset.UTC);
         firstDatePickerField.setValue(currentLocalDate);
         lastDatePickerField.setValue(localDateFromAWeek);
     }
-            
-        private void loadAvailableRooms(String firstDate,String lastDate,Connection connection) throws Exception{
-              roomList.clear();
-              String query="select * \n" +
-                      "from rooms r\n" +
-                      "where r.room_number not in(select r.room_number \n" +
-                      "from reservations res inner join rooms r on res.room_id=r.room_number\n" +
-                      "where checkin_date='"+firstDate+"' or checkout_date='"+lastDate+"')";
 
-              Statement stmt=connection.createStatement();
-              ResultSet rs=stmt.executeQuery(query);
-              
-              while(rs.next()){
-                  roomList.add(new Rooms(rs.getInt("room_number"),rs.getInt("floor_number"),rs.getInt("capacity"),
+    private void loadAvailableRooms(String firstDate,String lastDate,Connection connection) throws Exception{
+        roomList.clear();
+        String query="select * \n" +
+                "from rooms r\n" +
+                "where r.room_number not in(select r.room_number \n" +
+                "from reservations res inner join rooms r on res.room_id=r.room_number\n" +
+                "where checkin_date='"+firstDate+"' or checkout_date='"+lastDate+"')";
+
+        Statement stmt=connection.createStatement();
+        ResultSet rs=stmt.executeQuery(query);
+
+        while(rs.next()){
+            roomList.add(new Rooms(rs.getInt("room_number"),rs.getInt("floor_number"),rs.getInt("capacity"),
                     rs.getInt("bed_number"),rs.getString("room_type"),rs.getDouble("price")));
-              }
-              
-              tableView.setPlaceholder(new Label("No rooms available"));
-              tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-              onClickSelect();
-              
-              roomNumberCol.setCellValueFactory(new PropertyValueFactory<>("room_number"));
-              roomFloorCol.setCellValueFactory(new PropertyValueFactory<>("floor_number"));
-              capacityCol.setCellValueFactory(new PropertyValueFactory<>("capacity"));
-              bedsCol.setCellValueFactory(new PropertyValueFactory<>("bed_number"));
-              roomTypeCol.setCellValueFactory(new PropertyValueFactory<>("room_type"));
-              priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
         }
-            
-        private void onClickSelect(){
+
+
+        tableView.setPlaceholder(new Label("No rooms available"));
+        tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        onClickSelect();
+
+        roomNumberCol.setCellValueFactory(new PropertyValueFactory<>("room_number"));
+        roomFloorCol.setCellValueFactory(new PropertyValueFactory<>("floor_number"));
+        capacityCol.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+        bedsCol.setCellValueFactory(new PropertyValueFactory<>("bed_number"));
+        roomTypeCol.setCellValueFactory(new PropertyValueFactory<>("room_type"));
+        priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+//        reservationCol.setCellValueFactory(new PropertyValueFactory<Rooms,Boolean>());
+//        reservationCol.setCellFactory( tc -> new CheckBoxTableCell<Rooms,Boolean>());
+//        reservationCol.setCellFactory(e->{
+//            return new CheckBoxTableCell<>();
+//        });
+
+
+        tableView.setItems(roomList);
+    }
+
+    private void onClickSelect(){
         tableView.addEventFilter(MouseEvent.MOUSE_PRESSED, event -> {
             Node node = event.getPickResult().getIntersectedNode();
 
             while (node != null && node != tableView && !(node instanceof TableRow)) {
                 node = node.getParent();
             }
-           
-              if (node instanceof TableRow) {
+
+            if (node instanceof TableRow) {
                 event.consume();
 
                 TableRow row = (TableRow) node;
@@ -143,5 +155,7 @@ public class roomsController implements Initializable {
                 }
             }
         });
-        }
     }
+
+
+}
