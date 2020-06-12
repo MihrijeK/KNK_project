@@ -128,5 +128,20 @@ public class roomsController implements Initializable {
             while (node != null && node != tableView && !(node instanceof TableRow)) {
                 node = node.getParent();
             }
+           
+              if (node instanceof TableRow) {
+                event.consume();
+
+                TableRow row = (TableRow) node;
+                TableView tv = row.getTableView();
+
+                tv.requestFocus();
+
+                if (!row.isEmpty()) {
+                    int index = row.getIndex();
+                        tv.getSelectionModel().select(index);
+                }
+            }
+        });
         }
     }
