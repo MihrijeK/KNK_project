@@ -46,6 +46,15 @@ public class AddRoomServicesType{
         }
     }    
         
+       public Service_Type createServiceTypeObj(TextField Servicename, TextField price, TextField quantity){
+        String Service_name = Servicename.getText();
+        double Price = Double.parseDouble(price.getText());
+        int qty = Integer.parseInt(quantity.getText());
+
+        Service_Type stype = new Service_Type(1,Service_name,Price,qty);
+        return stype;
+      }
+        
       public void createButton(Service_Type St) throws Exception {
         Statement statement = connection.createStatement();
         int affectedRows = statement.executeUpdate(serviceTypeQuery(St),Statement.RETURN_GENERATED_KEYS);
