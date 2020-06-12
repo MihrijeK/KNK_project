@@ -21,4 +21,11 @@ package sample.Controllers;
 
 public class AddServicesTybe{
 
+        private Connection connection = dbConnection.getConnection();
+    private final Stage stage;
+    @FXML private TextField Price;
+    @FXML private TextField serviceName;
+    @FXML private TextField quantity;
+    @FXML private Button addNewServiceType;
+    @FXML private Button cancleButton;
 }
