@@ -19,7 +19,7 @@ package sample.Controllers;
         import java.sql.Statement;
         import java.util.ResourceBundle;
 
-public class AddServicesTybe{
+public class AddRoomServicesType{
 
         private Connection connection = dbConnection.getConnection();
     private final Stage stage;
