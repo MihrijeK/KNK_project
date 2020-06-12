@@ -46,6 +46,19 @@ public class AddRoomServicesType{
         }
     }    
         
+       public void display() throws IOException, SQLException {
+        addNewServiceType.setOnAction(e-> {
+            try {
+                createButton(createServiceTypeObj(serviceName,Price,quantity));
+                System.out.println("DONE");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        cancleButton.setOnAction(e->stage.close());
+        stage.showAndWait();
+    }
+        
        public Service_Type createServiceTypeObj(TextField Servicename, TextField price, TextField quantity){
         String Service_name = Servicename.getText();
         double Price = Double.parseDouble(price.getText());
