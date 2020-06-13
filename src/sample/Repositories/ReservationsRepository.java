@@ -32,5 +32,14 @@ public class ReservationsRepository {
             }else return null;
 
     }
+    
+    public int getPaymentId() throws Exception{
+        connection=dbconnection.getConnection();
+        Statement stmt=connection.createStatement();
+        ResultSet rs=stmt.executeQuery("select id from payments order by id desc limit 1");
+
+        rs.next();
+        return rs.getInt(1);
+    }
   
 }
