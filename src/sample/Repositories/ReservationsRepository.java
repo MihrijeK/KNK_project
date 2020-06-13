@@ -11,5 +11,10 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class ReservationsRepository {
+    dbConnection dbconnection=new dbConnection();
+    Connection connection;
+    public ReservationsRepository(){
 
+    }
+  
 }
