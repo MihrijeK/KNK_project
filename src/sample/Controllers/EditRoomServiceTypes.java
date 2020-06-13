@@ -50,6 +50,26 @@ public class EditRoomServiceTypes {
         }
     }
   
+  public void display() throws IOException, SQLException {
+        serviceName.setText(serviceType.getService_name());
+        price.setText(Double.toString(serviceType.getPrice()));
+        quantity.setText(Integer.toString(serviceType.getQuantity()));
+
+        updateButton.setOnAction(e->{
+            try {
+
+               updateButton( serviceName.getId(),serviceName.getText(),Double.parseDouble(price.getText()),Integer.parseInt(quantity.getText()));
+                System.out.println("Updated");
+                stage.close();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
+        cancleButton.setOnAction(e->stage.close());
+        stage.showAndWait();
+    }
+  
   public void updateButton(String id, String service_name, double price, int quantity) throws Exception {
         String query = "UPDATE services_type SET service_name = '"+service_name+"', price = "+ price + ",quantity = "+quantity+" WHERE id = "+id+";";
 
