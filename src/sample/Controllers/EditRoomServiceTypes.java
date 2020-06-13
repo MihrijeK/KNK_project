@@ -50,4 +50,11 @@ public class EditRoomServiceTypes {
         }
     }
   
+  public void updateButton(String id, String service_name, double price, int quantity) throws Exception {
+        String query = "UPDATE services_type SET service_name = '"+service_name+"', price = "+ price + ",quantity = "+quantity+" WHERE id = "+id+";";
+
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(query);
+    }
+  
 }
