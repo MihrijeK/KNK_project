@@ -41,5 +41,16 @@ public class ReservationsRepository {
         rs.next();
         return rs.getInt(1);
     }
+    
+    public int createPayment(String guestId,String price) throws Exception{
+        String insertQuery="insert into payments(guest_id,price,payment_method) values(?,?,'cash')";
+        PreparedStatement prep=connection.prepareStatement(insertQuery);
+        prep.setString(1,guestId);//Kqyri edhe niher se jane si ints mundet me dal problem
+        prep.setString(2,price);
+        prep.executeUpdate();
+
+        int paymentId=getPaymentId();
+        return paymentId;
+    }
   
 }
