@@ -16,5 +16,16 @@ public class ReservationsRepository {
     public ReservationsRepository(){
 
     }
+    
+    public Person getGuest(String id) throws Exception{
+            connection=dbconnection.getConnection();
+            String findGuestQuery="select * from guests where personal_number=? limit 1";
+            PreparedStatement prep=connection.prepareStatement(findGuestQuery);
+            prep.setString(1,id);
+            ResultSet rs=prep.executeQuery();
+
+            
+
+    }
   
 }
