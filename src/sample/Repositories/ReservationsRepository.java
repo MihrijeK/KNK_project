@@ -57,7 +57,12 @@ public class ReservationsRepository {
         connection=dbconnection.getConnection();
         String createReservationQuery="insert into reservations(guest_id,room_id,checkin_date,checkout_date,payment_id) values(?,?,?,?,?)";
         PreparedStatement prep=connection.prepareStatement(createReservationQuery);
-        
+        prep.setInt(1,guest_id);
+        prep.setInt(2,room_id);
+        prep.setString(3,checkin_date);
+        prep.setString(4,checkout_date);
+        prep.setInt(5,paymentId);
+        prep.executeUpdate();
     }
   
 }
