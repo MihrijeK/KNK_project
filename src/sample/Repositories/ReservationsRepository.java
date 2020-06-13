@@ -52,5 +52,12 @@ public class ReservationsRepository {
         int paymentId=getPaymentId();
         return paymentId;
     }
+    
+    public void createReservation(int guest_id,int room_id,String checkin_date,String checkout_date,int paymentId) throws Exception{
+        connection=dbconnection.getConnection();
+        String createReservationQuery="insert into reservations(guest_id,room_id,checkin_date,checkout_date,payment_id) values(?,?,?,?,?)";
+        PreparedStatement prep=connection.prepareStatement(createReservationQuery);
+        
+    }
   
 }
