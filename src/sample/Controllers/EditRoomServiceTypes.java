@@ -17,3 +17,19 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+
+public class EditRoomServiceTypes {
+  
+    private Connection connection = dbConnection.getConnection();
+  
+    private final Stage stage;
+  
+    private Service_Type serviceType;
+  
+    @FXML private TextField price;
+    @FXML private TextField serviceName;
+    @FXML private TextField quantity;
+    @FXML private Button updateButton;
+    @FXML private Button cancleButton;
+  
+}
