@@ -32,4 +32,22 @@ public class EditRoomServiceTypes {
     @FXML private Button updateButton;
     @FXML private Button cancleButton;
   
+  public EditRoomServiceTypes(Service_Type serviceType) throws Exception {
+        this.serviceType=serviceType;
+        stage = new Stage();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.Views.EditRoomServiceTypes.fxml"));
+            loader.setController(this);
+
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Edit Service Type");
+            stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+  
 }
