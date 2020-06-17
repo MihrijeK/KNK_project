@@ -24,5 +24,16 @@ public class ReservationsController implements Initializable {
         this.roomsToBook=rooms;
         this.days=getDaysOfStaying(checkin_date,checkout_date);
 
+        printRoomsSelected();
+        for(Rooms selectedRooms:roomsToBook){
+            try{
+                double price=selectedRooms.getPrice()*days;
+                total+=price;
+                roomTypes.add(selectedRooms.getRoom_type()+" "+price);
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+
+        }
     }
 }
