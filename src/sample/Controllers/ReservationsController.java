@@ -17,4 +17,12 @@ public class ReservationsController implements Initializable {
     
     ReservationsRepository reservationsRepository=new ReservationsRepository();
     ObservableList<String> roomTypes= FXCollections.observableArrayList();
+    
+    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
+        this.checkin_date=checkin_date;
+        this.checkout_date=checkout_date;
+        this.roomsToBook=rooms;
+        this.days=getDaysOfStaying(checkin_date,checkout_date);
+
+    }
 }
