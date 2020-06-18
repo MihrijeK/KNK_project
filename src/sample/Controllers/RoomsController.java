@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class roomsController implements Initializable {
+public class RoomsController implements Initializable {
     @FXML private DatePicker firstDatePickerField;
     @FXML private DatePicker lastDatePickerField;
     @FXML private Button findButtonId;
