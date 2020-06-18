@@ -17,3 +17,14 @@
             <Image url="@building.jpg" />
          </image>
       </ImageView>
+ <AnchorPane layoutX="219.0" layoutY="253.0" prefHeight="89.0" prefWidth="136.0">
+         <children>
+            <Button fx:id="login" layoutX="37.0" layoutY="25.0" mnemonicParsing="false" onAction="#changeScreen" text="LOGIN" textFill="#0c90f5">
+               <font>
+                  <Font name="Britannic Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
