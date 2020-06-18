@@ -12,3 +12,8 @@
             <Font name="Britannic Bold" size="48.0" />
          </font>
       </Label>
+       <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="200.0" layoutX="215.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@building.jpg" />
+         </image>
+      </ImageView>
