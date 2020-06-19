@@ -22,6 +22,10 @@ public class HomeController implements Initializable {
     @FXML private ImageView building;
     @FXML private Label sunhotel;
     @FXML private Button login_button;
+    
+        public void changeScreen(ActionEvent event) throws IOException {
+       Parent loginParent= FXMLLoader.load(getClass().getResource("login.fxml"));
+       Scene loginscene=new Scene(loginParent);
 
         @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
