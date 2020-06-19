@@ -26,6 +26,11 @@ public class HomeController implements Initializable {
         public void changeScreen(ActionEvent event) throws IOException {
        Parent loginParent= FXMLLoader.load(getClass().getResource("login.fxml"));
        Scene loginscene=new Scene(loginParent);
+            
+        Stage window =(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loginscene);
+        window.show();
+    }
 
         @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
