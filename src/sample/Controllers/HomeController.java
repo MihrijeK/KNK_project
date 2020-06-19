@@ -22,3 +22,9 @@ public class HomeController implements Initializable {
     @FXML private ImageView building;
     @FXML private Label sunhotel;
     @FXML private Button login_button;
+
+        @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+}
