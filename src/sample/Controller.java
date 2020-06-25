@@ -68,8 +68,8 @@ public class Controller {
         DateFormat df = new SimpleDateFormat("dd/MM/yy");
         Date dateobj = new Date();
 
-        Guests guest = new Guests(0,fName,lName,num,phoneNum,sqlDate,dateobj);
-        return guest;
+//        Guests guest = new Guests(0,fName,lName,num,phoneNum,sqlDate,dateobj);
+        return null;
     }
 
     private  void printError(Exception ex){

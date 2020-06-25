@@ -45,7 +45,6 @@ public class AddNewRoomView {
             e.printStackTrace();
         }
     }
-
     public void display() throws IOException, SQLException {
         addNewRoom.setOnAction(e-> {
             try {
@@ -97,5 +96,4 @@ public class AddNewRoomView {
         roomType.clear();
         Price.clear();
     }
-}
 }

@@ -1,8 +1,9 @@
-package controllers;
+package sample.Controllers;
 
-import Connectivity.dbConnection;
-import Connectivity.dbConnection;
-import Helpers.Room;
+//import Connectivity.dbConnection;
+//import Connectivity.dbConnection;
+//import Helpers.Room;
+import DatabaseConnection.dbConnection;
 import Helpers.Rooms;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.value.ObservableValue;
@@ -110,8 +111,8 @@ public class RoomsController implements Initializable {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(url);
                 Pane newScreen = loader.load();
-                ReservationsController reservationsController=loader.getController();
-                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue(),lastDatePickerField.getValue());
+//                ReservationsController reservationsController=loader.getController();
+//                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue(),lastDatePickerField.getValue());
 
                 Scene scene=new Scene(newScreen);
                 Stage stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();

@@ -68,11 +68,11 @@ public class PaymentView implements Initializable {
                     "inner join payments p on p.id = r.payment_id "+
                     "where r.guest_id = "+user +" and p.is_payed = 0;");
 
-            while(tabela.next()){
-                oblist.add(new Rooms(tabela.getInt("room_number"),
-                        tabela.getString("room_type"), tabela.getDouble("price")));
-                total += tabela.getDouble("price");
-            }
+//            while(tabela.next()){
+//                oblist.add(new Rooms(tabela.getInt("room_number"),
+//                        tabela.getString("room_type"), tabela.getDouble("price")));
+//                total += tabela.getDouble("price");
+//            }
 
             //Emri i atij qe po paguan
             ResultSet nameLastname = connection.createStatement().executeQuery("select first_name, last_name from guests\n" +

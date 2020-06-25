@@ -4,32 +4,28 @@ package sample.Controllers;
         import Helpers.Service_Type;
         import javafx.fxml.FXML;
         import javafx.fxml.FXMLLoader;
-        import javafx.fxml.Initializable;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
         import javafx.scene.control.*;
         import javafx.stage.Modality;
         import javafx.stage.Stage;
 
-        import javax.swing.*;
         import java.io.IOException;
-        import java.net.URL;
         import java.sql.Connection;
         import java.sql.SQLException;
         import java.sql.Statement;
-        import java.util.ResourceBundle;
 
 public class AddRoomServicesType{
 
         private Connection connection = dbConnection.getConnection();
-    private final Stage stage;
+    private Stage stage;
     @FXML private TextField Price;
     @FXML private TextField serviceName;
     @FXML private TextField quantity;
     @FXML private Button addNewServiceType;
     @FXML private Button cancleButton;
         
-    public AddServicesType() throws Exception {
+    public void AddServicesType() throws Exception {
         stage = new Stage();
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../sample.Views/AddServicesType.fxml"));
@@ -44,9 +40,12 @@ public class AddRoomServicesType{
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }    
-        
-       public void display() throws IOException, SQLException {
+    }
+
+    public AddRoomServicesType() throws Exception {
+    }
+
+    public void display() throws IOException, SQLException {
         addNewServiceType.setOnAction(e-> {
             try {
                 createButton(createServiceTypeObj(serviceName,Price,quantity));

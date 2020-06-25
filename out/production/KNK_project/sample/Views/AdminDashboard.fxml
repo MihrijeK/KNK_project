@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="850.0" prefWidth="1000.0" style="-fx-background-color: #FFF;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controllers.AdminDashboard">
+    <children>
+        <AnchorPane prefHeight="842.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #EBE8F9;"
+                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fitHeight="175.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/admin.png"/>
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="50.0"/>
+                            </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="overviewBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                mnemonicParsing="false"
+                                onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0"
+                                style="-fx-background-color: #EBE8F9;" text="Overview">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/home.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="staffBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false"
+                                onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0"
+                                style="-fx-background-color: #EBE8F9;" text="Staff">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/staff.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="roomsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false"
+                                onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0"
+                                style="-fx-background-color: #EBE8F9;" text="Rooms">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/rooms.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="paymentsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0"
+                                prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Payments">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/bills.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="reservationsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0"
+                                prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Reservations">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/reservations.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="menusBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false"
+                                onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0"
+                                style="-fx-background-color: #EBE8F9;" text="Menus">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/home.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="settingsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0"
+                                prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Settings">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/settings.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0"
+                                prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Log Out">
+                            <padding>
+                                <Insets left="50.0"/>
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/logout.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ffff;"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0"
+                            style="-fx-background-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0"
+                            style="-fx-background-color: #ecdad1;" AnchorPane.bottomAnchor="0.0"
+                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <bottom>
+                                <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0"
+                                      spacing="15.0" style="-fx-background-color: orange;"
+                                      BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Button fx:id="CreateMemberBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                                mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0"
+                                                style="-fx-background-color: #EBE8F9;" text="Add staff member">
+                                            <padding>
+                                                <Insets left="50.0"/>
+                                            </padding>
+                                            <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/home.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="refreshTableView" alignment="BASELINE_LEFT" graphicTextGap="20.0"
+                                                mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0"
+                                                style="-fx-background-color: #EBE8F9;" text="Refresh Table">
+                                            <padding>
+                                                <Insets left="50.0"/>
+                                            </padding>
+                                            <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/home.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="15.0" right="15.0"/>
+                                    </padding>
+                                </HBox>
+                            </bottom>
+                            <center>
+                                <AnchorPane fx:id="showStaffPane" prefHeight="672.0" prefWidth="942.0"
+                                            style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <TableView fx:id="showStaffTable" prefHeight="673.0" prefWidth="942.0"
+                                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn fx:id="col_id" prefWidth="55.0" text="ID"/>
+                                                <TableColumn fx:id="col_fname" prefWidth="95.0" text="First Name"/>
+                                                <TableColumn fx:id="col_lname" prefWidth="99.0" text="Last Name"/>
+                                                <TableColumn fx:id="col_prsNum" prefWidth="143.0"
+                                                             text="Personal Number"/>
+                                                <TableColumn fx:id="col_position" prefWidth="85.0" text="Position"/>
+                                                <TableColumn fx:id="col_bday" prefWidth="88.0" text="Birthdate"/>
+                                                <TableColumn fx:id="col_phone" prefWidth="126.0" text="Phone Number"/>
+                                                <TableColumn fx:id="col_salary" prefWidth="96.0" text="Salary"/>
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </center>
+                            <top>
+                                <Label text="STAFF MEMBERS" BorderPane.alignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                </Label>
+                            </top>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: pink;"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <children>
+                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <bottom>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0"
+                                      BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Button fx:id="btnAddNewRoom" mnemonicParsing="false" text="Add New"/>
+                                        <Button fx:id="btnUpdate" mnemonicParsing="false" text="Update"/>
+                                        <Button fx:id="btnDelete" mnemonicParsing="false" text="Delete"/>
+                                    </children>
+                                </HBox>
+                            </bottom>
+                            <center>
+                                <TableView fx:id="roomsTableView" prefHeight="200.0" prefWidth="200.0"
+                                           BorderPane.alignment="CENTER">
+                                    <columns>
+                                        <TableColumn fx:id="roomNumber" prefWidth="110.0" text="Room Number"/>
+                                        <TableColumn fx:id="floorNumber" minWidth="0.0" prefWidth="95.0"
+                                                     text="Floor Number"/>
+                                        <TableColumn fx:id="capacity" minWidth="0.0" prefWidth="95.0" text="Capacity"/>
+                                        <TableColumn fx:id="bedNumber" minWidth="0.0" prefWidth="95.0"
+                                                     text="Bed Number"/>
+                                        <TableColumn fx:id="roomType" minWidth="0.0" prefWidth="95.0" text="Room Type"/>
+                                        <TableColumn fx:id="price" minWidth="0.0" prefWidth="95.0" text="Price"/>
+                                    </columns>
+                                </TableView>
+                            </center>
+                            <top>
+                                <AnchorPane prefHeight="96.0" prefWidth="942.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <GridPane hgap="20.0" layoutX="49.0" layoutY="3.0" prefHeight="90.0"
+                                                  prefWidth="833.0" vgap="20.0" AnchorPane.bottomAnchor="3.0"
+                                                  AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0"
+                                                  AnchorPane.topAnchor="3.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <ChoiceBox prefHeight="25.0" prefWidth="165.0" GridPane.rowIndex="1"/>
+                                                <ChoiceBox prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="1"
+                                                           GridPane.rowIndex="1"/>
+                                                <ChoiceBox prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="2"
+                                                           GridPane.rowIndex="1"/>
+                                            </children>
+                                        </GridPane>
+                                        <Label layoutX="14.0" layoutY="18.0" text="Rooms"/>
+                                    </children>
+                                </AnchorPane>
+                            </top>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
