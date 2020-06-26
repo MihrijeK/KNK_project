@@ -18,6 +18,10 @@
       <children>
         <HBox alignment="CENTER" prefWidth="200.0">
           <children>
+            <Label text="Check in" textFill="#f5f1f1">
+               <padding>
+                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
           </children>
         </HBox>
       </children>
