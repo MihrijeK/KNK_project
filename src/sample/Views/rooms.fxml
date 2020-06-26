@@ -25,6 +25,7 @@
                <font>
                  <Font size="14.0" />
                </font></Label>
+            <DatePicker fx:id="firstDatePickerField" style="-fx-background-color: #111111;" />
           </children>
         </HBox>
       </children>
