@@ -34,6 +34,11 @@
                    <Font size="14.0" />
                 </font></Label>
             <DatePicker fx:id="lastDatePickerField" />
+            <ChoiceBox fx:id="roomTypeSelector" prefWidth="100.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
           </children>
         </HBox>
       </children>
