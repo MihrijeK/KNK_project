@@ -33,6 +33,7 @@
                 <font>
                    <Font size="14.0" />
                 </font></Label>
+            <DatePicker fx:id="lastDatePickerField" />
           </children>
         </HBox>
       </children>
