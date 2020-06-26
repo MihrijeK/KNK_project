@@ -39,6 +39,10 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </ChoiceBox>
+            <Button fx:id="findButtonId" mnemonicParsing="false" onAction="#findButtonClicked" style="-fx-background-color: #89609e;" text="find" textFill="#f8f5f5">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
           </children>
         </HBox>
       </children>
