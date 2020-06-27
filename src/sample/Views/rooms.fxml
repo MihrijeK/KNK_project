@@ -54,6 +54,9 @@
   <center>
     <TableView fx:id="tableView" fixedCellSize="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="448.0" prefWidth="666.0" BorderPane.alignment="CENTER">
        <columns>
+         <TableColumn fx:id="roomNumberCol" maxWidth="1.7976931348623157E308" prefWidth="106.39999389648438" resizable="false" style="-fx-alignment: center; -fx-background-color: transparent;" text="Room Number" />
+         <TableColumn fx:id="roomFloorCol" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="106.39996337890625" resizable="false" style="-fx-alignment: center; -fx-background-color: transparent;" text="Room Floor" />
+                
       </columns>
     <TableView>
   </center>
