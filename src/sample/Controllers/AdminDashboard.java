@@ -11,6 +11,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
+import sample.Controllers.Admin.RoomControllers.AddNewRoomView;
+import sample.Controllers.Admin.RoomControllers.EditRoomsView;
+import sample.Controllers.Admin.StaffControllers.CreateStaffMemberView;
+import sample.Controllers.Admin.StaffControllers.EditStaffMemberView;
 
 import java.io.IOException;
 import java.net.URL;

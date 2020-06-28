@@ -1,4 +1,4 @@
-package sample.Controllers;
+package sample.Controllers.Admin.RoomControllers;
 
 import DatabaseConnection.dbConnection;
 import Helpers.Rooms;

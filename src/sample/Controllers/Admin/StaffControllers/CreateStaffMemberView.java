@@ -1,4 +1,4 @@
-package sample.Controllers;
+package sample.Controllers.Admin.StaffControllers;
 
 import DatabaseConnection.dbConnection;
 import Helpers.Staff;
