@@ -18,7 +18,7 @@ public class InsertGuestController implements Initializable {
     @FXML private ToggleGroup genderToggleGroup;    
     
     private Connection conn;
-    public void insertGuest() throws SQLException, ClassNotFoundException, ParseException {
+    public void insertGuest() throws Exception {
         if(validateInput()){
             conn = DatabaseConnection.dbConnection.getConnection();
             boolean rs = conn.createStatement().execute(createQuery());

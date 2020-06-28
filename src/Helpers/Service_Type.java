@@ -15,6 +15,11 @@ public class Service_Type {
         this.quantity = quantity;
     }
 
+    public Service_Type(String service_name, double price) {
+        this.service_name = service_name;
+        this.price = price;
+    }
+
     public int getId() {
         return id;
     }

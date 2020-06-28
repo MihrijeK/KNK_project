@@ -19,6 +19,12 @@ public class Rooms {
         this.price = price;
     }
 
+    public Rooms(int room_number, String room_type, double price) {
+        this.room_number = room_number;
+        this.room_type = room_type;
+        this.price = price;
+    }
+
     public int getRoom_number() {
         return room_number;
     }
