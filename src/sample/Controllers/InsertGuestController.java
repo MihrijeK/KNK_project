@@ -112,6 +112,15 @@ public class Controller implements Initializable {
         sb.append("now())");
         return sb.toString();
     }
+    public String returnDate(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(birthDate.getValue().getYear());
+        sb.append("-");
+        sb.append(birthDate.getValue().getMonthValue());
+        sb.append("-");
+        sb.append(birthDate.getValue().getDayOfMonth());
+        return sb.toString();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
