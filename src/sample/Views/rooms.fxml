@@ -64,6 +64,9 @@
       <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
+      <padding>
+            <Insets bottom="20.0" left="30.0" right="20.0" />
+         </padding>
     <TableView>
   </center>
   <right>
