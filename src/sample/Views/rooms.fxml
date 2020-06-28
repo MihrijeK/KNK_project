@@ -70,5 +70,9 @@
     <TableView>
   </center>
   <right>
+    <VBox alignment="TOP_CENTER" prefHeight="441.0" prefWidth="133.0" BorderPane.alignment="CENTER">
+         <children>
+      </children>
+    </VBox>
   </right>
 </BorderPane>
