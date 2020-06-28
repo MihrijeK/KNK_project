@@ -109,6 +109,11 @@
                                     <Font name="Bell MT Bold" size="18.0" />
                                  </font>
                               </Label>
+                              <Label fx:id="emriMbiemri1" layoutX="14.0" layoutY="79.0" prefHeight="34.0" prefWidth="35.0" text="ID: ">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                              </Label>
                               <Label fx:id="personalNr" layoutX="49.0" layoutY="79.0" prefHeight="34.0" prefWidth="179.0" text="13212321">
                                  <font>
                                     <Font name="Monospaced Bold" size="20.0" />
