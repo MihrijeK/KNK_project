@@ -1,38 +1,40 @@
 package sample.Controllers.Admin.RoomControllers;
 
-import DatabaseConnection.dbConnection;
 import Helpers.Rooms;
-import Helpers.Staff;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import javax.swing.*;
+import sample.Controllers.AdminDashboard;
+import sample.Repositories.RoomRespository;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AddNewRoomView {
-    private Connection connection = dbConnection.getConnection();
     private final Stage stage;
+
     @FXML private TextField roomNumber;
     @FXML private TextField floorNumber;
     @FXML private TextField roomCapacity;
     @FXML private TextField bedNumber;
-    @FXML private TextField roomType;
+    @FXML private ChoiceBox roomTypeBox;
     @FXML private TextField Price;
     @FXML private Button addNewRoom;
     @FXML private Button cancleButton;
 
-    public AddNewRoomView() throws Exception {
+    private ArrayList<String> roomTypeList = new ArrayList<>(Arrays.asList(new String[]{"Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite"}));
+
+    public AddNewRoomView(){
         stage = new Stage();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddNewRoomView.fxml"));
+            FXMLLoader loader = new FXMLLoader(AdminDashboard.class.getResource("../Views/AdminViews/RoomsViews/AddNewRoomView.fxml"));
             loader.setController(this);
 
             Parent root = loader.load();
@@ -45,55 +47,44 @@ public class AddNewRoomView {
             e.printStackTrace();
         }
     }
-    public void display() throws IOException, SQLException {
-        addNewRoom.setOnAction(e-> {
+
+    public void display(ObservableList<Rooms> room){
+        addNewRoom.setOnAction(e -> {
             try {
-                createButton(createRoomsObj(roomNumber,floorNumber,roomCapacity,bedNumber,roomType,Price));
+                createButton(createRoomsObj(roomNumber, floorNumber, roomCapacity, bedNumber, roomTypeBox, Price),room);
                 System.out.println("DONE");
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         });
-        cancleButton.setOnAction(e->stage.close());
+        cancleButton.setOnAction(e -> stage.close());
+        for (String r : roomTypeList) {
+            roomTypeBox.getItems().addAll(r);
+        }
         stage.showAndWait();
     }
 
-    public Rooms createRoomsObj(TextField roomNumber, TextField floorNumber, TextField roomCapacity, TextField bedNumber, TextField roomType, TextField Price){
+    public Rooms createRoomsObj(TextField roomNumber, TextField floorNumber, TextField roomCapacity, TextField bedNumber, ChoiceBox roomType, TextField Price) {
         int room_number = Integer.parseInt(roomNumber.getText());
         int floor_number = Integer.parseInt(floorNumber.getText());
         int capacity = Integer.parseInt(roomCapacity.getText());
         int bed_number = Integer.parseInt(bedNumber.getText());
-        String room_type = roomType.getText();
         double price = Double.parseDouble(Price.getText());
+        String rType = roomType.getValue().toString();
 
-        Rooms rms = new Rooms(room_number,floor_number,capacity,bed_number,room_type,price);
+        Rooms rms = new Rooms(room_number, floor_number, capacity, bed_number, rType, price);
         return rms;
     }
 
-    public String roomsQuery(Rooms room) throws Exception {
-        StringBuilder query = new StringBuilder();
-
-        query.append("INSERT INTO rooms VALUES(");
-        query.append(room.getRoom_number());
-        query.append(", "+room.getFloor_number());
-        query.append(", "+room.getCapacity());
-        query.append(", "+room.getBed_number());
-        query.append(", '"+room.getRoom_type()+"'");
-        query.append(", "+room.getPrice()+");");
-
-        return query.toString();
-    }
-
-    public void createButton(Rooms rooms) throws Exception {
-        Statement statement = connection.createStatement();
-        int affectedRows = statement.executeUpdate(roomsQuery(rooms));
-        if(affectedRows<=0) throw new Exception("Failed");
+    public void createButton(Rooms rooms,ObservableList<Rooms> room) throws Exception {
+        RoomRespository.insert(rooms);
+        room.addAll(rooms);
         System.out.println("Done");
+
         roomNumber.clear();
         floorNumber.clear();
         roomCapacity.clear();
         bedNumber.clear();
-        roomType.clear();
         Price.clear();
     }
 }
