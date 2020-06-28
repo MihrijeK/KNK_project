@@ -121,6 +121,20 @@ public class Controller implements Initializable {
         sb.append(birthDate.getValue().getDayOfMonth());
         return sb.toString();
     }
+    public void alert(String alertType,String title, String message){
+        Alert alert = null;
+        if(alertType == "warning"){
+            alert = new Alert(Alert.AlertType.WARNING);
+        }else if(alertType == "confirmation") {
+            alert = new Alert(Alert.AlertType.CONFIRMATION);
+        }else if(alertType == "error"){
+            alert = new Alert(Alert.AlertType.ERROR);
+        }
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.setHeaderText(null);
+        alert.showAndWait();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
