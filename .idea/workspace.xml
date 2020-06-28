@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b53737-5212-470a-bf88-08264b023a8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KNK_project/sample/Views/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KNK_project/sample/Views/AdminDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Views/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/AdminDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,13 +274,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00018" summary="Krijimi i controllerit AdminDashboard">
-      <created>1588624709965</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1588624709965</updated>
     </task>
     <task id="LOCAL-00019" summary="Deklarimi i fieldave">
       <created>1588624761378</created>
@@ -616,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593384020973</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="update edit staff member view content">
+      <created>1593384058800</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1593384058800</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -638,7 +640,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Upddate" />
     <MESSAGE value="Krijimi controllerit CreateStaffMemberView" />
     <MESSAGE value="Deklarimi i fieldave" />
     <MESSAGE value="Konstruktori" />
@@ -663,7 +664,8 @@
     <MESSAGE value="Update admin view" />
     <MESSAGE value="Update addnewroom view and edit room view" />
     <MESSAGE value="Update add service view and edit service view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update add service view and edit service view" />
+    <MESSAGE value="update edit staff member view content" />
+    <option name="LAST_COMMIT_MESSAGE" value="update edit staff member view content" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -688,38 +690,38 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2654" y="119" key="CommitChangelistDialog2" timestamp="1593384020627">
+    <state x="2654" y="119" key="CommitChangelistDialog2" timestamp="1593384058380">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2654" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593384020627" />
+    <state x="2654" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593384058380" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593380484043" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112787197" />
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1593383897512">
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1593384064570">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="226" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593381267470" />
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383897512" />
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593384064570" />
     <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591902493256" />
-    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1593383897512">
+    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1593384064570">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="226" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593381267470" />
-    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383897512" />
+    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593384064570" />
     <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591902493256" />
-    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1593383897512">
+    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1593384064570">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="226" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593381267469" />
-    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383897512" />
+    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593384064570" />
     <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591902493256" />
-    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1593383897512">
+    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1593384064570">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="226" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593381267470" />
-    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383897512" />
+    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593384064570" />
     <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591902493256" />
     <state x="2692" y="253" width="674" height="602" key="NewModule_or_Project.wizard" timestamp="1593112802587">
       <screen x="1920" y="0" width="1920" height="1040" />
