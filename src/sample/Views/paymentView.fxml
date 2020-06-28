@@ -86,6 +86,12 @@
                               <TableColumn fx:id="thirdColumn" prefWidth="90.0" text="Price" />
                            </columns>
                         </TableView>
+                        <TableView fx:id="tableView1" prefHeight="364.0" prefWidth="174.0">
+                          <columns>
+                            <TableColumn fx:id="fourthColumn" prefWidth="95.19999539852142" text="Service name" />
+                              <TableColumn fx:id="fifthColumn" prefWidth="78.40001678466797" text="Price" />
+                          </columns>
+                        </TableView>
                         <AnchorPane prefHeight="363.0" prefWidth="294.0">
                            <children>
                               <Label layoutX="25.0" layoutY="14.0" prefHeight="34.0" prefWidth="84.0" text="Name:">
