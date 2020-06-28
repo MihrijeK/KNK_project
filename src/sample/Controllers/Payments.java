@@ -15,4 +15,30 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Payments implements Initializable {
+  public Button overviewBtn;
+    public Button staffBtn;
+    public Button roomsBtn;
+    public Button paymentsBtn;
+    public Button reservationsBtn;
+    public Button menusBtn;
+    public Button settingsBtn;
+    public Button logoutBtn;
+
+
+
+    public AnchorPane paymentsPane;
+    public TableView<Payment> paymentsTableView;
+
+    public ObservableList<Payment> payments = null;
+    public TableColumn payment_id;
+    public TableColumn firstname;
+    public TableColumn lastname;
+    public TableColumn date;
+    public TableColumn price;
+    @FXML
+    public TableColumn isPayed;
+public Payments() throws Exception{
+
+    }
+  
 }
