@@ -104,28 +104,31 @@ public class PaymentView implements Initializable {
     }
 
     public void paguaj(ActionEvent actionEvent) throws Exception {
-        RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
-        String metodaEzgjedhur = selectedMethod.getText();
-        String PaymentQuery = "update payments p \n" +
-                "inner join reservations r on r.payment_id = p.id \n" +
-                "set p.price = "+total+", p.payment_method = '"+metodaEzgjedhur+"', p.is_payed = 1, p.pay_date = now() \n" +
-                "where p.guest_id="+user;
-        Statement statement = connection.createStatement();
-        statement.executeUpdate(PaymentQuery);
-        
-        Stage stage = new Stage();
         try {
+            RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
+            String metodaEzgjedhur = selectedMethod.getText();
+            String PaymentQuery = "update payments p \n" +
+                    "inner join reservations r on r.payment_id = p.id \n" +
+                    "set p.price = "+total+", p.payment_method = '"+metodaEzgjedhur+"', p.is_payed = 1, p.pay_date = now() \n" +
+                    "where p.guest_id="+user;
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(PaymentQuery);
+
+            Stage stage = new Stage();
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/paymentConfirmed.fxml"));
 
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Payment confirmed");
-            stage.setScene(scene);
-            stage.show();
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.setTitle("Payment confirmed");
+                stage.setScene(scene);
+                stage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            errorHandle.setText("Ju lutem zgjedhni \nnjeren nga metodat \ne pageses!");
         }
     }
 }
