@@ -65,11 +65,11 @@ public class PaymentView implements Initializable {
 
             //Rezervimet qe i ka bere klienti ne fjale
             ResultSet tabela = PaymentRepository.roomsBill(user);
-//            while(tabela.next()){
-//                oblist.add(new Rooms(tabela.getInt("room_number"),
-//                        tabela.getString("room_type"), tabela.getDouble("price")));
-//                total += tabela.getDouble("price");
-//            }
+            while(tabela.next()){
+                oblist.add(new Rooms(tabela.getInt("room_number"),
+                        tabela.getString("room_type"), tabela.getDouble("price")));
+                total += tabela.getDouble("price");
+            }
 
             //Emri i atij qe po paguan
             ResultSet nameLastname = connection.createStatement().executeQuery("select first_name, last_name from guests\n" +
