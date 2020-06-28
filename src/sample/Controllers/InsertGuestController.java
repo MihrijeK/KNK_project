@@ -23,11 +23,7 @@ public class Controller implements Initializable {
             conn = Database.getConnection();
             boolean rs = conn.createStatement().execute(createQuery());
             if(rs){
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Guest Register");
-                alert.setContentText("Something has gone wrong!");
-                alert.setHeaderText(null);
-                alert.show();
+                alert("error" , "Guest Register", "Something has gone wrong, try again!");
             }else{
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Guest Register");
