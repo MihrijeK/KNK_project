@@ -20,7 +20,7 @@ public class InsertGuestController implements Initializable {
     private Connection conn;
     public void insertGuest() throws SQLException, ClassNotFoundException, ParseException {
         if(validateInput()){
-            conn = Database.getConnection();
+            conn = DatabaseConnection.dbConnection.getConnection();
             boolean rs = conn.createStatement().execute(createQuery());
             if(rs){
                 alert("error" , "Guest Register", "Something has gone wrong, try again!");
