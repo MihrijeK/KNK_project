@@ -8,8 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
-import sample.Models.Payment;
-import sample.Models.View.TableViewContent;
+//import sample.Models.Payment;
+//import sample.Models.View.TableViewContent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,9 +27,9 @@ public class Payments implements Initializable {
 
 
     public AnchorPane paymentsPane;
-    public TableView<Payment> paymentsTableView;
+//    public TableView<Payment> paymentsTableView;
 
-    public ObservableList<Payment> payments = null;
+//    public ObservableList<Payment> payments = null;
     public TableColumn payment_id;
     public TableColumn firstname;
     public TableColumn lastname;
@@ -49,8 +49,8 @@ public Payments() throws Exception{
     }
      @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        payments = TableViewContent.setPayments(payment_id, firstname, lastname, date, price,isPayed);
-        paymentsTableView.setItems(payments);
+//        payments = TableViewContent.setPayments(payment_id, firstname, lastname, date, price,isPayed);
+//        paymentsTableView.setItems(payments);
 
 
 
