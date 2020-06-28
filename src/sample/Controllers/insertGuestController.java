@@ -18,6 +18,21 @@ public class Controller implements Initializable {
     @FXML private ToggleGroup genderToggleGroup;    
     
     private Connection conn;
+    public void insertGuest() throws SQLException, ClassNotFoundException, ParseException {
+        if(validateInput()){
+            conn = Database.getConnection();
+            boolean rs = conn.createStatement().execute(createQuery());
+            if(rs){
+                System.out.println("Something has gone wrong");
+            }else{
+                System.out.println("Succesfully registerd");    
+            }
+            clearText();
+            conn.close();
+        }else{
+            clearText();
+        }
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
