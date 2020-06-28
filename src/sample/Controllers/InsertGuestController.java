@@ -25,11 +25,7 @@ public class Controller implements Initializable {
             if(rs){
                 alert("error" , "Guest Register", "Something has gone wrong, try again!");
             }else{
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Guest Register");
-                alert.setContentText("The new guest has been succsefully registerd");
-                alert.setHeaderText(null);
-                alert.show();   
+                alert("confirmation","Guest Register","The new guest has been succsefully registerd");  
             }
             clearText();
             conn.close();
