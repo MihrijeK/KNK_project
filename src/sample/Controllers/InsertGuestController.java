@@ -50,11 +50,7 @@ public class Controller implements Initializable {
             alert("warning","Guest Register", "Personal number field must be filled only with numbers!");
             return false;
         }else if(!isInt(phoneNumber.getText())){
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Guest Register");
-            alert.setContentText("The fields must contain only numbers");
-            alert.setHeaderText(null);
-            alert.showAndWait();
+            alert("warning","Guest Register", "Phone number field must be filled only with numbers!");
             return false;
         }else{
             return true;
