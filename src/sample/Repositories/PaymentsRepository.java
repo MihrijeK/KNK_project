@@ -1,9 +1,6 @@
 package sample.Repositories;
 
-import sample.ConnectDB;
-import sample.Controllers.Payments;
-import sample.Models.Guests;
-import sample.Models.Payment;
+import DatabaseConnection.dbConnection;
 import sample.Models.View.PaymentModel;
 
 import java.sql.Connection;
@@ -29,7 +26,7 @@ public class PaymentsRepository {
 
         public static List<PaymentModel> selectAll() throws Exception {
         ArrayList<PaymentModel> pModel = new ArrayList<>();
-        Connection con = new ConnectDB().connect();
+        Connection con = dbConnection.getConnection();
 
         PreparedStatement stmt = con.prepareStatement("SELECT * FROM " +
                 "((reservations INNER JOIN payments ON reservations.payment_id = payments.id) " +
@@ -38,13 +35,7 @@ public class PaymentsRepository {
         ResultSet res = stmt.executeQuery();
         while (res.next()) {
             pModel.add(parseFromRes(res));
-
-
         }
         return pModel;
-
-
-
-
     }
 }
