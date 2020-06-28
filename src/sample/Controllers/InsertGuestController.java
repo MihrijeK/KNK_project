@@ -52,7 +52,11 @@ public class Controller implements Initializable {
     public boolean validateInput(){
         if(firstName.getText().isEmpty() || lastName.getText().isEmpty() || personalNumber.getText().isEmpty() || phoneNumber.getText().isEmpty()
         || birthDate.getValue() == null || genderToggleGroup.getSelectedToggle() == null){
-            System.out.println("Fields must not be empty");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Guest Register");
+            alert.setContentText("The fields must not be empty");
+            alert.setHeaderText(null);
+            alert.showAndWait();
             return false;
         }else{
             return true;
