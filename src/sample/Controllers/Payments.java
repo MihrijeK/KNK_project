@@ -40,5 +40,12 @@ public class Payments implements Initializable {
 public Payments() throws Exception{
 
     }
+  public void handleButtonAction(ActionEvent actionEvent) throws Exception {
+
+        if (actionEvent.getSource() == paymentsBtn) {
+            paymentsBtn.toFront();
+        }
+
+    }
   
 }
