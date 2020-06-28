@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.List;
 
 public class PaymentsRepository {
+    private static Connection connection;
+    private static dbConnection dbconnection = new dbConnection();
 
     private static PaymentModel parseFromRes(ResultSet res) throws Exception {
         int payment_id = res.getInt("payment_id");
@@ -26,9 +28,9 @@ public class PaymentsRepository {
 
         public static List<PaymentModel> selectAll() throws Exception {
         ArrayList<PaymentModel> pModel = new ArrayList<>();
-        Connection con = dbConnection.getConnection();
+        connection=dbconnection.getConnection();
 
-        PreparedStatement stmt = con.prepareStatement("SELECT * FROM " +
+        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM " +
                 "((reservations INNER JOIN payments ON reservations.payment_id = payments.id) " +
                 "INNER JOIN guests ON reservations.guest_id = guests.id) " +
                 "WHERE checkin_date = CURRENT_DATE");
