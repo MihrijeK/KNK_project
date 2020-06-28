@@ -72,6 +72,10 @@ public class PaymentView implements Initializable {
             }
 
             ResultSet services = PaymentRepository.servicesBill(user);
+            while (services.next()){
+                oblist1.add(new Service_Type(services.getString("service_name"), services.getDouble("price")));
+                total += services.getDouble("price");
+            }
             
             //Emri i atij qe po paguan
             ResultSet nameLastname = connection.createStatement().executeQuery("select first_name, last_name from guests\n" +
