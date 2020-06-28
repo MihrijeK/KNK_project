@@ -30,11 +30,16 @@ public class PaymentView implements Initializable {
 
     @FXML private Button pay;
     @FXML private Label totali;
+    @FXML private Label errorHandle;
     @FXML private Label emriMbiemri;
+    @FXML private Label personalNr;
     @FXML private TableView<Rooms> tableView;
     @FXML private TableColumn<Rooms, Integer> firstColumn;
     @FXML private TableColumn<Rooms, String> secondColumn;
     @FXML private TableColumn<Rooms, Double> thirdColumn;
+    @FXML private TableView<Service_Type> tableView1;
+    @FXML private TableColumn<Service_Type, String> fourthColumn;
+    @FXML private TableColumn<Service_Type, String> fifthColumn;
     @FXML private Connection connection;
     @FXML private RadioButton cash;
     @FXML private RadioButton creditCard;
