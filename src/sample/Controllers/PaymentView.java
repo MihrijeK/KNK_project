@@ -78,10 +78,10 @@ public class PaymentView implements Initializable {
             }
             
             //Emri i atij qe po paguan
-            ResultSet nameLastname = connection.createStatement().executeQuery("select first_name, last_name from guests\n" +
-                    " where id="+user);
-            while(nameLastname.next()){
-                String rezultati = nameLastname.getString("first_name") + " " + nameLastname.getString("last_name");
+            ResultSet guestNameID = PaymentRepository.guestInfo(user);
+            while(guestNameID.next()){
+                String rezultati = guestNameID.getString("first_name") + " " + guestNameID.getString("last_name");
+                personalNr.setText(guestNameID.getString("personal_number"));
                 emriMbiemri.setText(rezultati);
             }
             totali.setText(total + "€");
