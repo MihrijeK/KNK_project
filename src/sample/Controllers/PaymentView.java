@@ -112,14 +112,19 @@ public class PaymentView implements Initializable {
             
             PaymentRepository.updatePayments(user, metodaEzgjedhur);
 
-            Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/paymentConfirmed.fxml"));
-                Parent root = loader.load();
-                Scene scene = new Scene(root);
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setTitle("Payment confirmed");
-                stage.setScene(scene);
-                stage.show();
+            if(rooms.next() || services.next()) {
+                Alert konfirmimi = new Alert(Alert.AlertType.INFORMATION);
+                konfirmimi.setTitle("Confirmation");
+                konfirmimi.setHeaderText("Payment Done");
+                konfirmimi.setContentText("Payment is completed successfully");
+                konfirmimi.showAndWait();
+            }else {
+                Alert nothing = new Alert(Alert.AlertType.WARNING);
+                nothing.setTitle("Empty");
+                nothing.setHeaderText(null);
+                nothing.setContentText("Nothing to pay");
+                nothing.showAndWait();
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
