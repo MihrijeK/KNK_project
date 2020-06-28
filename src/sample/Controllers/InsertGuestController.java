@@ -58,6 +58,13 @@ public class Controller implements Initializable {
             alert.setHeaderText(null);
             alert.showAndWait();
             return false;
+        }else if(!isInt(personalNumber.getText())){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Guest Register");
+            alert.setContentText("The fields must contain only numbers");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+            return false;
         }else{
             return true;
         }
