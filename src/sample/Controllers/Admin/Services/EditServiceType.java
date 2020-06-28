@@ -1,5 +1,6 @@
 package sample.Controllers.Admin.Services;
 
+import Helpers.Service_Type;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Controllers.AdminDashboard;
-import sample.Models.Service_Type;
 import sample.Repositories.ServicesTypeRepository;
 
 import java.io.IOException;

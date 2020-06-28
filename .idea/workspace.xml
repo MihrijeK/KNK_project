@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3b53737-5212-470a-bf88-08264b023a8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/Partials/AddButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/Partials/UserCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Models/StaffRoleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Models/View/TableViewContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Repositories/ServicesTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Repositories/StaffRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/Services/EditServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/Services/EditServiceType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/Repositories" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -123,11 +123,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Repositories" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Models" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Controllers\Partials" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Controllers\Admin\Services" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\lib" />
-      <recent name="C:\Users\xhana\IdeaProjects\KnkProject\lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -270,13 +270,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00007" summary="Admin Updated">
-      <created>1588624331971</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1588624331971</updated>
     </task>
     <task id="LOCAL-00008" summary="Admin Updated">
       <created>1588624342859</created>
@@ -614,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593382955420</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Adding Admin partials and Models Views">
+      <created>1593383135842</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1593383135842</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -636,7 +636,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Metoda per shtimin e nje butoni ne tableview" />
     <MESSAGE value="Metoda per popullimin e staff TableView" />
     <MESSAGE value="Metoda per popullimin e rooms tableView" />
     <MESSAGE value="Metoda per shtimin e butonit edit ne room table view" />
@@ -661,7 +660,8 @@
     <MESSAGE value="Krijimi i EditStaffMemberView controllerit" />
     <MESSAGE value="Updated" />
     <MESSAGE value="Adding Admin Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Admin Controllers" />
+    <MESSAGE value="Adding Admin partials and Models Views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Admin partials and Models Views" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -686,10 +686,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2654" y="119" key="CommitChangelistDialog2" timestamp="1593382954896">
+    <state x="2654" y="119" key="CommitChangelistDialog2" timestamp="1593383135444">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2654" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593382954896" />
+    <state x="2654" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383135444" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
