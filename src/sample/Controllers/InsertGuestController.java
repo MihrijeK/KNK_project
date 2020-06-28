@@ -49,6 +49,15 @@ public class Controller implements Initializable {
         birthDate.setValue(null);
         genderToggleGroup.selectToggle(null);
     }
+    public boolean validateInput(){
+        if(firstName.getText().isEmpty() || lastName.getText().isEmpty() || personalNumber.getText().isEmpty() || phoneNumber.getText().isEmpty()
+        || birthDate.getValue() == null || genderToggleGroup.getSelectedToggle() == null){
+            System.out.println("Fields must not be empty");
+            return false;
+        }else{
+            return true;
+        }
+    }
 
     
     @Override
