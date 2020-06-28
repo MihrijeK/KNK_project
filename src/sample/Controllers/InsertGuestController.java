@@ -44,11 +44,7 @@ public class Controller implements Initializable {
     public boolean validateInput(){
         if(firstName.getText().isEmpty() || lastName.getText().isEmpty() || personalNumber.getText().isEmpty() || phoneNumber.getText().isEmpty()
         || birthDate.getValue() == null || genderToggleGroup.getSelectedToggle() == null){
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Guest Register");
-            alert.setContentText("The fields must not be empty");
-            alert.setHeaderText(null);
-            alert.showAndWait();
+            alert("warning","Guest Register", "All fields must be filled or selected!");
             return false;
         }else if(!isInt(personalNumber.getText())){
             Alert alert = new Alert(Alert.AlertType.WARNING);
