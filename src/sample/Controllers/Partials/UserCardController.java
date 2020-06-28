@@ -1,5 +1,6 @@
 package sample.Controllers.Partials;
 
+import Helpers.Staff;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Controllers.AdminDashboard;
-import sample.Models.Staff;
 
 import java.io.IOException;
 

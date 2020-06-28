@@ -6,6 +6,9 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Repositories.RoomRespository;
+import sample.Repositories.ServicesTypeRepository;
+import sample.Repositories.StaffRepository;
 
 import java.util.Date;
 import java.util.List;

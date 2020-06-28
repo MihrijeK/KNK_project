@@ -1,6 +1,8 @@
 package sample.Controllers.Partials;
 
-import Helpers.*;
+import Helpers.Rooms;
+import Helpers.Service_Type;
+import Helpers.Staff;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
@@ -66,7 +68,7 @@ public class AddButton {
         roomsTableView.getColumns().add(colBtn);
     }
 
-    public static void addEditStaffBtn(TableView<Staff> showStaffTable,String btnName,ObservableList<Staff> staffi) {
+    public static void addEditStaffBtn(TableView<Staff> showStaffTable, String btnName, ObservableList<Staff> staffi) {
         TableColumn<Staff, Void> colBtn = new TableColumn(btnName);
 
         Callback<TableColumn<Staff, Void>, TableCell<Staff, Void>> cellFactory = new Callback<TableColumn<Staff, Void>, TableCell<Staff, Void>>() {
