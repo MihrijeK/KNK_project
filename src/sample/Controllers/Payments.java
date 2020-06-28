@@ -47,5 +47,13 @@ public Payments() throws Exception{
         }
 
     }
+     @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        payments = TableViewContent.setPayments(payment_id, firstname, lastname, date, price,isPayed);
+        paymentsTableView.setItems(payments);
+
+
+
+    }
   
 }
