@@ -38,4 +38,13 @@ public class PaymentsRepository {
         }
         return pModel;
     }
+    
+    public static ResultSet roomsBill(int user) throws Exception {
+        connection=dbconnection.getConnection();
+        ResultSet tabela = connection.createStatement().executeQuery("select dh.room_number, dh.room_type, dh.price from rooms dh \n" +
+                "inner join reservations r on r.room_id=dh.room_number " +
+                "inner join payments p on p.id = r.payment_id " +
+                "where r.guest_id = "+user +" and p.is_payed = 0;");
+        return tabela;
+    }
 }
