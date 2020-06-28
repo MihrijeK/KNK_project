@@ -16,8 +16,9 @@ public class Controller implements Initializable {
     @FXML private RadioButton male;
     @FXML private RadioButton female;
     @FXML private ToggleGroup genderToggleGroup;    
-  
-
+    
+    private Connection conn;
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         genderToggleGroup = new ToggleGroup();
