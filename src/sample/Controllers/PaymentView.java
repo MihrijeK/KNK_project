@@ -91,8 +91,11 @@ public class PaymentView implements Initializable {
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("room_number"));
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("room_type"));
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        fourthColumn.setCellValueFactory(new PropertyValueFactory<>("service_name"));
+        fifthColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         tableView.setItems(oblist);
+        tableView1.setItems(oblist1);
         
         toggle = new ToggleGroup();
         this.cash.setToggleGroup(toggle);
