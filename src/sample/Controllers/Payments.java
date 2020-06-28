@@ -14,3 +14,5 @@ import sample.Models.View.TableViewContent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+public class Payments implements Initializable {
+}
