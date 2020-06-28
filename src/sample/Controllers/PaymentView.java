@@ -118,12 +118,26 @@ public class PaymentView implements Initializable {
                 konfirmimi.setHeaderText("Payment Done");
                 konfirmimi.setContentText("Payment is completed successfully");
                 konfirmimi.showAndWait();
+                
+                emriMbiemri.setText("");
+                personalNr.setText("");
+                tableView.getItems().clear();
+                tableView1.getItems().clear();
+                totali.setText("");
+                toggle.getToggles().clear();
             }else {
                 Alert nothing = new Alert(Alert.AlertType.WARNING);
                 nothing.setTitle("Empty");
                 nothing.setHeaderText(null);
                 nothing.setContentText("Nothing to pay");
                 nothing.showAndWait();
+                
+                emriMbiemri.setText("");
+                personalNr.setText("");
+                tableView.getItems().clear();
+                tableView1.getItems().clear();
+                totali.setText("");
+                toggle.getToggles().clear();
             }
 
         } catch (IOException e) {
