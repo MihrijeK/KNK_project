@@ -49,13 +49,10 @@ public class PaymentView implements Initializable {
 
     //klienti qe po paguan
     private int user;
-    public int getUser() {
-        return user;
-    }
-
-    public void setUser(int user) {
-        this.user = user;
-    }
+    
+//    public void setUser(int user) {
+//        this.user = user;
+//    }
 
     ObservableList<Rooms> oblist = FXCollections.observableArrayList();
 
