@@ -29,7 +29,11 @@ public class Controller implements Initializable {
                 alert.setHeaderText(null);
                 alert.show();
             }else{
-                System.out.println("Succesfully registerd");    
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Guest Register");
+                alert.setContentText("The new guest has been succsefully registerd");
+                alert.setHeaderText(null);
+                alert.show();   
             }
             clearText();
             conn.close();
