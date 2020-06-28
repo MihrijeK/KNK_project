@@ -54,7 +54,7 @@
                                     <Font name="Times New Roman Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="totali" layoutX="85.0" layoutY="59.0" text="22$" textAlignment="RIGHT">
+                              <Label fx:id="totali" layoutX="85.0" layoutY="59.0" text="00$" textAlignment="RIGHT">
                                  <font>
                                     <Font name="Times New Roman Bold" size="34.0" />
                                  </font>
@@ -79,27 +79,27 @@
                <center>
                   <HBox prefHeight="363.0" prefWidth="640.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView fx:id="tableView" prefHeight="363.0" prefWidth="347.0">
+                        <TableView fx:id="tableView" prefHeight="364.0" prefWidth="217.0">
                            <columns>
-                              <TableColumn fx:id="firstColumn" prefWidth="75.0" text="Room" />
-                              <TableColumn fx:id="secondColumn" prefWidth="114.0" text="Room type" />
-                              <TableColumn fx:id="thirdColumn" prefWidth="90.0" text="Price" />
+                              <TableColumn fx:id="firstColumn" prefWidth="56.80001753568649" text="Room" />
+                              <TableColumn fx:id="secondColumn" prefWidth="80.80002212524414" text="Room type" />
+                              <TableColumn fx:id="thirdColumn" prefWidth="76.79998779296875" text="Price" />
                            </columns>
                         </TableView>
                         <TableView fx:id="tableView1" prefHeight="364.0" prefWidth="174.0">
-                          <columns>
-                            <TableColumn fx:id="fourthColumn" prefWidth="95.19999539852142" text="Service name" />
+                           <columns>
+                              <TableColumn fx:id="fourthColumn" prefWidth="95.19999539852142" text="Service name" />
                               <TableColumn fx:id="fifthColumn" prefWidth="78.40001678466797" text="Price" />
-                          </columns>
+                           </columns>
                         </TableView>
-                        <AnchorPane prefHeight="363.0" prefWidth="294.0">
+                        <AnchorPane prefHeight="364.0" prefWidth="133.0">
                            <children>
-                              <Label layoutX="25.0" layoutY="14.0" prefHeight="34.0" prefWidth="84.0" text="Name:">
+                              <Label layoutX="12.0" layoutY="-10.0" prefHeight="34.0" prefWidth="84.0" text="Name:">
                                  <font>
                                     <Font name="Bodoni MT Bold" size="22.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="emriMbiemri" layoutX="25.0" layoutY="48.0" text="Ylber Gashi">
+                              <Label fx:id="emriMbiemri" layoutX="9.0" layoutY="24.0" prefHeight="34.0" prefWidth="222.0" text="Ylber Gashi">
                                  <font>
                                     <Font name="Bodoni MT Bold Italic" size="27.0" />
                                  </font>

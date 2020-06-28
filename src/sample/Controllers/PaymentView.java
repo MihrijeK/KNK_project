@@ -48,7 +48,7 @@ public class PaymentView implements Initializable {
     private int total;
 
     //klienti qe po paguan
-    private int user;
+    private int user =1;
 
 //    public void setUser(int user) {
 //        this.user = user;
