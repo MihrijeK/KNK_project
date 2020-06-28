@@ -76,7 +76,17 @@ public class Controller implements Initializable {
             return true;
         }
     }
-
+    public boolean isInt(String number){
+        if(number == null){
+            return false;
+        }
+        try {
+            int newInt = Integer.parseInt(number);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
