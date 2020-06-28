@@ -56,7 +56,7 @@
                               </Label>
                               <Label fx:id="totali" layoutX="85.0" layoutY="59.0" text="22$" textAlignment="RIGHT">
                                  <font>
-                                    <Font name="Script MT Bold" size="34.0" />
+                                    <Font name="Times New Roman Bold" size="34.0" />
                                  </font>
                               </Label>
                               <Button fx:id="pay" layoutX="573.0" layoutY="85.0" mnemonicParsing="false" onAction="#paguaj" prefHeight="32.0" prefWidth="53.0" text="Pay" />
