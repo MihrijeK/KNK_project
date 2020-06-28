@@ -87,6 +87,31 @@ public class Controller implements Initializable {
         }
         return true;
     }
+    public String createQuery(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("INSERT INTO guests(first_name,last_name,personal_number,birthdate,phone_number,gender,registred_date)");
+        sb.append("VALUES('");
+        sb.append(firstName.getText());
+        sb.append("','");
+        sb.append(lastName.getText());
+        sb.append("',");
+        sb.append(Integer.parseInt(personalNumber.getText()));
+        sb.append(",");
+        sb.append("date_format('");
+        sb.append(returnDate());
+        sb.append("','%Y-%m-%d')");
+        sb.append(",'");
+        sb.append(phoneNumber.getText());
+        sb.append("',");
+        if(genderToggleGroup.getSelectedToggle().equals(male)) {
+            sb.append("'Male'");
+        }else{
+            sb.append("'Female'");
+        }
+        sb.append(",");
+        sb.append("now())");
+        return sb.toString();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
