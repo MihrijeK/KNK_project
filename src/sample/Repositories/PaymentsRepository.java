@@ -47,4 +47,13 @@ public class PaymentsRepository {
                 "where r.guest_id = "+user +" and p.is_payed = 0;");
         return tabela;
     }
+    
+    public static ResultSet servicesBill(int user) throws Exception {
+        connection=dbconnection.getConnection();
+        ResultSet tabela = connection.createStatement().executeQuery("select st.service_name, st.price from services_type st \n" +
+                "inner join services s on s.service_id = st.id " +
+                "inner join payments p on p.id = s.payment_id " +
+                "where s.guest_id = "+user+" and p.is_payed = 0;");
+        return tabela;
+    }
 }
