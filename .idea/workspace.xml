@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3b53737-5212-470a-bf88-08264b023a8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Repositories/ServicesTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Repositories/StaffRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/Services/EditServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/Services/EditServiceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Repositories/StaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Repositories/StaffRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,13 +268,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00008" summary="Admin Updated">
-      <created>1588624342859</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1588624342859</updated>
     </task>
     <task id="LOCAL-00009" summary="Admin Updated">
       <created>1588624353615</created>
@@ -614,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593383135842</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Adding repositories">
+      <created>1593383240888</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1593383240888</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -636,7 +634,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Metoda per popullimin e staff TableView" />
     <MESSAGE value="Metoda per popullimin e rooms tableView" />
     <MESSAGE value="Metoda per shtimin e butonit edit ne room table view" />
     <MESSAGE value="FXML file per Add New Staff Member" />
@@ -661,7 +658,8 @@
     <MESSAGE value="Updated" />
     <MESSAGE value="Adding Admin Controllers" />
     <MESSAGE value="Adding Admin partials and Models Views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Admin partials and Models Views" />
+    <MESSAGE value="Adding repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding repositories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -686,10 +684,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2654" y="119" key="CommitChangelistDialog2" timestamp="1593383135444">
+    <state x="2654" y="119" key="CommitChangelistDialog2" timestamp="1593383240464">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2654" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383135444" />
+    <state x="2654" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593383240464" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

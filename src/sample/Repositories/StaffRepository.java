@@ -1,7 +1,7 @@
 package sample.Repositories;
 
-import sample.Models.Staff;
-import sample.dbConnection;
+import DatabaseConnection.dbConnection;
+import Helpers.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
