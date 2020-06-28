@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class InsertGuestController implements Initializable {
     @FXML private TextField firstName;
     @FXML private TextField lastName;
     @FXML private TextField personalNumber;
