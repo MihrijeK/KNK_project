@@ -149,9 +149,9 @@ public class AdminDashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         positionCB.getItems().addAll("Manager","Waiter","Recepsionist");
-        roomTypeFilter.getItems().addAll("All","Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite");
-        roomNumberFilter.getItems().addAll("All","1","2","3","4","5","6");
-        roomCapacityFilter.getItems().addAll("All","1","2","3","4","5");
+        roomTypeFilter.getItems().addAll("Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite");
+        roomNumberFilter.getItems().addAll("1","2","3","4","5","6");
+        roomCapacityFilter.getItems().addAll("1","2","3","4","5");
 
         staffi = TableViewContent.setSaff(col_id, col_fname, col_lname, col_prsNum, col_position, col_bday, col_phone, col_salary,gender);
         showStaffTable.setItems(staffi);
