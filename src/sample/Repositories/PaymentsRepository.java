@@ -39,6 +39,13 @@ public class PaymentsRepository {
         return pModel;
     }
     
+    public static ResultSet guestInfo(int user) throws Exception {
+        connection=dbconnection.getConnection();
+        ResultSet nameAndID = connection.createStatement().executeQuery("select first_name, last_name, personal_number from guests\n" +
+                " where id="+user);
+        return nameAndID;
+    }
+    
     public static ResultSet roomsBill(int user) throws Exception {
         connection=dbconnection.getConnection();
         ResultSet tabela = connection.createStatement().executeQuery("select dh.room_number, dh.room_type, dh.price from rooms dh \n" +
