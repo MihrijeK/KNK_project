@@ -41,6 +41,15 @@ public class Controller implements Initializable {
             clearText();
         }
     }
+    public void clearText(){
+        firstName.clear();
+        lastName.clear();
+        personalNumber.clear();
+        phoneNumber.clear();
+        birthDate.setValue(null);
+        genderToggleGroup.selectToggle(null);
+    }
+
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
