@@ -55,6 +55,7 @@ public class PaymentView implements Initializable {
 //    }
 
     ObservableList<Rooms> oblist = FXCollections.observableArrayList();
+    ObservableList<Service_Type> oblist1 = FXCollections.observableArrayList();
 
 
     @Override
