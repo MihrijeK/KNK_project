@@ -63,4 +63,14 @@ public class PaymentsRepository {
                 "where s.guest_id = "+user+" and p.is_payed = 0;");
         return tabela;
     }
+    
+    public static void updatePayments(int user, String metodaEzgjedhur) throws Exception {
+        String PaymentQuery = "update payments p \n" +
+                "left join reservations r on r.payment_id = p.id \n" +
+                "left join services s on s.payment_id = p.id \n" +
+                "set p.payment_method = '"+metodaEzgjedhur+"', p.is_payed = 1, p.pay_date = now() \n" +
+                "where p.guest_id="+user;
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(PaymentQuery);
+    }
 }
