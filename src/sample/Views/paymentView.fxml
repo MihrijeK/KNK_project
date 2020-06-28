@@ -104,6 +104,11 @@
                                     <Font name="Bodoni MT Bold Italic" size="27.0" />
                                  </font>
                               </Label>
+                              <Label fx:id="errorHandle" layoutX="18.0" layoutY="182.0" prefHeight="114.0" prefWidth="203.0">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                      </children>
