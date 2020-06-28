@@ -24,6 +24,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.Repositories.PaymentsRepository;
 
 
 public class PaymentView implements Initializable {
@@ -107,10 +108,10 @@ public class PaymentView implements Initializable {
         try {
             RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
             String metodaEzgjedhur = selectedMethod.getText();
-            ResultSet rooms = PaymentRepository.roomsBill(user);
-            ResultSet services = PaymentRepository.servicesBill(user);
+            ResultSet rooms = PaymentsRepository.roomsBill(user);
+            ResultSet services = PaymentsRepository.servicesBill(user);
             
-            PaymentRepository.updatePayments(user, metodaEzgjedhur);
+            PaymentsRepository.updatePayments(user, metodaEzgjedhur);
 
             if(rooms.next() || services.next()) {
                 Alert konfirmimi = new Alert(Alert.AlertType.INFORMATION);

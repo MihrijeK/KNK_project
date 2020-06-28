@@ -1,5 +1,6 @@
 package sample.Controllers;
 
+import Helpers.Payment;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
