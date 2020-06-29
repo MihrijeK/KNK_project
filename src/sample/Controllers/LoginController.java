@@ -17,63 +17,70 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-public class Controller implements Initializable {
+
+public class LoginController implements Initializable {
     @FXML private Label ADMINLOGIN;
 
     @FXML private Button login;
     @FXML private ImageView sunhotel;
     @FXML private TextField username;
     @FXML private PasswordField password;
-     PreparedStatement pst;
+    PreparedStatement pst;
     @FXML
-     void login(ActionEvent event) throws Exception {
+    void login(ActionEvent event) throws Exception {
         String uname=username.getText();
         String pass=password.getText();
- Connection con= dbConnection.getConnection();
+        Connection con= dbConnection.getConnection();
         ResultSet rs ;
-         if(uname.equals("") || pass.equals("")){
+
+        if(uname.equals("") || pass.equals("")){
             JOptionPane.showMessageDialog(null,"Duhet te shenoni username dhe password");
         }
-    else{
+        else{
                try {
                    pst=con.prepareStatement("select * from staff where personal_number=?");
                    pst.setString(1,uname);
                    rs= pst.executeQuery();
-    if(rs.next()){
+                   if(rs.next()){
                        SecurityHelper security= new SecurityHelper();
-      boolean password_check= security.checkPassword(pass,rs.getString("passwordd"));
+
+                       boolean password_check= security.checkPassword(pass,rs.getString("passwordd"));
                        if(password_check){
                            switch (rs.getString("position")){
-                                       case "Admin":
+                               case "Admin":
                                    JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
                                    break;
-                                      case "Staff":
+                               case "Staff":
                                    JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
                                    break;
                            }
- }
+                       }
                        else{
                            JOptionPane.showMessageDialog(null,"Keni shenuar gabim username apo password");
                            username.setText("");
                            password.setText("");
                            username.requestFocus();
                        }
-          }
+
+                   }
                    else{
                        JOptionPane.showMessageDialog(null,"Username nuk ekziston");
-                        username.setText("");
+                       username.setText("");
                        password.setText("");
                        username.requestFocus();
 
                    }
-                     } catch (SQLException throwables) {
+               } catch (SQLException throwables) {
                    throwables.printStackTrace();
                }
 
         }
-          }
+
+    }
     public LoginController() {
     }
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb){
 
@@ -81,7 +88,3 @@ public class Controller implements Initializable {
 
 
 }
-
-
-
-
