@@ -16,3 +16,9 @@ public class SecurityHelper {
 
         return encodedHash;
      }
+    public boolean checkPassword(String userinput,String hashedpassword) throws Exception{
+      return hashPassword(userinput).equals(hashedpassword)?true:false;
+
+    }
+
+}
