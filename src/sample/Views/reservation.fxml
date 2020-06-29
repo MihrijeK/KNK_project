@@ -34,6 +34,11 @@
          <children>
             <Label text="Personal Number" />
             <TextField fx:id="idField" GridPane.columnIndex="1" />
+            <Label text="Total" GridPane.rowIndex="3" />
+            <Label fx:id="totalField" text="..." GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
       </GridPane>
   </children>
 </AnchorPane>
