@@ -60,7 +60,15 @@ public class ReservationsController implements Initializable {
                     Alert alert=new Alert(Alert.AlertType.INFORMATION);
                     alert.setContentText("A personal number is mandatory!");
                     alert.showAndWait();
-                }
+                }else{
+                    try{
+                        String ID=idField.getText();
+                        Person person=reservationsRepository.getGuest(ID);
+                    }catch(Exception e){
+                        Alert alert=new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText(ex.getMessage());
+                        alert.showAndWait();
+                    }
     }
 
    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
