@@ -34,3 +34,8 @@ public class Controller implements Initializable {
          if(uname.equals("") || pass.equals("")){
             JOptionPane.showMessageDialog(null,"Duhet te shenoni username dhe password");
         }
+ else{
+               try {
+                   pst=con.prepareStatement("select * from staff where personal_number=?");
+                   pst.setString(1,uname);
+                   rs= pst.executeQuery();
