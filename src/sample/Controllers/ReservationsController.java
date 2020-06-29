@@ -64,6 +64,15 @@ public class ReservationsController implements Initializable {
                     try{
                         String ID=idField.getText();
                         Person person=reservationsRepository.getGuest(ID);
+
+                        if(person==null){
+                            FXMLLoader loader=new FXMLLoader();
+                            URL url1 = new File("src/views/InsertGuest.fxml").toURI().toURL();
+                            loader.setLocation(url1);
+                            Pane pane=loader.load();
+                            Scene scene=new Scene(pane);
+                            }
+
                     }catch(Exception e){
                         Alert alert=new Alert(Alert.AlertType.ERROR);
                         alert.setContentText(ex.getMessage());
