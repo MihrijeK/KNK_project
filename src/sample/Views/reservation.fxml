@@ -43,6 +43,10 @@
             <Label text="Last Name" GridPane.rowIndex="2" />
             <Label fx:id="firstName" text="..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="lastName" text="..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="reserveButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onReserveButtonClicked" text="Reserve" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin></Button>
       </GridPane>
   </children>
 </AnchorPane>
