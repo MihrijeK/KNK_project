@@ -44,3 +44,6 @@ public class Controller implements Initializable {
       boolean password_check= security.checkPassword(pass,rs.getString("passwordd"));
                        if(password_check){
                            switch (rs.getString("position")){
+                                       case "Admin":
+                                   JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
+                                   break;
