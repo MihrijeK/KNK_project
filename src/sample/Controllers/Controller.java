@@ -54,3 +54,7 @@ public class Controller implements Initializable {
  }
                        else{
                            JOptionPane.showMessageDialog(null,"Keni shenuar gabim username apo password");
+                           username.setText("");
+                           password.setText("");
+                           username.requestFocus();
+                       }
