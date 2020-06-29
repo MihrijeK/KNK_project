@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Components/RoomDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Components/RoomDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/PieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/PieChart.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -696,7 +700,6 @@
     </state>
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593380484043" />
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112787197" />
-<<<<<<< HEAD
     <state width="1493" height="226" key="GridCell.Tab.0.bottom" timestamp="1593383632149">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -721,7 +724,7 @@
     <state width="1493" height="226" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593383632149" />
     <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593113279245" />
     <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591902493256" />
-=======
+    =======
     <state width="1877" height="237" key="GridCell.Tab.0.bottom" timestamp="1593435926943">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -762,7 +765,7 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1892" height="354" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593388724665" />
->>>>>>> be1466a2172fdc01a9ab8e1febc3d49f314de2ca
+    &gt;&gt;&gt;&gt;&gt;&gt;&gt; be1466a2172fdc01a9ab8e1febc3d49f314de2ca
     <state x="2692" y="253" width="674" height="602" key="NewModule_or_Project.wizard" timestamp="1593112802587">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

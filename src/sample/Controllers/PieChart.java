@@ -66,7 +66,7 @@ public class PieChart implements Initializable {
         }
 
    }
-    
+
      public  int g1()
     {
         int x=0;
@@ -77,7 +77,7 @@ public class PieChart implements Initializable {
         }
         return x;
     }
-    
+
     public  String g2()
     {
         String x="";
@@ -88,7 +88,7 @@ public class PieChart implements Initializable {
         }
         return x;
     }
-   
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
