@@ -5,6 +5,8 @@ public class RoomDetails {
       FXMLLoader loader=new FXMLLoader();
       URL url=new File("src/views/room-details.fxml").toURI().toURL();
       loader.setLocation(url);
-      
+      Pane pane = loader.load();
+        RoomDetailsController controller=loader.getController();
+        controller.getRoomToShow(room,daysToStay);
    }
 }
