@@ -40,4 +40,9 @@ public class MainManagingController implements Initializable {
         }
         }
     }
+
+    public void viewLoader(String view) throws Exception{
+        FXMLLoader loader=new FXMLLoader();
+        Parent node=null;
+    }
 }
