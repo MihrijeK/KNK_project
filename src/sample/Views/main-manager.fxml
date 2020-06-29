@@ -12,6 +12,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #1d1f2a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainManagingController">
    <left>
+   <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
+         <children>
+         </children>
    </left>
    <center>
    </center>
