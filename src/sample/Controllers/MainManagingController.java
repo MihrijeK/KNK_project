@@ -15,4 +15,9 @@ public class MainManagingController implements Initializable {
             System.out.println(e.getMessage());
         }
     }
+
+    @FXML
+    private void onButtonClicked(ActionEvent actionEvent){
+        
+    }
 }
