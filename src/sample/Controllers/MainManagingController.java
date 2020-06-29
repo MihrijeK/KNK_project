@@ -48,6 +48,12 @@ public class MainManagingController implements Initializable {
             case "Main":
                 //dritarja main e mires
                 break;
+            case "Reservations":
+                URL url = new File("src/views/rooms.fxml").toURI().toURL();
+                loader.setLocation(url);
+                node = loader.load();
+                break;
         }
+
     }
 }
