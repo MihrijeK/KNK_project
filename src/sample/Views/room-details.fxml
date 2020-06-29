@@ -40,6 +40,11 @@
                   <Font name="System Bold Italic" size="20.0" />
                </font>
             </Label>
+            <Label id="room-details-labels" fx:id="price" text="Price for x night" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
         </children>
       
       </GridPane>
