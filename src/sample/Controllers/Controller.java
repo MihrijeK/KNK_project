@@ -71,4 +71,10 @@ public class Controller implements Initializable {
                }
 
         }
+          }
+    public LoginController() {
+    }
+
+
+
 
