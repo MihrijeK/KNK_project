@@ -156,4 +156,12 @@ public class ReservationsController implements Initializable {
             roomsPane.setContent(verticalBox);
         }
     }
+
+    private double priceToPay(ObservableList<Rooms> rooms){
+        for(Rooms room:rooms){
+            double price=room.getPrice()*days;
+            total+=price;
+        }
+        return total;
+    }
 }
