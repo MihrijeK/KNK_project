@@ -14,7 +14,9 @@ public class RoomDetailsController implements Initializable {
     public void getRoomToShow(Rooms room,long daysToStay){
         id.setText(String.valueOf(room.getRoom_number()));
         floor.setText(String.valueOf(room.getFloor_number()));
-        
+        beds.setText(String.valueOf(room.getBed_number()));
+        toPay.setText(String.valueOf(room.getPrice()*daysToStay));
+        roomType.setText(capitalize(room.getRoom_type()));
     }
     
     public void setRemoveButtonAction(EventHandler<ActionEvent> eventHandler){
