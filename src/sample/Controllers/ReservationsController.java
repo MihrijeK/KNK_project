@@ -186,5 +186,10 @@ public class ReservationsController implements Initializable {
         Pane pane=loader.load();
         MainManagingController mainController=loader.getController();
         mainController.viewLoader("Reservations");
+
+        Scene scene=new Scene(pane);
+        Stage stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
