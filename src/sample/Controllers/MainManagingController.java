@@ -53,6 +53,9 @@ public class MainManagingController implements Initializable {
                 loader.setLocation(url);
                 node = loader.load();
                 break;
+            case "Payments":
+                //dritarja payments e kushtrimit
+                break;
         }
 
     }
