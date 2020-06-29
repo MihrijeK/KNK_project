@@ -14,6 +14,12 @@
    <left>
    <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
          <children>
+         <Label text="Emri Mbiemri" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../KNK_project/src/Style/sun-hotel-logo.jpg" />
+               </image>
+            </ImageView>
          </children>
    </left>
    <center>
