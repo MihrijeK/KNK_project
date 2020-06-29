@@ -26,3 +26,6 @@ public class Controller implements Initializable {
     @FXML private PasswordField password;
      PreparedStatement pst;
     @FXML
+     void login(ActionEvent event) throws Exception {
+        String uname=username.getText();
+        String pass=password.getText();
