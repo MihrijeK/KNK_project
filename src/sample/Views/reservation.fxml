@@ -31,6 +31,9 @@
             <RowConstraints maxHeight="64.00001220703123" minHeight="10.0" prefHeight="60.00001220703123" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="56.80002441406248" minHeight="10.0" prefHeight="55.39998779296877" vgrow="SOMETIMES" />
         </rowConstraints>
+         <children>
+            <Label text="Personal Number" />
+            <TextField fx:id="idField" GridPane.columnIndex="1" />
       </GridPane>
   </children>
 </AnchorPane>
