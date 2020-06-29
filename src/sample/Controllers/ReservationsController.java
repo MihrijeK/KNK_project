@@ -52,6 +52,11 @@ public class ReservationsController implements Initializable {
     List<Rooms> roomsSelected;
     ObservableList<Rooms> roomsToBook;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
        this.checkin_date=checkin_date;
        this.checkout_date=checkout_date;
