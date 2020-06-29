@@ -117,6 +117,11 @@ public class InsertGuestController implements Initializable {
         alert.setHeaderText(null);
         alert.showAndWait();
     }
+    public void closeMe(ActionEvent actionEvent) {
+        Node source = (Node)  actionEvent.getSource();
+        Stage stage  = (Stage) source.getScene().getWindow();
+        stage.close();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
