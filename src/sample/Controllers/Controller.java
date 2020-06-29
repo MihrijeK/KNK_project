@@ -31,3 +31,6 @@ public class Controller implements Initializable {
         String pass=password.getText();
  Connection con= dbConnection.getConnection();
         ResultSet rs ;
+         if(uname.equals("") || pass.equals("")){
+            JOptionPane.showMessageDialog(null,"Duhet te shenoni username dhe password");
+        }
