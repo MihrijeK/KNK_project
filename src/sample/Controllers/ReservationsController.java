@@ -192,4 +192,9 @@ public class ReservationsController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    private long getDaysOfStaying(LocalDate firstDate,LocalDate lastDate){
+        long days= Duration.between(firstDate.atStartOfDay(),lastDate.atStartOfDay()).toDays();
+        return days;
+    }
 }
