@@ -19,3 +19,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ResourceBundle;
 
+
+public class PieChart {
+    @FXML private PieChart pieChart;
+    @FXML private Label status;
+    ObservableList<PieChart.Data> pieChartData;
+    ArrayList<Integer> price=new ArrayList<Integer>();
+    ArrayList<String> service_name= new ArrayList<String>();
+  
+  
+}
