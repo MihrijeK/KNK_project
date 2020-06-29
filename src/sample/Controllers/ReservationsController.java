@@ -164,4 +164,18 @@ public class ReservationsController implements Initializable {
         }
         return total;
     }
+
+    public void removeReservedRoom(Object roomToRemove){
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"A deshironi te largoni dhomen?",ButtonType.OK,ButtonType.CANCEL);
+            alert.showAndWait();
+
+            if(alert.getResult()==ButtonType.OK){
+                roomsToBook.remove(roomToRemove);
+                this.total=0;
+                totalField.setText(priceToPay(roomsToBook) +" €");
+            }else{
+                alert.close();
+            }
+
+    }
 }
