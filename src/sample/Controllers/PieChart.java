@@ -27,5 +27,12 @@ public class PieChart {
     ArrayList<Integer> price=new ArrayList<Integer>();
     ArrayList<String> service_name= new ArrayList<String>();
   
-  
+   public void loadData()
+    {
+        pieChartData= FXCollections.observableArrayList();
+        String url="jdbc:mysql://localhost:3306/dbhotel?autoReconnect=true&useSSL=false";
+        String userName = "root";
+        String password = "riseandshine";
+       
+   }
 }
