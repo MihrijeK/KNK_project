@@ -137,5 +137,10 @@ public class RoomRespository {
                     "from reservations res inner join rooms r on res.room_id=r.room_number\n" +
                     "where (checkin_date between '"+checkin+"' and '"+checkout+"') and (checkout_date between '"+checkin+"' and '"+checkout+"'))";
         }
+        
+        Statement stmt=connection.createStatement();
+        ResultSet rs=stmt.executeQuery(query);
+
+        return rs;
     }
 }
