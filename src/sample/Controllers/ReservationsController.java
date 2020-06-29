@@ -125,21 +125,21 @@ public class ReservationsController implements Initializable {
     }
 
    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
-       this.checkin_date=checkin_date;
-       this.checkout_date=checkout_date;
-       this.roomsToBook=rooms;
-       this.days=getDaysOfStaying(checkin_date,checkout_date);
+        this.checkin_date=checkin_date;
+        this.checkout_date=checkout_date;
+        this.roomsSelected=rooms.stream().collect(Collectors.toList());
+        this.roomsToBook=FXCollections.observableArrayList(roomsSelected);
+        this.days=getDaysOfStaying(checkin_date,checkout_date);
 
-       printRoomsSelected();
-       for(Rooms selectedRooms:roomsToBook){
-           try{
-               double price=selectedRooms.getPrice()*days;
-               total+=price;
-               roomTypes.add(selectedRooms.getRoom_type()+" "+price);
-           }catch(Exception e){
-               System.out.println(e.getMessage());
-           }
+        roomsToBook.addListener(new ListChangeListener<Rooms>() {
+            @Override
+            public void onChanged(Change<? extends Rooms> change) {
+                verticalBox.getChildren().clear();
+                printRoomsSelected();
+            }
+        });
 
-       }
-   }
+        printRoomsSelected();
+        totalField.setText(priceToPay(roomsToBook) +" €");
+    }
 }
