@@ -39,3 +39,5 @@ public class Controller implements Initializable {
                    pst=con.prepareStatement("select * from staff where personal_number=?");
                    pst.setString(1,uname);
                    rs= pst.executeQuery();
+if(rs.next()){
+                       SecurityHelper security= new SecurityHelper();
