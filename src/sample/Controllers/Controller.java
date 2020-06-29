@@ -66,3 +66,9 @@ public class Controller implements Initializable {
                        username.requestFocus();
 
                    }
+                     } catch (SQLException throwables) {
+                   throwables.printStackTrace();
+               }
+
+        }
+
