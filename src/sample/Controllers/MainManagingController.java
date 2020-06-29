@@ -63,6 +63,7 @@ public class MainManagingController implements Initializable {
                 node=null;
                 System.out.println("No such view!");
         }
-
+        mainPane.getChildren().clear();
+        mainPane.getChildren().add(node);
     }
 }
