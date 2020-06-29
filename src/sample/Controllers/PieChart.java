@@ -77,4 +77,15 @@ public class PieChart {
         }
         return x;
     }
+    
+    public  String g2()
+    {
+        String x="";
+        Iterator serviceitr=service_name.iterator();
+        while(serviceitr.hasNext())
+        {
+            x=(String) serviceitr.next();
+        }
+        return x;
+    }
 }
