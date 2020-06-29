@@ -102,6 +102,11 @@ public class ReservationsController implements Initializable {
                 for(Rooms room:roomsToBook){
                     reservationsRepository.createReservation(guestId,room.getRoom_number(),checkin_date.toString(),checkout_date.toString(),paymentId);
                 }
+                Alert completed=new Alert(Alert.AlertType.CONFIRMATION,"The reservation has been made.",ButtonType.OK);
+                completed.showAndWait();
+                if(completed.getResult().equals(ButtonType.OK)){
+                    returnToMain(actionEvent);
+                }
             }
         }catch(Exception e){
 
