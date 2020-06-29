@@ -30,7 +30,14 @@ public class MainManagingController implements Initializable {
             }
             else if(actionEvent.getSource()==servicesBtn){
                 viewLoader("Services");
+            }lse{
+                //do smth
             }
+        }catch(Exception e){
+            Alert alertBox=new Alert(Alert.AlertType.ERROR);
+            alertBox.setContentText(e.getMessage());
+            alertBox.showAndWait();
+        }
         }
     }
 }
