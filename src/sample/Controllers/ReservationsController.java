@@ -54,7 +54,13 @@ public class ReservationsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        idField.setOnKeyPressed((event)->{
+            if(event.getCode().equals(KeyCode.ENTER)){
+                if(idField.getText().equals("")){
+                    Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("A personal number is mandatory!");
+                    alert.showAndWait();
+                }
     }
 
    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
