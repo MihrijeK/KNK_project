@@ -11,4 +11,8 @@ public class SecurityHelper {
     }
      public String hashPassword(String password) throws Exception{
         MessageDigest messageDigest=MessageDigest.getInstance("SHA-512");
+        byte[] bytes=messageDigest.digest(password.getBytes(StandardCharsets.UTF_8));
+        String encodedHash= Base64.getEncoder().encodeToString(bytes);
+
+        return encodedHash;
      }
