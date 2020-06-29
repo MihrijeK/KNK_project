@@ -9,3 +9,6 @@ public class SecurityHelper {
     public SecurityHelper(){
 
     }
+     public String hashPassword(String password) throws Exception{
+        MessageDigest messageDigest=MessageDigest.getInstance("SHA-512");
+     }
