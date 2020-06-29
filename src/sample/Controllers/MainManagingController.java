@@ -56,6 +56,12 @@ public class MainManagingController implements Initializable {
             case "Payments":
                 //dritarja payments e kushtrimit
                 break;
+            case "Services":
+                //dritarja services e mires
+                break;
+            default:
+                node=null;
+                System.out.println("No such view!");
         }
 
     }
