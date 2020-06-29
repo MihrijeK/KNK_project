@@ -24,6 +24,13 @@
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.6000244140625" minWidth="10.0" prefWidth="174.39996337890625" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.00002441406252" minWidth="10.0" prefWidth="175.20003662109377" />
         </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="117.60001220703126" minHeight="10.0" prefHeight="85.39999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="98.99998168945314" minHeight="10.0" prefHeight="81.20000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="73.99999389648437" minHeight="10.0" prefHeight="73.99999389648437" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.00001220703123" minHeight="10.0" prefHeight="60.00001220703123" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.80002441406248" minHeight="10.0" prefHeight="55.39998779296877" vgrow="SOMETIMES" />
+        </rowConstraints>
       </GridPane>
   </children>
 </AnchorPane>
