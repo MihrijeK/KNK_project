@@ -41,6 +41,8 @@
                </font></Label>
             <Label text="First Name" GridPane.rowIndex="1" />
             <Label text="Last Name" GridPane.rowIndex="2" />
+            <Label fx:id="firstName" text="..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lastName" text="..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
       </GridPane>
   </children>
 </AnchorPane>
