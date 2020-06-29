@@ -113,6 +113,17 @@ public class ReservationsController implements Initializable {
         }
     }
 
+    @FXML
+    public void onCancelButtonClick(ActionEvent actionEvent) {
+        try{
+            returnToMain(actionEvent);
+        }catch(Exception e){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+        }
+    }
+
    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
        this.checkin_date=checkin_date;
        this.checkout_date=checkout_date;
