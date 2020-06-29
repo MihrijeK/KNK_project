@@ -11,3 +11,8 @@
             <Font size="13.0" />
          </font>
       </TextField>
+      <PasswordField fx:id="password" layoutX="225.0" layoutY="241.0" promptText="password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </PasswordField>
