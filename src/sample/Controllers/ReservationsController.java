@@ -48,8 +48,9 @@ public class ReservationsController implements Initializable {
    @FXML private Label lastName;
    @FXML private Label totalField;
 
-   ReservationsRepository reservationsRepository=new ReservationsRepository();
-   ObservableList<String> roomTypes= FXCollections.observableArrayList();
+    ReservationsRepository reservationsRepository=new ReservationsRepository();
+    List<Rooms> roomsSelected;
+    ObservableList<Rooms> roomsToBook;
 
    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
        this.checkin_date=checkin_date;
