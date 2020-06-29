@@ -34,10 +34,13 @@ public class Controller implements Initializable {
          if(uname.equals("") || pass.equals("")){
             JOptionPane.showMessageDialog(null,"Duhet te shenoni username dhe password");
         }
- else{
+    else{
                try {
                    pst=con.prepareStatement("select * from staff where personal_number=?");
                    pst.setString(1,uname);
                    rs= pst.executeQuery();
-if(rs.next()){
+    if(rs.next()){
                        SecurityHelper security= new SecurityHelper();
+      boolean password_check= security.checkPassword(pass,rs.getString("passwordd"));
+                       if(password_check){
+                           switch (rs.getString("position")){
