@@ -26,7 +26,7 @@ public class PieChart {
     ObservableList<PieChart.Data> pieChartData;
     ArrayList<Integer> price=new ArrayList<Integer>();
     ArrayList<String> service_name= new ArrayList<String>();
-  
+
    public void loadData()
     {
         pieChartData= FXCollections.observableArrayList();
@@ -36,12 +36,12 @@ public class PieChart {
         try {
             Connection connection= DriverManager.getConnection(url, userName, password);
             //JOptionPane.showMessageDialog(null,"Connected");
-           
+
         } catch (SQLException throwables) {
 
             //JOptionPane.showMessageDialog(null,throwables);
             throwables.printStackTrace();
         }
-       
+
    }
 }
