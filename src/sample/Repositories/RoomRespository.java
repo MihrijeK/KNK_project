@@ -125,5 +125,12 @@ public class RoomRespository {
     public ResultSet getAvailableRooms(String checkin,String checkout,String type) throws Exception{
         Connection connection=dbConnection.getConnection();
         String query;
+        
+        if(type=="All"){
+            query="select * from rooms r where r.room_number not in(\n" +
+                    "select r.room_number \n" +
+                    "from reservations res inner join rooms r on res.room_id=r.room_number\n" +
+                    "where (checkin_date between '"+checkin+"' and '"+checkout+"') and (checkout_date between '"+checkin+"' and '"+checkout+"'))";
+        }
     }
 }
