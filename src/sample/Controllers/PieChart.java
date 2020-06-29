@@ -66,4 +66,15 @@ public class PieChart {
         }
 
    }
+    
+     public  int g1()
+    {
+        int x=0;
+        Iterator itr= price.iterator();
+        while(itr.hasNext())
+        {
+            x=(int)itr.next();
+        }
+        return x;
+    }
 }
