@@ -178,4 +178,13 @@ public class ReservationsController implements Initializable {
             }
 
     }
+
+    private void returnToMain(ActionEvent actionEvent) throws Exception{
+        URL url=new File("src/views/main-manager.fxml").toURI().toURL();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(url);
+        Pane pane=loader.load();
+        MainManagingController mainController=loader.getController();
+        mainController.viewLoader("Reservations");
+    }
 }
