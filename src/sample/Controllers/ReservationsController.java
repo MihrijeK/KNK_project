@@ -151,4 +151,9 @@ public class ReservationsController implements Initializable {
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
+            roomsPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+            roomsPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+            roomsPane.setContent(verticalBox);
+        }
+    }
 }
