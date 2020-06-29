@@ -39,6 +39,8 @@
                <font>
                   <Font size="21.0" />
                </font></Label>
+            <Label text="First Name" GridPane.rowIndex="1" />
+            <Label text="Last Name" GridPane.rowIndex="2" />
       </GridPane>
   </children>
 </AnchorPane>
