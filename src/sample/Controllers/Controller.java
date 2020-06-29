@@ -61,3 +61,8 @@ public class Controller implements Initializable {
           }
                    else{
                        JOptionPane.showMessageDialog(null,"Username nuk ekziston");
+                        username.setText("");
+                       password.setText("");
+                       username.requestFocus();
+
+                   }
