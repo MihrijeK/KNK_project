@@ -56,7 +56,8 @@
                </GridPane.margin></Label>
                <Label fx:id="id" maxWidth="1.7976931348623157E308" prefHeight="18.0" text="Nr" GridPane.columnIndex="1" />
             <Label fx:id="floor" maxWidth="1.7976931348623157E308" prefHeight="18.0" text="Floor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            
+            <Label fx:id="beds" maxWidth="1.7976931348623157E308" prefHeight="18.0" text="Beds" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="toPay" maxWidth="1.7976931348623157E308" prefHeight="18.0" stylesheets="@../../../../Desktop/Projektet/hotel-stylesheet.css" text="Price" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         </children>
       
       </GridPane>
