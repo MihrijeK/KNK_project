@@ -36,7 +36,29 @@ public class PieChart {
         try {
             Connection connection= DriverManager.getConnection(url, userName, password);
             //JOptionPane.showMessageDialog(null,"Connected");
-
+           Statement myStmt = connection.createStatement();
+            String sql = "select * from dbhotel.services_type ";
+            ResultSet rs = myStmt.executeQuery(sql);
+            while (rs.next())
+                pieChartData.add(new PieChart.Data(rs.getString("service_name"),rs.getInt("price")));
+            service_name.add(rs.getString("service_name"));
+            price.add(rs.getInt("price"));
+            //System.out.println(rs.getString("service_name"));
+           //label=new Label();
+            //pieChart.getData().stream().forEach(data -> {
+              //  data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
+                //    label.setText(data.getName() + "" + data.getPieValue() + "%\n");
+                //});
+            //});
+            for(final PieChart.Data data : pieChart.getData())
+            {
+                data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent mouseEvent) {
+                        status.setText(String.valueOf(data.getPieValue())+ " %");
+                    }
+                });
+            }
         } catch (SQLException throwables) {
 
             //JOptionPane.showMessageDialog(null,throwables);
