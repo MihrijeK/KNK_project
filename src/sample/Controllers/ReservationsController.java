@@ -71,6 +71,10 @@ public class ReservationsController implements Initializable {
                             loader.setLocation(url1);
                             Pane pane=loader.load();
                             Scene scene=new Scene(pane);
+                            Stage stage=new Stage();
+                            stage.initModality(Modality.APPLICATION_MODAL);
+                            stage.setScene(scene);
+                            stage.show();
                             }
 
                     }catch(Exception e){
