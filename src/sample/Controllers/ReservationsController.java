@@ -142,4 +142,13 @@ public class ReservationsController implements Initializable {
         printRoomsSelected();
         totalField.setText(priceToPay(roomsToBook) +" €");
     }
+
+    private void printRoomsSelected(){
+        for(Rooms room:roomsToBook){
+            try{
+                RoomDetails controller=new RoomDetails();
+                verticalBox.getChildren().add(controller.singleComponent(room,days,e->removeReservedRoom(room)));
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
 }
