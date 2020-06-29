@@ -75,7 +75,13 @@ public class ReservationsController implements Initializable {
                             stage.initModality(Modality.APPLICATION_MODAL);
                             stage.setScene(scene);
                             stage.show();
-                            }
+                        }else{
+                            String personName=person.getFirstName();
+                            String personSurname=person.getLastName();
+                            guestId=person.getId();
+                            firstName.setText(personName);
+                            lastName.setText(personSurname);
+                        }
 
                     }catch(Exception e){
                         Alert alert=new Alert(Alert.AlertType.ERROR);
