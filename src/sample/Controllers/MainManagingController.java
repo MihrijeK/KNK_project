@@ -25,6 +25,12 @@ public class MainManagingController implements Initializable {
             else if(actionEvent.getSource()==reservationsBtn){
                 viewLoader("Reservations");
             }
+            else if(actionEvent.getSource()==paymentsBtn){
+                viewLoader("Payments");
+            }
+            else if(actionEvent.getSource()==servicesBtn){
+                viewLoader("Services");
+            }
         }
     }
 }
