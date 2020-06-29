@@ -1,4 +1,4 @@
-package controllers;
+package sample.Controllers;
 
 import Helpers.Person;
 import Helpers.Rooms;
@@ -32,25 +32,24 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class ReservationsController implements Initializable {
-   private LocalDate checkin_date;
-   private LocalDate checkout_date;
-   private ObservableList<Rooms> roomsToBook;
-   private double total=0;
-   private int guestId=0;
-   private long days;
+    private LocalDate checkin_date;
+    private LocalDate checkout_date;
+    private double total=0;
+    private int guestId=0;
+    private long days;
 
-   @FXML private ScrollPane roomsPane;
-   @FXML private VBox verticalBox;
-   @FXML private ListView<String> roomsList;
-   @FXML private ScrollPane bookedRoomsScroll;
-   @FXML private TextField idField;
-   @FXML private Label firstName;
-   @FXML private Label lastName;
-   @FXML private Label totalField;
+    @FXML private ScrollPane roomsPane;
+    @FXML private VBox verticalBox;
+    @FXML private TextField idField;
+    @FXML private Label firstName;
+    @FXML private Label lastName;
+    @FXML private Label totalField;
+    @FXML private Button cancelButton;
 
     ReservationsRepository reservationsRepository=new ReservationsRepository();
     List<Rooms> roomsSelected;
     ObservableList<Rooms> roomsToBook;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,7 +63,6 @@ public class ReservationsController implements Initializable {
                     try{
                         String ID=idField.getText();
                         Person person=reservationsRepository.getGuest(ID);
-
                         if(person==null){
                             FXMLLoader loader=new FXMLLoader();
                             URL url1 = new File("src/views/InsertGuest.fxml").toURI().toURL();
@@ -82,12 +80,14 @@ public class ReservationsController implements Initializable {
                             firstName.setText(personName);
                             lastName.setText(personSurname);
                         }
-
-                    }catch(Exception e){
+                    }catch(Exception ex){
                         Alert alert=new Alert(Alert.AlertType.ERROR);
                         alert.setContentText(ex.getMessage());
                         alert.showAndWait();
                     }
+                }
+            }
+        });
     }
 
     @FXML
@@ -109,7 +109,9 @@ public class ReservationsController implements Initializable {
                 }
             }
         }catch(Exception e){
-
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
         }
     }
 
@@ -124,7 +126,7 @@ public class ReservationsController implements Initializable {
         }
     }
 
-   public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
+    public void getRooms(ObservableList<Rooms> rooms, LocalDate checkin_date, LocalDate checkout_date){
         this.checkin_date=checkin_date;
         this.checkout_date=checkout_date;
         this.roomsSelected=rooms.stream().collect(Collectors.toList());
@@ -197,4 +199,5 @@ public class ReservationsController implements Initializable {
         long days= Duration.between(firstDate.atStartOfDay(),lastDate.atStartOfDay()).toDays();
         return days;
     }
+    
 }
