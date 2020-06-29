@@ -16,3 +16,13 @@
             <Font size="13.0" />
          </font>
       </PasswordField>
+        <Label fx:id="ADMINLOGIN" layoutX="248.0" layoutY="133.0" text="ADMIN LOGIN" textFill="#f2e33c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="login" layoutX="281.0" layoutY="300.0" mnemonicParsing="false" onAction="#login" text="LOGIN" textAlignment="CENTER" textFill="#348bf5">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
