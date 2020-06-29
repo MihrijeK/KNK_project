@@ -121,4 +121,9 @@ public class RoomRespository {
 
         return new Rooms(room_number, floor_number, capacity, bed_number, room_type, price);
     }
+    
+    public ResultSet getAvailableRooms(String checkin,String checkout,String type) throws Exception{
+        Connection connection=dbConnection.getConnection();
+        String query;
+    }
 }
