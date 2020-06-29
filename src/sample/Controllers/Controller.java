@@ -29,3 +29,5 @@ public class Controller implements Initializable {
      void login(ActionEvent event) throws Exception {
         String uname=username.getText();
         String pass=password.getText();
+ Connection con= dbConnection.getConnection();
+        ResultSet rs ;
