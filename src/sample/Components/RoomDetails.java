@@ -8,5 +8,8 @@ public class RoomDetails {
       Pane pane = loader.load();
         RoomDetailsController controller=loader.getController();
         controller.getRoomToShow(room,daysToStay);
+        controller.setRemoveButtonAction(handler);
+
+        return pane;
    }
 }
