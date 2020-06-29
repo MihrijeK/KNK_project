@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.ResourceBundle;
 
 
-public class PieChart {
+public class PieChart implements Initializable {
     @FXML private PieChart pieChart;
     @FXML private Label status;
     ObservableList<PieChart.Data> pieChartData;
@@ -87,5 +87,11 @@ public class PieChart {
             x=(String) serviceitr.next();
         }
         return x;
+    }
+   
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadData();
+        pieChart.setData(pieChartData);
     }
 }
