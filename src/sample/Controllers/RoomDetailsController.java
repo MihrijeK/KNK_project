@@ -10,6 +10,12 @@ public class RoomDetailsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    public void getRoomToShow(Rooms room,long daysToStay){
+        id.setText(String.valueOf(room.getRoom_number()));
+        floor.setText(String.valueOf(room.getFloor_number()));
+        
+    }
     
     public void setRemoveButtonAction(EventHandler<ActionEvent> eventHandler){
         removeButton.setOnAction(eventHandler);
