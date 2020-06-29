@@ -14,5 +14,10 @@
 
 <AnchorPane prefHeight="492.0" prefWidth="900.0" stylesheets="@../../../KNK_project/src/Style/hotel-style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReservationsController">
    <children>
+      <ScrollPane fx:id="roomsPane" layoutX="600.0" layoutY="111.0" prefHeight="466.0" prefWidth="300.0" style="-fx-background: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox fx:id="verticalBox" style="-fx-background-color: #1d1f2a;" />
+         </content>
+      </ScrollPane>
   </children>
 </AnchorPane>
