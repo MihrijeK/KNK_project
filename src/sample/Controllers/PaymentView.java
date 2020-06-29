@@ -2,18 +2,12 @@ package sample.Controllers;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 import Helpers.Service_Type;
-//import sample.Repositories.PaymentRepository;
 import sample.Repositories.*;
 import Helpers.Rooms;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import Helpers.Payment;
 import DatabaseConnection.*;
 import java.sql.Connection;
 import java.util.logging.Level;
@@ -23,7 +17,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 
 public class PaymentView implements Initializable {
@@ -45,7 +38,7 @@ public class PaymentView implements Initializable {
     @FXML private RadioButton creditCard;
     @FXML private RadioButton gift;
     private ToggleGroup toggle;
-    private int total;
+    private double total;
 
     //klienti qe po paguan
     private int user =1;
@@ -62,40 +55,28 @@ public class PaymentView implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             connection = dbConnection.getConnection();
+            //Fatura per dhomat
+            PaymentsRepository.roomsBill(user, oblist, total);
 
-            //Rezervimet qe i ka bere klienti ne fjale
-            ResultSet tabela = PaymentsRepository.roomsBill(user);
-            while(tabela.next()){
-                oblist.add(new Rooms(tabela.getInt("room_number"),
-                        tabela.getString("room_type"), tabela.getDouble("price")));
-                total += tabela.getDouble("price");
-            }
+            //Fatura per sherbimet
+            PaymentsRepository.servicesBill(user, oblist1, total);
 
-            ResultSet services = PaymentsRepository.servicesBill(user);
-            while (services.next()){
-                oblist1.add(new Service_Type(services.getString("service_name"), services.getDouble("price")));
-                total += services.getDouble("price");
-            }
+            //Te dhenat e klientit
+            PaymentsRepository.guestInfo(user, personalNr, emriMbiemri);
 
-            //Emri i atij qe po paguan
-            ResultSet guestNameID = PaymentsRepository.guestInfo(user);
-            while(guestNameID.next()){
-                String rezultati = guestNameID.getString("first_name") + " " + guestNameID.getString("last_name");
-                personalNr.setText(guestNameID.getString("personal_number"));
-                emriMbiemri.setText(rezultati);
-            }
             totali.setText(total + "€");
         } catch (Exception ex) {
             Logger.getLogger(PaymentView.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("room_number"));
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("room_type"));
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("service_name"));
         fifthColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        tableView.setItems(oblist);
-        tableView1.setItems(oblist1);
+        tableView.setItems(oblist); //tabela per faturen e dhomave
+        tableView1.setItems(oblist1); //tabela per faturen e sherbimeve
 
         toggle = new ToggleGroup();
         this.cash.setToggleGroup(toggle);
@@ -103,27 +84,26 @@ public class PaymentView implements Initializable {
         this.gift.setToggleGroup(toggle);
     }
 
-    public void paguaj(ActionEvent actionEvent) throws Exception {
+    public void paguaj() throws Exception {
         try {
             RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
             String metodaEzgjedhur = selectedMethod.getText();
-            ResultSet rooms = PaymentsRepository.roomsBill(user);
-            ResultSet services = PaymentsRepository.servicesBill(user);
+            PaymentsRepository.updatePayments(user, metodaEzgjedhur); //query per te kryer pagesen
 
-            PaymentsRepository.updatePayments(user, metodaEzgjedhur);
-
-            if(rooms.next() || services.next()) {
+            if(total != 0) {
                 Alert konfirmimi = new Alert(Alert.AlertType.INFORMATION);
                 konfirmimi.setTitle("Confirmation");
                 konfirmimi.setHeaderText("Payment Done");
                 konfirmimi.setContentText("Payment is completed successfully");
                 konfirmimi.showAndWait();
 
+                //Empty all the fields
                 emriMbiemri.setText("");
                 personalNr.setText("");
                 tableView.getItems().clear();
                 tableView1.getItems().clear();
                 totali.setText("");
+                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
                 toggle.getToggles().clear();
             }else {
                 Alert nothing = new Alert(Alert.AlertType.WARNING);
@@ -132,11 +112,13 @@ public class PaymentView implements Initializable {
                 nothing.setContentText("Nothing to pay");
                 nothing.showAndWait();
 
+                //Empty all the fields
                 emriMbiemri.setText("");
                 personalNr.setText("");
                 tableView.getItems().clear();
                 tableView1.getItems().clear();
                 totali.setText("");
+                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
                 toggle.getToggles().clear();
             }
 

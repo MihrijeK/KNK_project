@@ -1,8 +1,14 @@
 package sample.Repositories;
 
 import DatabaseConnection.dbConnection;
+import Helpers.Rooms;
+import Helpers.Service_Type;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Label;
 import sample.Models.View.PaymentModel;
 
+import java.awt.*;
+import javafx.scene.control.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -42,29 +48,40 @@ public class PaymentsRepository {
         return pModel;
     }
     
-    public static ResultSet guestInfo(int user) throws Exception {
+    public static void guestInfo(int user, Label personalNr, Label emriMbiemri) throws Exception {
         connection=dbconnection.getConnection();
-        ResultSet nameAndID = connection.createStatement().executeQuery("select first_name, last_name, personal_number from guests\n" +
+        ResultSet guestNameID = connection.createStatement().executeQuery("select first_name, last_name, personal_number from guests\n" +
                 " where id="+user);
-        return nameAndID;
+        while(guestNameID.next()){
+            String rezultati = guestNameID.getString("first_name") + " " + guestNameID.getString("last_name");
+            personalNr.setText(guestNameID.getString("personal_number"));
+            emriMbiemri.setText(rezultati);
+        }
     }
     
-    public static ResultSet roomsBill(int user) throws Exception {
+    public static void roomsBill(int user, ObservableList oblist, double total) throws Exception {
         connection=dbconnection.getConnection();
         ResultSet tabela = connection.createStatement().executeQuery("select dh.room_number, dh.room_type, dh.price from rooms dh \n" +
                 "inner join reservations r on r.room_id=dh.room_number " +
                 "inner join payments p on p.id = r.payment_id " +
                 "where r.guest_id = "+user +" and p.is_payed = 0;");
-        return tabela;
+        while(tabela.next()){
+            oblist.add(new Rooms(tabela.getInt("room_number"),
+                    tabela.getString("room_type"), tabela.getDouble("price")));
+            total += tabela.getDouble("price");
+        }
     }
     
-    public static ResultSet servicesBill(int user) throws Exception {
+    public static void servicesBill(int user, ObservableList oblist1, double total) throws Exception {
         connection=dbconnection.getConnection();
-        ResultSet tabela = connection.createStatement().executeQuery("select st.service_name, st.price from services_type st \n" +
+        ResultSet services = connection.createStatement().executeQuery("select st.service_name, st.price from services_type st \n" +
                 "inner join services s on s.service_id = st.id " +
                 "inner join payments p on p.id = s.payment_id " +
                 "where s.guest_id = "+user+" and p.is_payed = 0;");
-        return tabela;
+        while (services.next()){
+            oblist1.add(new Service_Type(services.getString("service_name"), services.getDouble("price")));
+            total += services.getDouble("price");
+        }
     }
     
     public static void updatePayments(int user, String metodaEzgjedhur) throws Exception {
