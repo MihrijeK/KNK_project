@@ -14,4 +14,9 @@ public class RoomDetailsController implements Initializable {
     public void setRemoveButtonAction(EventHandler<ActionEvent> eventHandler){
         removeButton.setOnAction(eventHandler);
     }
+    
+    private String capitalize(String word){
+        String cap = word.substring(0, 1).toUpperCase() + word.substring(1);
+        return cap;
+    }
 }
