@@ -74,6 +74,13 @@ public class Controller implements Initializable {
           }
     public LoginController() {
     }
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+
+    }
+
+
+}
 
 
 
