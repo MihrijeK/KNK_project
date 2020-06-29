@@ -51,3 +51,6 @@ public class Controller implements Initializable {
                                    JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
                                    break;
                            }
+ }
+                       else{
+                           JOptionPane.showMessageDialog(null,"Keni shenuar gabim username apo password");
