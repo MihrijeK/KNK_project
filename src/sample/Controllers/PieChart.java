@@ -33,6 +33,15 @@ public class PieChart {
         String url="jdbc:mysql://localhost:3306/dbhotel?autoReconnect=true&useSSL=false";
         String userName = "root";
         String password = "riseandshine";
+        try {
+            Connection connection= DriverManager.getConnection(url, userName, password);
+            //JOptionPane.showMessageDialog(null,"Connected");
+           
+        } catch (SQLException throwables) {
+
+            //JOptionPane.showMessageDialog(null,throwables);
+            throwables.printStackTrace();
+        }
        
    }
 }
