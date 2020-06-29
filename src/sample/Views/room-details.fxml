@@ -24,6 +24,9 @@
             <RowConstraints maxHeight="81.00000610351563" minHeight="10.0" prefHeight="37.800018310546875" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="84.00000610351563" minHeight="10.0" prefHeight="34.80000610351563" vgrow="SOMETIMES" />
         </rowConstraints>
+        <children>
+            <Label id="room-details-labels" fx:id="roomNumber" text="Room Number">
+        </children>
       </GridPane>
   </children>
 </AnchorPane>
