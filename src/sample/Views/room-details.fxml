@@ -11,5 +11,7 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" minHeight="145.0" minWidth="300.0" prefHeight="145.0" prefWidth="300.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../../../Desktop/Projektet/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RoomDetailsController">
    <children>
+      <GridPane layoutX="71.0" layoutY="55.0" prefHeight="131.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      </GridPane>
   </children>
 </AnchorPane>
