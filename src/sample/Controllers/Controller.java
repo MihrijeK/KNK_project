@@ -47,3 +47,7 @@ public class Controller implements Initializable {
                                        case "Admin":
                                    JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
                                    break;
+                                      case "Staff":
+                                   JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
+                                   break;
+                           }
