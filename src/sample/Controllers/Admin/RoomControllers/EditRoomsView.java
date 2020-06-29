@@ -1,7 +1,11 @@
-package sample.Controllers;
+package sample.Controllers.Admin.RoomControllers;
 
-import DatabaseConnection.dbConnection;
 import Helpers.Rooms;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ChoiceBox;
+import sample.Controllers.AdminDashboard;
+import sample.Repositories.RoomRespository;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,52 +16,60 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EditRoomsView {
-    private Connection connection = dbConnection.getConnection();
     private final Stage stage;
     private Rooms rooms;
     @FXML private TextField roomNumber;
     @FXML private TextField floorNumber;
     @FXML private TextField roomCapacity;
     @FXML private TextField bedNumber;
-    @FXML private TextField roomType;
+    @FXML private ChoiceBox roomTypeBox;
     @FXML private TextField Price;
     @FXML private Button updateRoom;
     @FXML private Button cancleButton;
+
+    private ArrayList<String> roomTypeList = new ArrayList<>(Arrays.asList(new String[]{"Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite"}));
 
     public EditRoomsView(Rooms rooms) throws Exception {
         this.rooms = rooms;
         stage = new Stage();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/EditRoomsView.fxml"));
+            FXMLLoader loader = new FXMLLoader(AdminDashboard.class.getResource("../Views/AdminViews/RoomsViews/EditRoomsView.fxml"));
+
             loader.setController(this);
 
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Edit staff member");
+            for (String r : roomTypeList) {
+                roomTypeBox.getItems().addAll(r);
+            }
             stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public void display() throws IOException, SQLException {
+
+    public void display(ObservableList<Rooms> room) throws IOException, SQLException {
         roomNumber.setText(Integer.toString(rooms.getRoom_number()));
         floorNumber.setText(Integer.toString(rooms.getFloor_number()));
         roomCapacity.setText(Integer.toString(rooms.getCapacity()));
         bedNumber.setText(Integer.toString(rooms.getBed_number()));
-        roomType.setText(rooms.getRoom_type());
+        roomTypeBox.setValue(rooms.getRoom_type());
         Price.setText(Double.toString(rooms.getPrice()));
 
-        updateRoom.setOnAction(e->{
+        updateRoom.setOnAction(e -> {
             try {
-                updateRoom(Integer.parseInt(roomNumber.getText()),Integer.parseInt(floorNumber.getText()),Integer.parseInt(roomCapacity.getText()),Integer.parseInt(bedNumber.getText()),roomType.getText(),
+                Rooms rooms = new Rooms(Integer.parseInt(roomNumber.getText()), Integer.parseInt(floorNumber.getText()), Integer.parseInt(roomCapacity.getText()), Integer.parseInt(bedNumber.getText()), roomTypeBox.getValue().toString(),
                         Double.parseDouble(Price.getText()));
+                room.addAll(rooms);
+                RoomRespository.update(rooms);
                 System.out.println("Updated");
                 stage.close();
             } catch (Exception ex) {
@@ -65,14 +77,8 @@ public class EditRoomsView {
             }
         });
 
-        cancleButton.setOnAction(e->stage.close());
+        cancleButton.setOnAction(e -> stage.close());
         stage.showAndWait();
     }
-    public void updateRoom(int room_number,int floor_number,int capacity,int bed_number,String room_type,double price) throws Exception {
-        String query = "UPDATE rooms SET room_number = "+room_number+" ,floor_number = "+floor_number+",capacity = "+capacity+",bed_number = "+bed_number+",room_type = '"+room_type+"'," +
-                "price = "+price+" WHERE room_number = "+ room_number+";";
 
-        Statement statement = connection.createStatement();
-        statement.executeUpdate(query);
-    }
 }
