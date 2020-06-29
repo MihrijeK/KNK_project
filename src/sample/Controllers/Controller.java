@@ -17,3 +17,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+public class Controller implements Initializable {
+    @FXML private Label ADMINLOGIN;
+
+    @FXML private Button login;
+    @FXML private ImageView sunhotel;
+    @FXML private TextField username;
+    @FXML private PasswordField password;
