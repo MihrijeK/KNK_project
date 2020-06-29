@@ -97,6 +97,12 @@ public class ReservationsController implements Initializable {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setContentText("A guest must be specified to make a reservation!");
                 alert.showAndWait();
+            }else{
+                int paymentId=reservationsRepository.createPayment(String.valueOf(guestId),String.valueOf(total));
+                for(Rooms room:roomsToBook){
+                    reservationsRepository.createReservation(guestId,room.getRoom_number(),checkin_date.toString(),checkout_date.toString(),paymentId);
+                }
+            }
         }catch(Exception e){
 
         }
