@@ -93,7 +93,10 @@ public class ReservationsController implements Initializable {
     @FXML
     public void onReserveButtonClicked(ActionEvent actionEvent){
         try{
-
+            if(guestId==0){
+                Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("A guest must be specified to make a reservation!");
+                alert.showAndWait();
         }catch(Exception e){
 
         }
