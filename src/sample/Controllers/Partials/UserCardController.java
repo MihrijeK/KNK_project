@@ -32,13 +32,13 @@ public class UserCardController {
     public UserCardController() {
         stage = new Stage();
         try {
-            FXMLLoader loader = new FXMLLoader(AdminDashboard.class.getResource("../Views/AdminViews/StaffViews/UserCard.fxml"));
+            FXMLLoader loader = new FXMLLoader(AdminDashboard.class.getResource("../Views/AdminViews/StaffViews/UsersCard.fxml"));
             loader.setController(this);
 
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Create staff member");
+            stage.setTitle("User Card");
             stage.setScene(scene);
 
         } catch (IOException e) {
