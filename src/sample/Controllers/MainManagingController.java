@@ -18,6 +18,13 @@ public class MainManagingController implements Initializable {
 
     @FXML
     private void onButtonClicked(ActionEvent actionEvent){
-        
+        try{
+            if(actionEvent.getSource()==mainBtn){
+                viewLoader("Main");
+            }
+            else if(actionEvent.getSource()==reservationsBtn){
+                viewLoader("Reservations");
+            }
+        }
     }
 }
