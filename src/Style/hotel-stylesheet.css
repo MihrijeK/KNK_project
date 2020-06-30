@@ -23,3 +23,8 @@
     /*-fx-selection-bar:#DA9100;*/
     -fx-text-fill:#1d1f2a;
 }
+.table-view .table-row-cell:selected , .table-view .table-row-cell:selected .table-cell{
+    -fx-background:#DA9100;
+    -fx-text-fill:#1d1f2a;
+    -fx-font-weight:bold;
+}
