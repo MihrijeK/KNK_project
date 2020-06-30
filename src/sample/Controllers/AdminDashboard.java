@@ -198,6 +198,9 @@ public class AdminDashboard implements Initializable {
         servicesTableView.setItems(serviceObservableList);
         AddButton.addEditServiceTypeBtn(servicesTableView,"Edit",serviceObservableList);
         AddButton.addDeleteServiceTypeBtn(servicesTableView,"Delete");
+        
+        paymentsObservableList = TableViewContent.setPayments(payment_id,firstname,lastname,date,price1,isPayed,paymentDtPickerFilter);
+        paymentsTableView.setItems(paymentsObservableList);
     }
 }
 
