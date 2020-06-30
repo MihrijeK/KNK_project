@@ -104,3 +104,12 @@
     -fx-highlight-fill:#DA9100;
     -fx-highlight-text-fill:#1d1f2a;
 }
+.radio-button .radio{
+    -fx-background-color:#343742;
+}
+.radio-button .radio .dot{
+    -fx-background-color:#DA9100;
+}
+.radio-button .text{
+    -fx-fill:white;
+}
