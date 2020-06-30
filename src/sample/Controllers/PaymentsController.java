@@ -33,4 +33,15 @@ public class PaymentsController implements Initializable {
     @FXML private TableColumn<GuestPayment,Integer> date;
     @FXML private TableColumn<GuestPayment,Integer> price;
     @FXML private AnchorPane anchor;
+
+    Connection connection;
+    ObservableList<GuestPayment> paymentList= FXCollections.observableArrayList();
+    PaymentsRepository paymentsRepository;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setDefaultDate();
+        loadPayments(anchor);
+        AddButton.addPayButton(paymentsTableView,"Pay",anchor);
+    }
     }
