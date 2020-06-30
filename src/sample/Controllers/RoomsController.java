@@ -39,7 +39,8 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 
-public class RoomsController implements Initializable {
+public class RoomsController extends LanguageController {
+
     @FXML private DatePicker firstDatePickerField;
     @FXML private DatePicker lastDatePickerField;
     @FXML private Button findButtonId;
@@ -61,6 +62,7 @@ public class RoomsController implements Initializable {
     ObservableList<String> roomTypesList=FXCollections.observableArrayList("All","Single","Double","Triple","Quad","Suite");
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
         try {
             connection= dbConnection.getConnection();
 
@@ -188,4 +190,13 @@ public class RoomsController implements Initializable {
     }
 
 
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        roomNumberCol.setText(langBundle.getString("roomNr"));
+        roomFloorCol.setText(langBundle.getString("floorNr"));
+        capacityCol.setText(langBundle.getString("roomCapacity"));
+        bedsCol.setText(langBundle.getString("bedNumber"));
+        roomTypeCol.setText(langBundle.getString("roomType"));
+        priceCol.setText(langBundle.getString("price"));
+    }
 }
