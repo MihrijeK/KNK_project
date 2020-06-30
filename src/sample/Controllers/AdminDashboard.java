@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import sample.Components.ErrorPopupComponent;
 import sample.Controllers.Admin.RoomControllers.AddNewRoomView;
@@ -87,7 +84,6 @@ public class AdminDashboard implements Initializable {
     @FXML private ChoiceBox<String> roomNumberFilter;
     @FXML private ChoiceBox<String> roomCapacityFilter;
     @FXML private ChoiceBox<String> roomTypeFilter;
-    @FXML private Button btnRefresh;
     @FXML private Button findRooms;
 
     public ObservableList<Rooms> room = null;
@@ -127,7 +123,7 @@ public class AdminDashboard implements Initializable {
                 }
             });
             positionFilterBtn.setOnAction(e -> {
-                staffi = TableViewContent.setSaffByPosition(col_id, col_fname, col_lname, col_prsNum, col_position, col_bday, col_phone, col_salary,gender,positionCB);
+                staffi = TableViewContent.setSaff(col_id, col_fname, col_lname, col_prsNum, col_position, col_bday, col_phone, col_salary,gender,positionCB);
                 showStaffTable.setItems(staffi);
             });
 
@@ -144,12 +140,7 @@ public class AdminDashboard implements Initializable {
             findRooms.setOnAction(e -> {
                 roomsTableView.setItems(TableViewContent.setRoomsByType(roomNumber, floorNumber, capacity, bedNumber, roomType, price,roomTypeFilter,roomNumberFilter,roomCapacityFilter));
             });
-            btnRefresh.setOnAction(e->{
-                showStaffTable.setItems(TableViewContent.setSaff(col_id, col_fname, col_lname, col_prsNum, col_position, col_bday, col_phone, col_salary,gender));
-                roomNumberFilter.setValue(null);
-                roomCapacityFilter.setValue(null);
-                roomTypeFilter.setValue(null);
-            });
+
         }else if (actionEvent.getSource() == sevicesBtn) {
             servicesPane.toFront();
             addNewServiceBtn.setOnAction(e -> {
@@ -184,7 +175,7 @@ public class AdminDashboard implements Initializable {
         roomNumberFilter.setValue("All");
         roomCapacityFilter.setValue("All");
 
-        staffi = TableViewContent.setSaff(col_id, col_fname, col_lname, col_prsNum, col_position, col_bday, col_phone, col_salary,gender);
+        staffi = TableViewContent.setSaff(col_id, col_fname, col_lname, col_prsNum, col_position, col_bday, col_phone, col_salary,gender,positionCB);
         showStaffTable.setItems(staffi);
         AddButton.addEditStaffBtn(showStaffTable,"Edit",staffi);
         AddButton.addDeleteStaffBtn(showStaffTable,"Delete");

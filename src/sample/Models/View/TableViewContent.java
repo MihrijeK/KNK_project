@@ -16,7 +16,7 @@ import java.util.List;
 public class TableViewContent {
 
     public static ObservableList<Staff> setSaff(TableColumn<Staff, Integer> col_id, TableColumn<Staff, String> col_fname, TableColumn<Staff, String> col_lname, TableColumn<Staff, Integer> col_prsNum, TableColumn<Staff,
-            String> col_position, TableColumn<Staff, Date> col_bday, TableColumn<Staff, String> col_phone, TableColumn<Staff, Integer> col_salary, TableColumn<Staff, String> col_gender) {
+            String> col_position, TableColumn<Staff, Date> col_bday, TableColumn<Staff, String> col_phone, TableColumn<Staff, Integer> col_salary, TableColumn<Staff, String> col_gender, ChoiceBox<String> positionCB) {
 
         ObservableList<Staff> staffObservableList = FXCollections.observableArrayList();
         col_id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -30,7 +30,11 @@ public class TableViewContent {
         col_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         List<Staff> staffList = null;
         try {
-            staffList = StaffRepository.selectAll();
+            if(positionCB.getValue() == null){
+                staffList = StaffRepository.selectAll();
+            }else
+                staffList = StaffRepository.findPosition(positionCB.getValue());
+
             for (Staff sf : staffList) {
                 staffObservableList.add(sf);
             }
@@ -75,34 +79,6 @@ public class TableViewContent {
                 servicesObservableList.add(rm);
             }
             return servicesObservableList;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-    public static ObservableList<Staff> setSaffByPosition(TableColumn<Staff, Integer> col_id, TableColumn<Staff, String> col_fname, TableColumn<Staff, String> col_lname, TableColumn<Staff, Integer> col_prsNum, TableColumn<Staff,
-            String> col_position, TableColumn<Staff, Date> col_bday, TableColumn<Staff, String> col_phone, TableColumn<Staff, Integer> col_salary, TableColumn<Staff, String> col_gender, ChoiceBox positionCB) {
-
-        ObservableList<Staff> staffObservableList = FXCollections.observableArrayList();
-        col_id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        col_fname.setCellValueFactory(new PropertyValueFactory<>("firstName"));
-        col_lname.setCellValueFactory(new PropertyValueFactory<>("lastName"));
-        col_prsNum.setCellValueFactory(new PropertyValueFactory<>("personalNumber"));
-        col_position.setCellValueFactory(new PropertyValueFactory<>("position"));
-        col_bday.setCellValueFactory(new PropertyValueFactory<>("birthdate"));
-        col_phone.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
-        col_salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
-        col_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        List<Staff> staffList = null;
-        try {
-            System.out.println(positionCB.getValue().toString());
-            staffList = StaffRepository.findPosition(positionCB.getValue().toString());
-            for (Staff sf : staffList) {
-                staffObservableList.add(sf);
-            }
-            return staffObservableList;
         } catch (Exception e) {
             e.printStackTrace();
         }

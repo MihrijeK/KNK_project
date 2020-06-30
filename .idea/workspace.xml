@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Select services by service_name for chart view">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Models/View/ChartsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/View/ChartsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Models/View/TableViewContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/View/TableViewContent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,13 +274,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00029" summary="Updated">
-      <created>1588625140436</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625140436</updated>
     </task>
     <task id="LOCAL-00030" summary="Krijimi i contollerit per AddNewRoomView">
       <created>1588625207680</created>
@@ -617,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593519648277</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Updated">
+      <created>1593519689254</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1593519689254</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -640,7 +641,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Krijimi i EditStaffMemberView controllerit" />
-    <MESSAGE value="Updated" />
     <MESSAGE value="Adding Admin Controllers" />
     <MESSAGE value="Adding Admin partials and Models Views" />
     <MESSAGE value="Adding repositories" />
@@ -664,7 +664,8 @@
     <MESSAGE value="selecting rooms for chart by floor number" />
     <MESSAGE value="Select staff by position for chart view" />
     <MESSAGE value="Select services by service_name for chart view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Select services by service_name for chart view" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -689,10 +690,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593519647799">
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593519688837">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593519647799" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593519688837" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593389662721" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
