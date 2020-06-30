@@ -4,11 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
@@ -18,9 +23,10 @@ public class MainManagingController implements Initializable {
     @FXML private Button mainBtn;
     @FXML private Button reservationsBtn;
     @FXML private Button paymentsBtn;
-    @FXML private Button servicesBtn;
+    @FXML private Button logOutBtn;
     @FXML private Pane mainPane;
     @FXML private Label loggedInUser;
+    @FXML private MenuItem logoutButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -53,7 +59,6 @@ public class MainManagingController implements Initializable {
                 stage.setScene(scene);
                 stage.setTitle("Sun Hotel");
                 stage.show();
-            }
             }else{
                 //do smth
             }
@@ -73,12 +78,12 @@ public class MainManagingController implements Initializable {
                 //dritarja main e mires
                 break;
             case "Reservations":
-                URL url = new File("src/sample/Views/rooms.fxml").toURI().toURL();
-                loader.setLocation(url);
+                URL urlres = new File("src/sample/Views/rooms.fxml").toURI().toURL();
+                loader.setLocation(urlres);
                 node = loader.load();
                 break;
             case "Payments":
-                 URL urlpay = new File("src/sample/Views/Payments.fxml").toURI().toURL();
+                URL urlpay = new File("src/sample/Views/Payments.fxml").toURI().toURL();
                 loader.setLocation(urlpay);
                 node = loader.load();
                 break;
@@ -90,7 +95,42 @@ public class MainManagingController implements Initializable {
         mainPane.getChildren().add(node);
     }
 
+    @FXML
+    private void insertGuestMenuClicked(ActionEvent actionEvent){
+        try{
+            FXMLLoader loader=new FXMLLoader();
+            URL url1 = new File("src/sample/Views/InsertGuest.fxml").toURI().toURL();
+            loader.setLocation(url1);
+            Pane pane=loader.load();
+            Scene scene=new Scene(pane);
+            Stage stage=new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    @FXML
+    private void logoutMenuItemClicked(ActionEvent actionEvent){
+        try{
+            FXMLLoader loader=new FXMLLoader();
+            URL url=new File("src/sample/Views/login.fxml").toURI().toURL();
+            loader.setLocation(url);
+            Pane pane=loader.load();
+            Scene scene=new Scene(pane);
+            Stage stage=(Stage)((javafx.scene.Node)actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Sun Hotel");
+            stage.show();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void getUser(String emri,String mbiemri){
-        loggedInUser.setText("Logged In:"+emri+" "+mbiemri);
+        loggedInUser.setText("Logged In: "+emri+" "+mbiemri);
     }
 }

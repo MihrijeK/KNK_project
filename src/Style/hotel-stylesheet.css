@@ -120,5 +120,8 @@
 .radio-button .text{
     -fx-fill:white;
 }
+.menu-bar .label{
+    -fx-text-fill:white;
+}
 
 
