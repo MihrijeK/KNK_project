@@ -56,3 +56,7 @@
 .date-picker .arrow-button{
     -fx-background-color:#1d1f2a;
 }
+.date-picker .arrow-button .arrow{
+    -fx-opacity:1;
+    -fx-background-color:#89609e;
+}
