@@ -117,4 +117,18 @@ public class PaymentsRepository {
         Statement statement = connection.createStatement();
         statement.executeUpdate(PaymentQuery);
     }
+    
+    public static ResultSet getUnpaidByDate(String date) throws Exception{
+        connection=dbConnection.getConnection();
+
+        String query="SELECT DISTINCT p.id,g.first_name,g.last_name,r.checkout_date,p.price \n" +
+                "FROM reservations r INNER JOIN payments p ON r.payment_id = p.id\n" +
+                "INNER JOIN guests g ON r.guest_id = g.id \n" +
+                "WHERE r.checkout_date = '"+date+"' and is_payed=0;";
+
+        Statement stmt=connection.createStatement();
+        ResultSet rs=stmt.executeQuery(query);
+
+        return rs;
+    }
 }
