@@ -73,3 +73,7 @@
     -fx-text-fill:#1d1f2a;
     -fx-font-weight:bold;
 }
+.date-picker-popup > * > .day-cell:hover{
+    -fx-background-color:#DA9100;
+    -fx-text-fill:#1d1f2a;
+}
