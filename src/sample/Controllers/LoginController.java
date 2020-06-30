@@ -49,12 +49,12 @@ public class LoginController implements Initializable {
                            switch (rs.getString("position")){
                                case "Admin":
                                    //JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
-                                    URL url = new File("src/views/AdminDashboard.fxml").toURI().toURL();
+                                   URL url = new File("src/sample/Views/AdminDashboard.fxml").toURI().toURL();
                                    FXMLLoader loader = new FXMLLoader();
                                    loader.setLocation(url);
                                    Pane newScreen = loader.load();
                                    Scene scene=new Scene(newScreen);
-                                   Stage stage=new Stage();
+                                   Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
                                    stage.setScene(scene);
                                    stage.show();
                                    break;
