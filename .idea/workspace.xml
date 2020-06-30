@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Update">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Languages">
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/LanguageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/utils/SessionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Partials/AddButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Partials/AddButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/PaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/PaymentView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,19 +120,21 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\RoomsViews" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sample.utils" />
+      <recent name="sample.Controllers" />
+      <recent name="sample.Models.View" />
+      <recent name="sample.Components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Models\View" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\StaffViews" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\Services" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Repositories" />
-      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Models" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="sample.Models.View" />
-      <recent name="sample.Components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\RoomsViews" />
     </key>
   </component>
   <component name="RunManager">
@@ -274,13 +276,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00036" summary="funskionaliteti i butonit addnew">
-      <created>1588625323905</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625323905</updated>
     </task>
     <task id="LOCAL-00037" summary="Krijimi i view CreateStaffMemberView">
       <created>1588625440302</created>
@@ -618,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593521112744</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Languages">
+      <created>1593543759178</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1593543759178</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -629,17 +631,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Adding adminViews" />
     <MESSAGE value="Update AdminDashboard Controller" />
     <MESSAGE value="Update Rooms Controllers" />
     <MESSAGE value="Update Staff Controllers" />
@@ -664,7 +666,8 @@
     <MESSAGE value="Updated" />
     <MESSAGE value="Hashed password while creating staff member" />
     <MESSAGE value="Hashed password while editing staff member" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hashed password while editing staff member" />
+    <MESSAGE value="Languages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Languages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -694,10 +697,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="734" y="119" key="CommitChangelistDialog2" timestamp="1593524854194">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593543758556">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593521112335" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593543758556" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593524854194" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
