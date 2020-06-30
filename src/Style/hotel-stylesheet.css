@@ -11,3 +11,10 @@
     -fx-background-radius:5;
     -fx-padding:5 5 5 5;
 }
+.table-view .column-background, #table .column-background{
+    -fx-background-color:transparent;
+}
+.table-view .table-cell{
+    -fx-text-fill:#A38995;
+    -fx-font-size:15px;
+}
