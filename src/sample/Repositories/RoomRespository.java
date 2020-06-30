@@ -3,6 +3,7 @@ package sample.Repositories;
 
 import DatabaseConnection.dbConnection;
 import Helpers.Rooms;
+import sample.Models.View.ChartsViewModels.RoomChartModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -142,5 +143,16 @@ public class RoomRespository {
         ResultSet rs=stmt.executeQuery(query);
 
         return rs;
+    }
+
+    public static List<RoomChartModel> selectAllGroupByRoomType() throws Exception {
+        ArrayList<RoomChartModel> list = new ArrayList<>();
+        Connection conn = dbConnection.getConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT room_type, COUNT(*) FROM rooms GROUP BY room_type ");
+        ResultSet res = stmt.executeQuery();
+        while (res.next()) {
+            list.add(new RoomChartModel(res.getString("room_type"),res.getInt("COUNT(*)")));
+        }
+        return list;
     }
 }
