@@ -23,7 +23,7 @@ import java.time.ZoneOffset;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 
-public class PaymentsController implements Initializable {
+public class PaymentsController extends LanguageController {
     @FXML private DatePicker datePicker;
     @FXML private Button searchBtn;
     @FXML private TableView<GuestPayment> paymentsTableView;
@@ -40,6 +40,7 @@ public class PaymentsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
         setDefaultDate();
 
         payment_id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -98,5 +99,14 @@ public class PaymentsController implements Initializable {
     private void setDefaultDate(){
         LocalDate currentLocalDate=LocalDate.now();
         datePicker.setValue(currentLocalDate);
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        payment_id.setText(langBundle.getString("payment_id"));
+        firstname.setText(langBundle.getString("first_name"));
+        lastname.setText(langBundle.getString("last_name"));
+        date.setText(langBundle.getString("data"));
+        price.setText(langBundle.getString("price"));
     }
 }

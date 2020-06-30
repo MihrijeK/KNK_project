@@ -8,16 +8,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Controllers.AdminDashboard;
+import sample.Controllers.LanguageController;
 import sample.Repositories.RoomRespository;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
-public class AddNewRoomView {
+public class AddNewRoomView extends LanguageController {
     private final Stage stage;
 
     @FXML private TextField roomNumber;
@@ -28,6 +32,13 @@ public class AddNewRoomView {
     @FXML private TextField Price;
     @FXML private Button addNewRoom;
     @FXML private Button cancleButton;
+
+    @FXML private Label lbl_roomNr;
+    @FXML private Label lbl_floorNr;
+    @FXML private Label lbl_roomCap;
+    @FXML private Label lbl_bedNr;
+    @FXML private Label lbl_roomType;
+    @FXML private Label lbl_price;
 
     private ArrayList<String> roomTypeList = new ArrayList<>(Arrays.asList(new String[]{"Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite"}));
 
@@ -86,5 +97,21 @@ public class AddNewRoomView {
         roomCapacity.clear();
         bedNumber.clear();
         Price.clear();
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        lbl_roomNr.setText(langBundle.getString("roomNr"));
+        lbl_floorNr.setText(langBundle.getString("floorNr"));
+        lbl_roomCap.setText(langBundle.getString("roomCapacity"));
+        lbl_bedNr.setText(langBundle.getString("bedNumber"));
+        lbl_roomType.setText(langBundle.getString("roomType"));
+        lbl_price.setText(langBundle.getString("price"));
+        addNewRoom.setText(langBundle.getString("Add"));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
     }
 }

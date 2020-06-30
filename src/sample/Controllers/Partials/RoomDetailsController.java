@@ -7,11 +7,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import sample.Controllers.LanguageController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RoomDetailsController implements Initializable {
+public class RoomDetailsController extends LanguageController {
     private Rooms room;
     @FXML
     private Label roomNumber;
@@ -27,7 +28,7 @@ public class RoomDetailsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        loadLangTexts(getLangBundle());
     }
 
     public void getRoomToShow(Rooms room, long daysToStay){
@@ -45,5 +46,13 @@ public class RoomDetailsController implements Initializable {
     private String capitalize(String word){
         String cap = word.substring(0, 1).toUpperCase() + word.substring(1);
         return cap;
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        roomNumber.setText(langBundle.getString("roomNr"));
+        roomFloor.setText(langBundle.getString("floorNr"));
+        nrOfBeds.setText(langBundle.getString("bedNumber"));
+        price.setText(langBundle.getString("price"));
     }
 }

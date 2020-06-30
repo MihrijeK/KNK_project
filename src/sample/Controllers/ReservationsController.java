@@ -32,7 +32,12 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class ReservationsController implements Initializable {
+public class ReservationsController extends LanguageController{
+    @FXML private Label lbl_persNum;
+    @FXML private Label lbl_total;
+    @FXML private Label lbl_fName;
+    @FXML private Label lbl_lName;
+
     private LocalDate checkin_date;
     private LocalDate checkout_date;
     private double total=0;
@@ -54,6 +59,7 @@ public class ReservationsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
         idField.setOnKeyPressed((event)->{
             if(event.getCode().equals(KeyCode.ENTER)){
                 if(idField.getText().equals("")){
@@ -200,5 +206,12 @@ public class ReservationsController implements Initializable {
         long days= Duration.between(firstDate.atStartOfDay(),lastDate.atStartOfDay()).toDays();
         return days;
     }
-    
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        lbl_persNum.setText(langBundle.getString("personal_number"));
+        lbl_total.setText(langBundle.getString("total"));
+        lbl_fName.setText(langBundle.getString("firs_name"));
+        lbl_lName.setText(langBundle.getString("last_name"));
+    }
 }

@@ -13,7 +13,14 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ResourceBundle;
 
-public class InsertGuestController implements Initializable {
+public class InsertGuestController extends LanguageController {
+    @FXML private Label lbl_fName;
+    @FXML private Label lbl_lName;
+    @FXML private Label lbl_persNum;
+    @FXML private Label lbl_bday;
+    @FXML private Label lbl_phoneNum;
+    @FXML private  Label lbl_gender;
+
     @FXML private TextField firstName;
     @FXML private TextField lastName;
     @FXML private TextField personalNumber;
@@ -130,8 +137,19 @@ public class InsertGuestController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
         genderToggleGroup = new ToggleGroup();
         this.male.setToggleGroup(this.genderToggleGroup);
         this.female.setToggleGroup(this.genderToggleGroup);
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        lbl_fName.setText(langBundle.getString("first_name"));
+        lbl_lName.setText(langBundle.getString("last_name"));
+        lbl_persNum.setText(langBundle.getString("personal_number"));
+        lbl_bday.setText(langBundle.getString("birthdate"));
+        lbl_phoneNum.setText(langBundle.getString("phone_number"));
+        lbl_gender.setText(langBundle.getString("gender"));
     }
 }

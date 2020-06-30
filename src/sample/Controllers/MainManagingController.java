@@ -3,8 +3,6 @@ package sample.Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -19,7 +17,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainManagingController implements Initializable {
+public class MainManagingController extends LanguageController{
     @FXML private Button mainBtn;
     @FXML private Button reservationsBtn;
     @FXML private Button paymentsBtn;
@@ -30,6 +28,7 @@ public class MainManagingController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
         try{
             viewLoader("Reservations");
         }catch(Exception e){
@@ -132,5 +131,13 @@ public class MainManagingController implements Initializable {
 
     public void getUser(String emri,String mbiemri){
         loggedInUser.setText("Logged In: "+emri+" "+mbiemri);
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        mainBtn.setText(langBundle.getString("overviewButton"));
+        reservationsBtn.setText(langBundle.getString("reservationButton"));
+        paymentsBtn.setText(langBundle.getString("paymentsButton"));
+        logOutBtn.setText(langBundle.getString("logoutButton"));
     }
 }
