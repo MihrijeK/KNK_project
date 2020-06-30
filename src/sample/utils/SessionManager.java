@@ -7,10 +7,9 @@ import Helpers.Staff;
 import java.util.Locale;
 
 public class SessionManager {
-  public static Staff user;
   private static LangEnum lang;
 
-  public static Locale getLocale() {
+  public static Locale getLocale(){
     Locale locale = lang == LangEnum.AL ? new Locale("al", "AL") : new Locale("en", "EN");
     return locale;
   }
