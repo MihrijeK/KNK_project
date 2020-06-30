@@ -79,4 +79,4 @@ public class PaymentsController implements Initializable {
         LocalDate currentLocalDate=LocalDate.now();
         datePicker.setValue(currentLocalDate);
     }
-    }
+}
