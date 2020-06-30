@@ -53,3 +53,6 @@
     -fx-text-fill:white;
 
 }
+.date-picker .arrow-button{
+    -fx-background-color:#1d1f2a;
+}
