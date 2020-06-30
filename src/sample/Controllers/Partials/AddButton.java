@@ -1,5 +1,6 @@
 package sample.Controllers.Partials;
 
+import DatabaseConnection.dbConnection;
 import Helpers.GuestPayment;
 import Helpers.Rooms;
 import Helpers.Service_Type;
@@ -29,7 +30,10 @@ import sample.Repositories.StaffRepository;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AddButton {
 
@@ -298,18 +302,22 @@ public class AddButton {
                         btn.setOnAction((ActionEvent event) -> {
 
                             GuestPayment data = getTableView().getItems().get(getIndex());
-                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                            alert.setTitle("Pay");
-                            alert.showAndWait();
                             try {
                                 GuestPayment guestPayment=paymentTable.getItems().get(getIndex());
-                                PaymentView.setPaymentID(guestPayment.getId());
+
+                                Connection connection= dbConnection.getConnection();
+                                Statement stmt=connection.createStatement();
+                                ResultSet rs=stmt.executeQuery("select distinct guest_id from reservations where payment_id='"+guestPayment.getId()+"'");
+                                int guest_id=0;
+                                while(rs.next()) {guest_id=rs.getInt("guest_id");}
+
                                 URL url = new File("src/sample/Views/paymentView.fxml").toURI().toURL();
                                 FXMLLoader loader = new FXMLLoader();
                                 loader.setLocation(url);
                                 Pane newScreen = loader.load();
                                 PaymentView controller=loader.getController();
-                                //controller.setPaymentID(guestPayment.getId());
+                                controller.setPaymentID(guestPayment.getId());
+                                controller.setUser(guest_id);
 
                                 Scene scene=new Scene(newScreen);
                                 Stage stage=(Stage)anchor.getScene().getWindow();
