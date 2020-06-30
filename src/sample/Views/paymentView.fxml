@@ -51,14 +51,14 @@
             </AnchorPane>
          </center>
          <right>
-            <AnchorPane prefHeight="364.0" prefWidth="248.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="367.0" prefWidth="304.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
                <children>
                   <Label layoutX="12.0" layoutY="-10.0" prefHeight="34.0" prefWidth="84.0" text="Name:" AnchorPane.bottomAnchor="339.6" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="-10.0">
                      <font>
                         <Font name="Bodoni MT Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="emriMbiemri" layoutX="12.0" layoutY="24.0" prefHeight="34.0" prefWidth="160.0" text="Ylber Gashi" AnchorPane.bottomAnchor="306.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="24.0">
+                  <Label fx:id="emriMbiemri" layoutX="12.0" layoutY="24.0" prefHeight="37.0" prefWidth="272.0" text="Ylber Gashi" AnchorPane.bottomAnchor="306.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="24.0">
                      <font>
                         <Font name="Bodoni MT Bold Italic" size="27.0" />
                      </font>
@@ -100,7 +100,7 @@
                         <Font name="Times New Roman Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="totali" layoutX="75.0" layoutY="59.0" text="00$" textAlignment="RIGHT" AnchorPane.bottomAnchor="28.200000000000003" AnchorPane.leftAnchor="75.00000000000004" AnchorPane.rightAnchor="792.1999999999999" AnchorPane.topAnchor="59.0">
+                  <Label fx:id="totali" layoutX="75.0" layoutY="59.0" text="00$" textAlignment="RIGHT" AnchorPane.bottomAnchor="28.200000000000003" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="792.1999999999999" AnchorPane.topAnchor="59.0">
                      <font>
                         <Font name="Times New Roman Bold" size="34.0" />
                      </font>

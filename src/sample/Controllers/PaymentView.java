@@ -38,14 +38,20 @@ public class PaymentView implements Initializable {
     @FXML private RadioButton creditCard;
     @FXML private RadioButton gift;
     private ToggleGroup toggle;
-    private double total;
+    private double total = 0;
 
     //klienti qe po paguan
     private int user =1;
+    private int payment_id=1;
 
 //    public void setUser(int user) {
 //        this.user = user;
 //    }
+//
+//    public void setPaymentID(int id) {
+//        this.payment_id = id;
+//    }
+
 
     ObservableList<Rooms> oblist = FXCollections.observableArrayList();
     ObservableList<Service_Type> oblist1 = FXCollections.observableArrayList();
@@ -56,10 +62,10 @@ public class PaymentView implements Initializable {
         try {
             connection = dbConnection.getConnection();
             //Fatura per dhomat
-            PaymentsRepository.roomsBill(user, oblist, total);
+            PaymentsRepository.roomsBill(user, payment_id,  oblist, total);
 
             //Fatura per sherbimet
-            PaymentsRepository.servicesBill(user, oblist1, total);
+            PaymentsRepository.servicesBill(user, payment_id, oblist1, total);
 
             //Te dhenat e klientit
             PaymentsRepository.guestInfo(user, personalNr, emriMbiemri);
@@ -88,7 +94,7 @@ public class PaymentView implements Initializable {
         try {
             RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
             String metodaEzgjedhur = selectedMethod.getText();
-            PaymentsRepository.updatePayments(user, metodaEzgjedhur); //query per te kryer pagesen
+            PaymentsRepository.updatePayments(user, payment_id, metodaEzgjedhur); //query per te kryer pagesen
 
             if(total != 0) {
                 Alert konfirmimi = new Alert(Alert.AlertType.INFORMATION);
@@ -103,7 +109,7 @@ public class PaymentView implements Initializable {
                 tableView.getItems().clear();
                 tableView1.getItems().clear();
                 totali.setText("");
-                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
+                //total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
                 toggle.getToggles().clear();
             }else {
                 Alert nothing = new Alert(Alert.AlertType.WARNING);
@@ -118,7 +124,7 @@ public class PaymentView implements Initializable {
                 tableView.getItems().clear();
                 tableView1.getItems().clear();
                 totali.setText("");
-                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
+                //total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
                 toggle.getToggles().clear();
             }
 
