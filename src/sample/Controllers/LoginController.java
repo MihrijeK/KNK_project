@@ -60,12 +60,12 @@ public class LoginController implements Initializable {
                                    break;
                                case "Staff":
                                   // JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
-                                    URL url1 = new File("src/views/main-manager.fxml").toURI().toURL();
+                                  URL url1 = new File("src/sample/Views/main-manager.fxml").toURI().toURL();
                                    FXMLLoader loader1 = new FXMLLoader();
                                    loader1.setLocation(url1);
                                    Pane newScreen1 = loader1.load();
                                    Scene scene1=new Scene(newScreen1);
-                                   Stage stage1=new Stage();
+                                   Stage stage1=(Stage)((Node)event.getSource()).getScene().getWindow();
                                    stage1.setScene(scene1);
                                    stage1.show();
                                    break;
