@@ -105,5 +105,29 @@ public class TableViewContent {
         }
         return null;
     }
+    public static ObservableList<PaymentModel> setPayments(TableColumn<PaymentModel,Integer> payment_id, TableColumn<PaymentModel,String> firstname,
+                                                           TableColumn<PaymentModel,String> lastname, TableColumn<PaymentModel,Date> date,
+                                                           TableColumn<PaymentModel,Double> price ,TableColumn<PaymentModel, Integer> isPayed) {
+
+        ObservableList<PaymentModel> staffObservableList = FXCollections.observableArrayList();
+        payment_id.setCellValueFactory(new PropertyValueFactory<>("payment_id"));
+        firstname.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+        lastname.setCellValueFactory(new PropertyValueFactory<>("lastname"));
+        date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        price.setCellValueFactory(new PropertyValueFactory<>("price"));
+       isPayed.setCellValueFactory(new PropertyValueFactory<>("isPayed"));
+
+        try {
+            List<PaymentModel> payments = PaymentsRepository.selectAll();
+            for (PaymentModel sf : payments) {
+                staffObservableList.add(sf);
+            }
+
+            return staffObservableList;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
 
