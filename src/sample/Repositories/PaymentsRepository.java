@@ -1,10 +1,12 @@
 package sample.Repositories;
 
 import DatabaseConnection.dbConnection;
+import Helpers.Payment;
 import Helpers.Rooms;
 import Helpers.Service_Type;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Label;
+import sample.Controllers.PaymentView;
 import sample.Models.View.PaymentModel;
 
 import java.sql.Connection;
@@ -77,8 +79,9 @@ public class PaymentsRepository {
         }
     }
     
-    public static void roomsBill(int user, int payment_id, ObservableList oblist, double total) throws Exception {
+    public static double roomsBill(int user, int payment_id, ObservableList oblist) throws Exception {
         connection=dbconnection.getConnection();
+        double total=0;
         ResultSet tabela = connection.createStatement().executeQuery("select dh.room_number, dh.room_type, dh.price from rooms dh \n" +
                 "inner join reservations r on r.room_id=dh.room_number " +
                 "inner join payments p on p.id = r.payment_id " +
@@ -88,10 +91,12 @@ public class PaymentsRepository {
                     tabela.getString("room_type"), tabela.getDouble("price")));
             total += tabela.getDouble("price");
         }
+        return total;
     }
     
-    public static void servicesBill(int user, int payment_id, ObservableList oblist1, double total) throws Exception {
+    public static double servicesBill(int user, int payment_id, ObservableList oblist1) throws Exception {
         connection=dbconnection.getConnection();
+        double total=0;
         ResultSet services = connection.createStatement().executeQuery("select st.service_name, st.price from services_type st \n" +
                 "inner join services s on s.service_id = st.id " +
                 "inner join payments p on p.id = s.payment_id " +
@@ -100,6 +105,7 @@ public class PaymentsRepository {
             oblist1.add(new Service_Type(services.getString("service_name"), services.getDouble("price")));
             total += services.getDouble("price");
         }
+        return total;
     }
     
     public static void updatePayments(int user, int payment_id, String metodaEzgjedhur) throws Exception {
