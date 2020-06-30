@@ -43,8 +43,17 @@ public class MainManagingController implements Initializable {
             else if(actionEvent.getSource()==paymentsBtn){
                 viewLoader("Payments");
             }
-            else if(actionEvent.getSource()==servicesBtn){
-                viewLoader("Services");
+            else if(actionEvent.getSource()==logOutBtn){
+                FXMLLoader loader=new FXMLLoader();
+                URL url=new File("src/sample/Views/login.fxml").toURI().toURL();
+                loader.setLocation(url);
+                Pane pane=loader.load();
+                Scene scene=new Scene(pane);
+                Stage stage=(Stage)((javafx.scene.Node)actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.setTitle("Sun Hotel");
+                stage.show();
+            }
             }else{
                 //do smth
             }
@@ -72,9 +81,6 @@ public class MainManagingController implements Initializable {
                  URL urlpay = new File("src/sample/Views/Payments.fxml").toURI().toURL();
                 loader.setLocation(urlpay);
                 node = loader.load();
-                break;
-            case "Services":
-                //dritarja services e mires
                 break;
             default:
                 node=null;
