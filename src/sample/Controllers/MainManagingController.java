@@ -140,4 +140,21 @@ public class MainManagingController extends LanguageController{
         paymentsBtn.setText(langBundle.getString("paymentsButton"));
         logOutBtn.setText(langBundle.getString("logoutButton"));
     }
+
+    public void aboutMenuItemClicked(ActionEvent actionEvent) {
+        try{
+            FXMLLoader loader=new FXMLLoader();
+            URL url=new File("src/sample/Views/about.fxml").toURI().toURL();
+            loader.setLocation(url);
+            Pane pane=loader.load();
+            Scene scene=new Scene(pane);
+            Stage stage=new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.setTitle("Sun Hotel");
+            stage.show();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
