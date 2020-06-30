@@ -28,3 +28,6 @@
     -fx-text-fill:#1d1f2a;
     -fx-font-weight:bold;
 }
+.table-view .placeholder{
+    -fx-background-color:#343742;
+}
