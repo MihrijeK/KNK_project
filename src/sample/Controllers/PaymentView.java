@@ -19,7 +19,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 
-public class PaymentView implements Initializable {
+public class PaymentView extends LanguageController {
+
+    @FXML private Label lbl_paymentDetail;
+    @FXML private Label lbl_total;
+    @FXML private Label lbl_payType;
+    @FXML private Label lbl_name;
 
     @FXML private Button pay;
     @FXML private Label totali;
@@ -51,9 +56,6 @@ public class PaymentView implements Initializable {
    public static void setPaymentID(int id) {
        payment_id = id;
    }
-   
-
-
 
     ObservableList<Rooms> oblist = FXCollections.observableArrayList();
     ObservableList<Service_Type> oblist1 = FXCollections.observableArrayList();
@@ -61,6 +63,7 @@ public class PaymentView implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        loadLangTexts(getLangBundle());
         try {
             connection = dbConnection.getConnection();
             //Fatura per dhomat
@@ -136,5 +139,20 @@ public class PaymentView implements Initializable {
         } catch (NullPointerException e) {
             errorHandle.setText("Ju lutem zgjedhni \nnjeren nga metodat \ne pageses!");
         }
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        lbl_paymentDetail.setText(langBundle.getString("paymentDetail"));
+        lbl_total.setText(langBundle.getString("total"));
+        lbl_payType.setText(langBundle.getString("payType"));
+        lbl_name.setText(langBundle.getString("first_name"));
+
+        firstColumn.setText(langBundle.getString("room"));
+        secondColumn.setText(langBundle.getString("roomType"));
+        thirdColumn.setText(langBundle.getString("price"));
+
+        fourthColumn.setText(langBundle.getString("service_name"));
+        fifthColumn.setText(langBundle.getString("price"));
     }
 }
