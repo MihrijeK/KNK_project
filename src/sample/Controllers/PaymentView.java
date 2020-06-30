@@ -49,8 +49,8 @@ public class PaymentView extends LanguageController {
     private static int user;
     private static int payment_id;
 
-    public static void setUser(int user) {
-        user = user;
+    public static void setUser(int user1) {
+        user = user1;
     }
 
    public static void setPaymentID(int id) {

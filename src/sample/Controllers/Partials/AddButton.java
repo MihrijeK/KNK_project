@@ -311,13 +311,16 @@ public class AddButton {
                                 int guest_id=0;
                                 while(rs.next()) {guest_id=rs.getInt("guest_id");}
 
+                                PaymentView.setUser(guest_id);
+                                PaymentView.setPaymentID(guestPayment.getId());
+
                                 URL url = new File("src/sample/Views/paymentView.fxml").toURI().toURL();
                                 FXMLLoader loader = new FXMLLoader();
                                 loader.setLocation(url);
                                 Pane newScreen = loader.load();
                                 PaymentView controller=loader.getController();
-                                controller.setPaymentID(guestPayment.getId());
-                                controller.setUser(guest_id);
+//                                controller.setPaymentID(guestPayment.getId());
+//                                controller.setUser(guest_id);
 
                                 Scene scene=new Scene(newScreen);
                                 Stage stage=(Stage)anchor.getScene().getWindow();
