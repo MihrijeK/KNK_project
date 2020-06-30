@@ -56,7 +56,7 @@ public class LoginController implements Initializable {
                        boolean password_check= security.checkPassword(pass,rs.getString("passwordd"));
                        if(password_check){
                            switch (rs.getString("position")){
-                               case "Admin":
+                               case "Manager":
                                    //JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
                                    URL url = new File("src/sample/Views/AdminDashboard.fxml").toURI().toURL();
                                    FXMLLoader loader = new FXMLLoader();
