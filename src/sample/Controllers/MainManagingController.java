@@ -69,7 +69,9 @@ public class MainManagingController implements Initializable {
                 node = loader.load();
                 break;
             case "Payments":
-                //dritarja payments e kushtrimit
+                 URL urlpay = new File("src/sample/Views/Payments.fxml").toURI().toURL();
+                loader.setLocation(urlpay);
+                node = loader.load();
                 break;
             case "Services":
                 //dritarja services e mires
