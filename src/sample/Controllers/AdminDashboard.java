@@ -179,6 +179,7 @@ public class AdminDashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         positionCB.getItems().addAll("Manager","Waiter","Recepsionist");
+        positionCB.setValue("All");
         roomTypeFilter.getItems().addAll("All","Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite");
         roomNumberFilter.getItems().addAll("All","1","2","3","4","5","6");
         roomCapacityFilter.getItems().addAll("All","1","2","3","4","5");
