@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editViewPane" prefHeight="661.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="editViewPane" prefHeight="661.0" prefWidth="1045.0" stylesheets="@../../../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <GridPane layoutX="136.0" layoutY="100.0" prefHeight="482.0" prefWidth="794.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="90.0">
             <columnConstraints>
@@ -67,7 +67,7 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <DatePicker fx:id="birthdate" promptText="Birthdate" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                <DatePicker fx:id="birthdate" promptText="Birthdate" style="-fx-background-color: #343742;" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
                 <Label text="Position:" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <font>
                         <Font name="System Bold" size="14.0" />
@@ -90,14 +90,14 @@
                     </font>
                 </Label>
                 <PasswordField fx:id="password" promptText="Password" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8" />
-                <Button fx:id="editStaffMemberBtn" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                <Button fx:id="editStaffMemberBtn" alignment="CENTER" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="9">
                     <GridPane.margin>
-                        <Insets left="60.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="cancleCreation" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Cancle" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                <Button fx:id="cancleCreation" alignment="CENTER" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Cancel" GridPane.columnIndex="3" GridPane.rowIndex="9">
                     <GridPane.margin>
-                        <Insets left="60.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </GridPane.margin>
                 </Button>
                 <Label text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="5">
