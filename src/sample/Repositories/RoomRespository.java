@@ -155,4 +155,17 @@ public class RoomRespository {
         }
         return list;
     }
+
+    public static List<RoomChartModel> selectAllGroupByFloorNum() throws Exception {
+        ArrayList<RoomChartModel> list = new ArrayList<>();
+        Connection conn = dbConnection.getConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT rr.floor_number, COUNT(*) FROM reservations r \n" +
+                "INNER JOIN rooms rr ON r.room_id = rr.room_number\n" +
+                "GROUP BY rr.floor_number ");
+        ResultSet res = stmt.executeQuery();
+        while (res.next()) {
+            list.add(new RoomChartModel(res.getInt("floor_number"),res.getInt("COUNT(*)")));
+        }
+        return list;
+    }
 }
