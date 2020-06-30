@@ -1,10 +1,8 @@
 package sample.Controllers;
 
-//import Connectivity.dbConnection;
-//import Connectivity.dbConnection;
-//import Helpers.Room;
 import DatabaseConnection.dbConnection;
 import Helpers.Rooms;
+import Repositories.RoomRepository;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -42,6 +40,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+
 public class RoomsController implements Initializable {
     @FXML private DatePicker firstDatePickerField;
     @FXML private DatePicker lastDatePickerField;
@@ -53,23 +52,27 @@ public class RoomsController implements Initializable {
     @FXML private TableColumn<Rooms,Integer> bedsCol;
     @FXML private TableColumn<Rooms,String> roomTypeCol;
     @FXML private TableColumn<Rooms,Integer> priceCol;
+    @FXML private ChoiceBox<String> roomTypeSelector;
     @FXML private Button makeReservation;
     @FXML private Button cancelButton;
 
     dbConnection connectionClass = new dbConnection();
     Connection connection;
+    RoomsRepository roomsRepository=new RoomsRepository();
 
     ObservableList<Rooms> roomList=FXCollections.observableArrayList();
-
+    ObservableList<String> roomTypesList=FXCollections.observableArrayList("All","Single","Double","Triple","Quad","Suite");
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             connection= connectionClass.getConnection();
 
             setDefaultDate();
+            roomTypeSelector.setItems(roomTypesList);
+            roomTypeSelector.setValue("All");
             String defaultFirstDate=firstDatePickerField.getValue().toString();
             String defaultLastDate=lastDatePickerField.getValue().toString();
-            loadAvailableRooms(defaultFirstDate,defaultLastDate,connection);
+            loadAvailableRooms(defaultFirstDate,defaultLastDate,"All",connection);
 
         }catch(Exception e){}
 
@@ -83,9 +86,10 @@ public class RoomsController implements Initializable {
             SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
             Date firstDate=format.parse(newFirstDate);
             Date lastDate=format.parse(newLastDate);
+            String type=roomTypeSelector.getSelectionModel().getSelectedItem();
 
             if(firstDate.compareTo(lastDate)<0){
-                loadAvailableRooms(newFirstDate,newLastDate,connection);
+                loadAvailableRooms(newFirstDate,newLastDate,type,connection);
             }else{
                 Alert alertBox=new Alert(Alert.AlertType.INFORMATION);
                 alertBox.setContentText("Dates you entered are not valid!");
@@ -111,8 +115,8 @@ public class RoomsController implements Initializable {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(url);
                 Pane newScreen = loader.load();
-//                ReservationsController reservationsController=loader.getController();
-//                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue(),lastDatePickerField.getValue());
+                ReservationsController reservationsController=loader.getController();
+                reservationsController.getRooms(roomsToBook,firstDatePickerField.getValue(),lastDatePickerField.getValue());
 
                 Scene scene=new Scene(newScreen);
                 Stage stage=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
@@ -137,16 +141,10 @@ public class RoomsController implements Initializable {
         lastDatePickerField.setValue(localDateFromAWeek);
     }
 
-    private void loadAvailableRooms(String firstDate,String lastDate,Connection connection) throws Exception{
+    private void loadAvailableRooms(String firstDate,String lastDate,String type,Connection connection) throws Exception{
         roomList.clear();
-        String query="select * \n" +
-                "from rooms r\n" +
-                "where r.room_number not in(select r.room_number \n" +
-                "from reservations res inner join rooms r on res.room_id=r.room_number\n" +
-                "where checkin_date='"+firstDate+"' or checkout_date='"+lastDate+"')";
 
-        Statement stmt=connection.createStatement();
-        ResultSet rs=stmt.executeQuery(query);
+        ResultSet rs=roomsRepository.getAvailableRooms(firstDate,lastDate,type);
 
         while(rs.next()){
             roomList.add(new Rooms(rs.getInt("room_number"),rs.getInt("floor_number"),rs.getInt("capacity"),
@@ -164,13 +162,6 @@ public class RoomsController implements Initializable {
         bedsCol.setCellValueFactory(new PropertyValueFactory<>("bed_number"));
         roomTypeCol.setCellValueFactory(new PropertyValueFactory<>("room_type"));
         priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
-
-//        reservationCol.setCellValueFactory(new PropertyValueFactory<Rooms,Boolean>());
-//        reservationCol.setCellFactory( tc -> new CheckBoxTableCell<Rooms,Boolean>());
-//        reservationCol.setCellFactory(e->{
-//            return new CheckBoxTableCell<>();
-//        });
-
 
         tableView.setItems(roomList);
     }
