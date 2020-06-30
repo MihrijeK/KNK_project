@@ -41,5 +41,12 @@ public class PaymentModel {
         public void setLastname(String lastname) {
             this.lastname = lastname;
         }
+         public Date getDate() {
+            return date;
+        }
+
+        public void setDate(Date date) {
+            this.date = date;
+        }
 
 }
