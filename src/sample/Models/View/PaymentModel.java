@@ -27,5 +27,12 @@ public class PaymentModel {
         public void setPayment_id(int payment_id) {
             this.payment_id = payment_id;
         }
+         public String getFirstname() {
+            return firstname;
+        }
+
+        public void setFirstname(String firstname) {
+            this.firstname = firstname;
+        }
 
 }
