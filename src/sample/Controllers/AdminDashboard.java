@@ -15,6 +15,7 @@ import sample.Controllers.Admin.Services.AddServicesType;
 import sample.Controllers.Admin.StaffControllers.CreateStaffMemberView;
 import sample.Controllers.Partials.AddButton;
 import sample.Models.View.ChartsView;
+import sample.Models.View.PaymentModel;
 import sample.Models.View.TableViewContent;
 
 import java.io.IOException;
