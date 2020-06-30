@@ -2,6 +2,7 @@ package sample.Controllers;
 
 import Helpers.Person;
 import Helpers.Rooms;
+import sample.Components.RoomDetails;
 import sample.Repositories.ReservationsRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
