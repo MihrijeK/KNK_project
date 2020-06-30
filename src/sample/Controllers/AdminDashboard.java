@@ -161,7 +161,8 @@ public class AdminDashboard implements Initializable {
             });
             else if (actionEvent.getSource() == paymentsBtn){
             paymentsPane.toFront();
-            
+            paymentFilterBtn.setOnAction(e->{
+                
             });
         }
         }
