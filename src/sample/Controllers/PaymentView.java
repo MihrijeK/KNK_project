@@ -48,9 +48,9 @@ public class PaymentView implements Initializable {
 //        this.user = user;
 //    }
 //
-//    public void setPaymentID(int id) {
-//        this.payment_id = id;
-//    }
+   public void setPaymentID(int id) {
+       this.payment_id = id;
+   }
 
 //
 //    public static void incrementTotal(double total){
