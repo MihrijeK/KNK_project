@@ -4,12 +4,15 @@ import Helpers.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Repositories.PaymentsRepository;
 import sample.Repositories.RoomRespository;
 import sample.Repositories.ServicesTypeRepository;
 import sample.Repositories.StaffRepository;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -107,7 +110,7 @@ public class TableViewContent {
     }
     public static ObservableList<PaymentModel> setPayments(TableColumn<PaymentModel,Integer> payment_id, TableColumn<PaymentModel,String> firstname,
                                                            TableColumn<PaymentModel,String> lastname, TableColumn<PaymentModel,Date> date,
-                                                           TableColumn<PaymentModel,Double> price ,TableColumn<PaymentModel, Integer> isPayed) {
+                                                           TableColumn<PaymentModel,Double> price , TableColumn<PaymentModel, Integer> isPayed, DatePicker datePicker) {
 
         ObservableList<PaymentModel> staffObservableList = FXCollections.observableArrayList();
         payment_id.setCellValueFactory(new PropertyValueFactory<>("payment_id"));
@@ -118,7 +121,11 @@ public class TableViewContent {
        isPayed.setCellValueFactory(new PropertyValueFactory<>("isPayed"));
 
         try {
-            List<PaymentModel> payments = PaymentsRepository.selectAll();
+            List<PaymentModel> payments = null;
+            if(datePicker.getValue()==null){
+                payments = PaymentsRepository.selectAll();
+            }else
+                payments = PaymentsRepository.selectAllByDate(getDate(datePicker));
             for (PaymentModel sf : payments) {
                 staffObservableList.add(sf);
             }
@@ -128,6 +135,12 @@ public class TableViewContent {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static Date getDate(DatePicker dt) {
+        LocalDate localDate = dt.getValue();
+        Date date = java.sql.Date.valueOf(localDate);
+        return date;
     }
 }
 

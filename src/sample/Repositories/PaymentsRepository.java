@@ -7,8 +7,6 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Label;
 import sample.Models.View.PaymentModel;
 
-import java.awt.*;
-import javafx.scene.control.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

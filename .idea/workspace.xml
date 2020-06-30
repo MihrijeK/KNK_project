@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Hashed password while creating staff member">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Hashed password while editing staff member">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/StaffControllers/EditStaffMemberView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/StaffControllers/EditStaffMemberView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/PaymentModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Models/View/PaymentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/View/PaymentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Models/View/TableViewContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/View/TableViewContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Repositories/PaymentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Repositories/PaymentsRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,19 +123,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\RoomsViews" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="sample.Models.View" />
-      <recent name="sample.Components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Models\View" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\StaffViews" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\Services" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Repositories" />
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Models" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sample.Models.View" />
+      <recent name="sample.Components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\RoomsViews" />
     </key>
   </component>
   <component name="RunManager">
@@ -273,13 +277,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00035" summary="Metod per query">
-      <created>1588625300600</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625300600</updated>
     </task>
     <task id="LOCAL-00036" summary="funskionaliteti i butonit addnew">
       <created>1588625323905</created>
@@ -617,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593520893153</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Hashed password while editing staff member">
+      <created>1593521112744</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1593521112744</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -639,7 +643,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Update repositories" />
     <MESSAGE value="Adding adminViews" />
     <MESSAGE value="Update AdminDashboard Controller" />
     <MESSAGE value="Update Rooms Controllers" />
@@ -664,7 +667,8 @@
     <MESSAGE value="Chart Updated for overview pane" />
     <MESSAGE value="Updated" />
     <MESSAGE value="Hashed password while creating staff member" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hashed password while creating staff member" />
+    <MESSAGE value="Hashed password while editing staff member" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hashed password while editing staff member" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -685,14 +689,18 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593371070176" />
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593522219222">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593522219222" />
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593112691866">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593520892707">
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593521112335">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593520892707" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593521112335" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593389662721" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />

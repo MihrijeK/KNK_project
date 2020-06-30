@@ -16,7 +16,6 @@ import sample.Controllers.Admin.StaffControllers.CreateStaffMemberView;
 import sample.Controllers.Partials.AddButton;
 import sample.Models.View.ChartsView;
 import sample.Models.View.TableViewContent;
-import sample.Models.View.PaymentModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -59,7 +58,7 @@ public class AdminDashboard implements Initializable {
     @FXML private TableColumn<PaymentModel,String> lastname;
     @FXML private TableColumn<PaymentModel,Date> date;
     @FXML private TableColumn<PaymentModel,Double> price1;
-    @FXML private TableColumn<PaymentModel,Boolean> isPayed;
+    @FXML private TableColumn<PaymentModel,Integer> isPayed;
     @FXML private DatePicker paymentDtPickerFilter;
     @FXML private Button paymentFilterBtn;
     public ObservableList<PaymentModel> paymentsObservableList = null;

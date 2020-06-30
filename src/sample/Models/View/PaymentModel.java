@@ -1,17 +1,18 @@
 package sample.Models.View;
 
 import java.util.Date;
+
 public class PaymentModel {
         private int payment_id;
         private String firstname;
         private String lastname;
         private Date date;
         private double price;
-           private String isPayed;
+        private String isPayed;
         
          public PaymentModel(){}
 
-        public PaymentModel(int payment_id, String firstname,String lastname,Date date,double price, String isPayed;){
+        public PaymentModel(int payment_id, String firstname,String lastname,Date date,double price, String isPayed){
             this.payment_id=payment_id;
             this.firstname=firstname;
             this.lastname=lastname;
