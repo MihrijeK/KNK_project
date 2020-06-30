@@ -2,6 +2,7 @@ package sample.Repositories;
 
 import DatabaseConnection.dbConnection;
 import Helpers.Service_Type;
+import sample.Models.View.ChartsViewModels.ServiceChartModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -89,5 +90,16 @@ public class ServicesTypeRepository {
             return res.getInt("max(id)");
         }
         return 0;
+    }
+
+    public static List<ServiceChartModel> selectAllChart() throws Exception {
+        ArrayList<ServiceChartModel> list = new ArrayList<>();
+        Connection conn = dbConnection.getConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT service_name,COUNT(*) FROM services_type GROUP BY service_name");
+        ResultSet res = stmt.executeQuery();
+        while (res.next()) {
+            list.add(new ServiceChartModel(res.getString("service_name"),res.getInt("COUNT(*)")));
+        }
+        return list;
     }
 }
