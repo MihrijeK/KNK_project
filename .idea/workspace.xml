@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Language set">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Setting default languange">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/utils/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/utils/SessionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,13 +277,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00053" summary="Updated">
-      <created>1588625919686</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625919686</updated>
     </task>
     <task id="LOCAL-00054" summary="Updated">
       <created>1588626046670</created>
@@ -620,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593548358353</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Setting default languange">
+      <created>1593548531074</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1593548531074</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -642,7 +643,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Select staff by position for chart view" />
     <MESSAGE value="Select services by service_name for chart view" />
     <MESSAGE value="Updated setStaff TableViewContent" />
     <MESSAGE value="Update AdminDashboard fxml view" />
@@ -667,7 +667,8 @@
     <MESSAGE value="Reservation Controller Language" />
     <MESSAGE value="Rooms Controller Language" />
     <MESSAGE value="Language set" />
-    <option name="LAST_COMMIT_MESSAGE" value="Language set" />
+    <MESSAGE value="Setting default languange" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting default languange" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -697,10 +698,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593546420228">
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593548530682">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593546420228" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593548530682" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593524854194" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />

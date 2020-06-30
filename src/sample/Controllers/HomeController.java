@@ -40,6 +40,7 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         languageCB.getItems().setAll(LangEnum.AL,LangEnum.EN);
         languageCB.setValue(LangEnum.EN);
-        SessionManager.getLocale(languageCB.getValue());
+        SessionManager sessionManager = new SessionManager();
+        sessionManager.setLang(languageCB.getValue());
     }
 }
