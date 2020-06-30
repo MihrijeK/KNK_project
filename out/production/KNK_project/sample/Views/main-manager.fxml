@@ -14,7 +14,7 @@
    <left>
    <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
          <children>
-         <Label text="Emri Mbiemri" />
+         <Label fx:id="loggedInUser" style="-fx-text-fill: #A38995; -fx-font-weight: bold;" text="Emri Mbiemri" />
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Style/logo.png" />
