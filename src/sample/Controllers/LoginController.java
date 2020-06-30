@@ -48,10 +48,18 @@ public class LoginController implements Initializable {
                        if(password_check){
                            switch (rs.getString("position")){
                                case "Admin":
-                                   JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
+                                   //JOptionPane.showMessageDialog(null,"Jeni loguar si admin");
+                                    URL url = new File("src/views/AdminDashboard.fxml").toURI().toURL();
+                                   FXMLLoader loader = new FXMLLoader();
+                                   loader.setLocation(url);
+                                   Pane newScreen = loader.load();
+                                   Scene scene=new Scene(newScreen);
+                                   Stage stage=new Stage();
+                                   stage.setScene(scene);
+                                   stage.show();
                                    break;
                                case "Staff":
-                                   JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
+                                  // JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
                                    break;
                            }
                        }
