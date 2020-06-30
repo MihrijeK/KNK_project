@@ -131,4 +131,18 @@ public class PaymentsRepository {
 
         return rs;
     }
+
+    public static ResultSet getDefaultUnpaid() throws Exception{
+        connection=dbConnection.getConnection();
+
+        String query="SELECT DISTINCT p.id,g.first_name,g.last_name,r.checkout_date,p.price \n" +
+                "FROM reservations r INNER JOIN payments p ON r.payment_id = p.id\n" +
+                "INNER JOIN guests g ON r.guest_id = g.id \n" +
+                "WHERE is_payed=0;";
+
+        Statement stmt=connection.createStatement();
+        ResultSet rs=stmt.executeQuery(query);
+
+        return rs;
+    }
 }
