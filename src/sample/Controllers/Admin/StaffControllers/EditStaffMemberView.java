@@ -11,11 +11,13 @@ import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Controllers.AdminDashboard;
+import sample.Controllers.LanguageController;
 import sample.Controllers.Partials.UserCardController;
 import sample.Models.StaffRoleModel;
 import sample.Repositories.StaffRepository;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -23,8 +25,9 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.ResourceBundle;
 
-public class EditStaffMemberView {
+public class EditStaffMemberView extends LanguageController {
 
     private Staff staff;
     @FXML private TextField first_name;
@@ -39,6 +42,16 @@ public class EditStaffMemberView {
     @FXML private Button cancleCreation;
     @FXML private RadioButton Male;
     @FXML private RadioButton Female;
+
+    @FXML private Label lbl_fName;
+    @FXML private Label lbl_lName;
+    @FXML private Label lbl_persNum;
+    @FXML private Label lbl_phoneNum;
+    @FXML private Label lbl_bday;
+    @FXML private Label lbl_position;
+    @FXML private Label lbl_salary;
+    @FXML private Label lbl_pw;
+    @FXML private Label lbl_gender;
 
     public void setStaff(Staff staff) {
         this.staff = staff;
@@ -134,5 +147,24 @@ public class EditStaffMemberView {
             }
         }
         return Double.toString(salary);
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        lbl_fName.setText(langBundle.getString("first_name"));
+        lbl_lName.setText(langBundle.getString("last_name"));
+        lbl_persNum.setText(langBundle.getString("personal_number"));
+        lbl_phoneNum.setText(langBundle.getString("phone_number"));
+        lbl_bday.setText(langBundle.getString("bday"));
+        lbl_position.setText(langBundle.getString("position"));
+        lbl_salary.setText(langBundle.getString("salary"));
+        lbl_pw.setText(langBundle.getString("password"));
+        lbl_gender.setText(langBundle.getString("gender"));
+        editStaffMemberBtn.setText(langBundle.getString("Update"));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
     }
 }
