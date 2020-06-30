@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="EditServicesType Language">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="EditStaffMemberView Language">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Views/AdminViews/StaffViews/CreateStaffMemberView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/AdminViews/StaffViews/CreateStaffMemberView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Views/AdminViews/StaffViews/EditStaffMemberView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/AdminViews/StaffViews/EditStaffMemberView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,20 +275,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00043" summary="Konstruktori">
-      <created>1588625560293</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625560293</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Metoda per display scene">
-      <created>1588625578837</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625578837</updated>
     </task>
     <task id="LOCAL-00045" summary="Metoda per krijim te objektit dhe querys">
       <created>1588625600061</created>
@@ -621,7 +605,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593544394798</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="CreateStaffMemberView Language">
+      <created>1593544580477</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1593544580477</updated>
+    </task>
+    <task id="LOCAL-00093" summary="EditStaffMemberView Language">
+      <created>1593544629189</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1593544629189</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -643,8 +641,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Update add service view and edit service view" />
-    <MESSAGE value="update edit staff member view content" />
     <MESSAGE value="update admin dashboard fxml file" />
     <MESSAGE value="UPDATE" />
     <MESSAGE value="UPDATE room filters" />
@@ -668,7 +664,9 @@
     <MESSAGE value="EditNewRoom Language" />
     <MESSAGE value="AddServicesType Language" />
     <MESSAGE value="EditServicesType Language" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditServicesType Language" />
+    <MESSAGE value="CreateStaffMemberView Language" />
+    <MESSAGE value="EditStaffMemberView Language" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditStaffMemberView Language" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -698,10 +696,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593544579996">
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593544628305">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593544579996" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593544628305" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593524854194" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
