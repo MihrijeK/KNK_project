@@ -82,3 +82,8 @@
     -fx-background-color:#89609e;
     -fx-text-fill:#1d1f2a;
 }
+.button{
+    -fx-background-color:#89609e;
+    -fx-text-fill:white;
+    -fx-cursor:hand;
+}
