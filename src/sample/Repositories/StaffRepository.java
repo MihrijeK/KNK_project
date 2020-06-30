@@ -2,6 +2,7 @@ package sample.Repositories;
 
 import DatabaseConnection.dbConnection;
 import Helpers.*;
+import sample.Models.View.ChartsViewModels.StaffChartModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -133,5 +134,16 @@ public class StaffRepository {
             return res.getInt("max(id)");
         }
         return 0;
+    }
+
+    public static List<StaffChartModel> selectAllOrdeByPosiotion() throws Exception {
+        ArrayList<StaffChartModel> list = new ArrayList<>();
+        Connection conn = dbConnection.getConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT position,COUNT(*) FROM staff GROUP BY position ");
+        ResultSet res = stmt.executeQuery();
+        while (res.next()) {
+            list.add(new StaffChartModel(res.getString("position"),res.getInt("COUNT(*)")));
+        }
+        return list;
     }
 }
