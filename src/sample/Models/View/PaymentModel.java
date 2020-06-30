@@ -19,5 +19,13 @@ public class PaymentModel {
             this.price=price;
             this.isPayed=isPayed;
         }
+        
+         public int getPayment_id() {
+            return payment_id;
+        }
+
+        public void setPayment_id(int payment_id) {
+            this.payment_id = payment_id;
+        }
 
 }
