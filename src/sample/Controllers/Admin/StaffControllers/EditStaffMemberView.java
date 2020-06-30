@@ -1,5 +1,6 @@
 package sample.Controllers.Admin.StaffControllers;
 
+import Helpers.SecurityHelper;
 import Helpers.Staff;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -79,7 +80,7 @@ public class EditStaffMemberView {
         salary.setText(Double.toString(staff.getSalary()));
 
 
-
+        SecurityHelper sc = new SecurityHelper();
         if(staff.getGender().equals("Male")){
             Male.setSelected(true);
         }else if(staff.getGender().equals("Female")){
@@ -96,7 +97,7 @@ public class EditStaffMemberView {
                 else
                     gendeer = null;
                 Staff model = new Staff(staff.getId(),first_name.getText(),last_name.getText(),Integer.parseInt(personal_number.getText()),phone_number.getText()
-                        ,gendeer,getDate(birthdate),position.getValue().toString(), Double.parseDouble(getSalary(position.getValue().toString())), password.getText());
+                        ,gendeer,getDate(birthdate),position.getValue().toString(), Double.parseDouble(getSalary(position.getValue().toString())), sc.hashPassword(password.getText()));
                 UserCardController us = new UserCardController();
                 if(us.display(model,null)){
                     staffi.addAll(model);
