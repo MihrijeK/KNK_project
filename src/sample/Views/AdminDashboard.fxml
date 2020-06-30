@@ -19,21 +19,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1000.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
+<AnchorPane prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
     <children>
-        <AnchorPane prefHeight="842.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane prefHeight="842.0" prefWidth="294.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #EBE8F9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <VBox prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <ImageView fitHeight="175.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../images/admin.png" />
                             </image>
                             <VBox.margin>
-                                <Insets bottom="10.0" left="50.0" />
+                                <Insets bottom="10.0" />
                             </VBox.margin>
                         </ImageView>
-                        <Button fx:id="overviewBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Overview">
+                        <Button fx:id="overviewBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Overview">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -45,7 +45,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="staffBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Staff">
+                        <Button fx:id="staffBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Staff">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -57,7 +57,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="roomsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Rooms">
+                        <Button fx:id="roomsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Rooms">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -69,7 +69,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="paymentsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Payments">
+                        <Button fx:id="paymentsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Payments">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -81,7 +81,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="sevicesBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Service Types">
+                        <Button fx:id="sevicesBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Service Types">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -93,7 +93,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Log Out">
+                        <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Log Out">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -109,9 +109,9 @@
                 </VBox>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: #b8f2d2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <GridPane fx:id="chartGridPane" prefHeight="850.0" prefWidth="942.0">
                             <columnConstraints>
@@ -135,15 +135,15 @@
                         </GridPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ecdad1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
-                                <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0" spacing="15.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+                                <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0" spacing="15.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
                                     <children>
-                                        <Button fx:id="CreateMemberBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Add staff member">
+                                        <Button fx:id="CreateMemberBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" text="Add staff member">
                                             <padding>
-                                                <Insets left="50.0" />
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                             </padding>
                                             <graphic>
                                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -152,6 +152,9 @@
                                                     </image>
                                                 </ImageView>
                                             </graphic>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                                         </Button>
                                     </children>
                                     <opaqueInsets>
@@ -184,7 +187,7 @@
                             <top>
                                 <VBox prefHeight="69.0" prefWidth="942.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="150.0">
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="150.0" style="-fx-background-color: #1d1f2a;">
                                             <children>
                                                 <Label alignment="CENTER" text="Staff" textAlignment="CENTER" textFill="#c98c8c">
                                                     <font>
@@ -192,9 +195,9 @@
                                                     </font>
                                                 </Label>
                                                 <ChoiceBox fx:id="positionCB" prefWidth="150.0" />
-                                                <Button fx:id="positionFilterBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Search">
+                                                <Button fx:id="positionFilterBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" text="Search">
                                                     <padding>
-                                                        <Insets left="50.0" />
+                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                                     </padding>
                                                     <graphic>
                                                         <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -203,6 +206,9 @@
                                                             </image>
                                                         </ImageView>
                                                     </graphic>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
                                                 </Button>
                                             </children>
                                             <opaqueInsets>
@@ -218,7 +224,7 @@
                         </BorderPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
@@ -290,7 +296,7 @@
                         </BorderPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="servicesPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: purple;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="servicesPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
@@ -333,13 +339,13 @@
                             </top>
                         </BorderPane>
                     </children></AnchorPane>
-                <AnchorPane fx:id="paymentsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: green;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="paymentsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <top>
                                 <AnchorPane prefHeight="97.0" prefWidth="942.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <DatePicker fx:id="paymentDtPickerFilter" layoutX="153.0" layoutY="31.0" prefHeight="36.0" prefWidth="277.0" />
+                                        <DatePicker fx:id="paymentDtPickerFilter" layoutX="153.0" layoutY="31.0" prefHeight="36.0" prefWidth="277.0" style="-fx-background-color: #343742;" />
                                         <Button fx:id="paymentFilterBtn" layoutX="499.0" layoutY="32.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="93.0" text="Search" />
                                     </children>
                                 </AnchorPane>
