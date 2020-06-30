@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="AdminDashboard Language">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/AddNewRoomView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/AddNewRoomView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Views/AdminViews/RoomsViews/AddNewRoomView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/AdminViews/RoomsViews/AddNewRoomView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Views/AdminViews/RoomsViews/EditRoomsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Views/AdminViews/RoomsViews/EditRoomsView.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="AddNewRoom Language">
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/EditRoomsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/EditRoomsView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,13 +275,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00039" summary="Upddate">
-      <created>1588625466737</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625466737</updated>
     </task>
     <task id="LOCAL-00040" summary="Upddate">
       <created>1588625481446</created>
@@ -622,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593544011461</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="AddNewRoom Language">
+      <created>1593544164861</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1593544164861</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -644,7 +641,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Update Staff Controllers" />
     <MESSAGE value="Update admin" />
     <MESSAGE value="Update admin view" />
     <MESSAGE value="Update addnewroom view and edit room view" />
@@ -669,7 +665,8 @@
     <MESSAGE value="Languages" />
     <MESSAGE value="Language Controller &amp; Session Manager" />
     <MESSAGE value="AdminDashboard Language" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminDashboard Language" />
+    <MESSAGE value="AddNewRoom Language" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddNewRoom Language" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -686,11 +683,11 @@
     <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1593444119090" />
     <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112634186" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591902614695" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593544147315">
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593544193508">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1593531176402" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593544147315" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593544193508" />
     <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593522219222">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -699,10 +696,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593544010992">
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593544218246">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593544010992" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593544218246" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593524854194" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
