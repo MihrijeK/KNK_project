@@ -33,7 +33,7 @@ public class TableViewContent {
         col_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         List<Staff> staffList = null;
         try {
-            if(positionCB.getValue() == null){
+            if(positionCB.getValue().equals("All")){
                 staffList = StaffRepository.selectAll();
             }else
                 staffList = StaffRepository.findPosition(positionCB.getValue());
