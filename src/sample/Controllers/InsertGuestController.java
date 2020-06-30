@@ -68,10 +68,11 @@ public class InsertGuestController implements Initializable {
         }
         try {
             int newInt = Integer.parseInt(number);
+            return true;
         } catch (NumberFormatException e) {
             return false;
         }
-        return true;
+        
     }
     public String createQuery(){
         StringBuilder sb = new StringBuilder();
