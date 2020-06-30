@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class ReservationsController extends LanguageController{
+public class ReservationsController extends LanguageController implements Initializable{
     @FXML private Label lbl_persNum;
     @FXML private Label lbl_total;
     @FXML private Label lbl_fName;
@@ -211,7 +211,7 @@ public class ReservationsController extends LanguageController{
     public void loadLangTexts(ResourceBundle langBundle) {
         lbl_persNum.setText(langBundle.getString("personal_number"));
         lbl_total.setText(langBundle.getString("total"));
-        lbl_fName.setText(langBundle.getString("firs_name"));
+        lbl_fName.setText(langBundle.getString("first_name"));
         lbl_lName.setText(langBundle.getString("last_name"));
     }
 }
