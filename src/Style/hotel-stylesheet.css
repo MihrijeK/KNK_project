@@ -1,3 +1,13 @@
 .root{
     -fx-background-color:#1d1f2a;
 }
+.table-view{
+    -fx-background-color:#1d1f2a;
+    -fx-background-radius:5;
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color:#343742;
+    -fx-background-radius:5;
+    -fx-padding:5 5 5 5;
+}
