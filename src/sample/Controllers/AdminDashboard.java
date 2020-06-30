@@ -4,11 +4,15 @@ import Helpers.*;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import sample.Components.ErrorPopupComponent;
 import sample.Controllers.Admin.RoomControllers.AddNewRoomView;
 import sample.Controllers.Admin.Services.AddServicesType;
@@ -18,6 +22,7 @@ import sample.Models.View.ChartsView;
 import sample.Models.View.PaymentModel;
 import sample.Models.View.TableViewContent;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -25,7 +30,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 
-public class AdminDashboard implements Initializable {
+public class AdminDashboard extends LanguageController {
 
 
     @FXML private Button overviewBtn;
@@ -186,6 +191,7 @@ public class AdminDashboard implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
         positionCB.getItems().addAll("All","Manager","Waiter","Recepsionist");
         positionCB.setValue("All");
         roomTypeFilter.getItems().addAll("All","Single","Double","Triple","Quad","Double-double","Master Suite","Junior Suite");
@@ -221,6 +227,47 @@ public class AdminDashboard implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        payment_id.setText(langBundle.getString("payment_id"));
+        firstname.setText(langBundle.getString("first_name"));
+        lastname.setText(langBundle.getString("first_name"));
+        date.setText(langBundle.getString("data"));
+        price1.setText(langBundle.getString("price"));
+        isPayed.setText(langBundle.getString("isPayed"));
+
+        col_fname.setText(langBundle.getString("first_name"));
+        col_lname.setText(langBundle.getString("last_name"));
+        col_prsNum.setText(langBundle.getString("personal_number"));
+        col_position.setText(langBundle.getString("position"));
+        col_bday.setText(langBundle.getString("bday"));
+        col_phone.setText(langBundle.getString("phone_number"));
+        col_salary.setText(langBundle.getString("salary"));
+        gender.setText(langBundle.getString("gender"));
+        positionFilterBtn.setText(langBundle.getString("search"));
+
+        findRooms.setText(langBundle.getString("search"));
+        paymentFilterBtn.setText(langBundle.getString("search"));
+
+        roomNumber.setText(langBundle.getString("roomNr"));
+        floorNumber.setText(langBundle.getString("floorNr"));
+        capacity.setText(langBundle.getString("roomCapacity"));
+        bedNumber.setText(langBundle.getString("bedNumber"));
+        roomType.setText(langBundle.getString("roomType"));
+        price.setText(langBundle.getString("price"));
+
+        overviewBtn.setText(langBundle.getString("overviewButton"));
+        staffBtn.setText(langBundle.getString("staffButon"));
+        roomsBtn.setText(langBundle.getString("roomsButton"));
+        paymentsBtn.setText(langBundle.getString("paymentsButton"));
+        sevicesBtn.setText(langBundle.getString("servicesButton"));
+        logoutBtn.setText(langBundle.getString("logoutButton"));
+
+        serviceName.setText(langBundle.getString("first_name"));
+        servicePrice.setText(langBundle.getString("price"));
+        serviceQuantity.setText(langBundle.getString("quantity"));
     }
 }
 

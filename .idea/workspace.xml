@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Languages">
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/LanguageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/utils/SessionManager.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Language Controller &amp; Session Manager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +123,7 @@
       <recent name="C:\Users\xhana\Documents\GitHub\KNK_project\src\sample\Views\AdminViews\RoomsViews" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Helpers" />
       <recent name="sample.utils" />
       <recent name="sample.Controllers" />
       <recent name="sample.Models.View" />
@@ -276,13 +276,6 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-    </task>
-    <task id="LOCAL-00037" summary="Krijimi i view CreateStaffMemberView">
-      <created>1588625440302</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1588625440303</updated>
     </task>
     <task id="LOCAL-00038" summary="Upddate">
       <created>1588625456295</created>
@@ -620,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593543759178</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Language Controller &amp; Session Manager">
+      <created>1593543855705</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1593543855705</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -642,7 +642,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Update AdminDashboard Controller" />
     <MESSAGE value="Update Rooms Controllers" />
     <MESSAGE value="Update Staff Controllers" />
     <MESSAGE value="Update admin" />
@@ -667,7 +666,8 @@
     <MESSAGE value="Hashed password while creating staff member" />
     <MESSAGE value="Hashed password while editing staff member" />
     <MESSAGE value="Languages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Languages" />
+    <MESSAGE value="Language Controller &amp; Session Manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Language Controller &amp; Session Manager" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="178" key="#Main" timestamp="1593112812617">
@@ -684,11 +684,11 @@
     <state x="331" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1593444119090" />
     <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112634186" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591902614695" />
-    <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1593531176402">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593543924451">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="612" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1593531176402" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593371070176" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593543924451" />
     <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593522219222">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -697,10 +697,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2609" y="383" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593112691866" />
-    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593543758556">
+    <state x="2992" y="109" key="CommitChangelistDialog2" timestamp="1593543855322">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593543758556" />
+    <state x="2992" y="109" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593543855322" />
     <state x="734" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593524854194" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1593380484043">
       <screen x="0" y="0" width="1536" height="824" />
