@@ -159,6 +159,10 @@ public class AdminDashboard implements Initializable {
                     ex.printStackTrace();
                 }
             });
+            else if (actionEvent.getSource() == paymentsBtn){
+            
+            });
+        }
         }
 
     }
