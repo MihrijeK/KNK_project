@@ -9,7 +9,7 @@
    <children>
       <ImageView blendMode="COLOR_DODGE" fitHeight="427.0" fitWidth="600.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="57.5" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="5.0">
          <image>
-            <Image url="@../../out/production/logo2.png" />
+            <Image url="@../../src/Style/logo2.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="219.0" layoutY="253.0" prefHeight="89.0" prefWidth="136.0">
