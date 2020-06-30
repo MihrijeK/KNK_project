@@ -8,10 +8,14 @@ import java.util.Locale;
 
 public class SessionManager {
   public static Staff user;
+  private static LangEnum lang;
 
   public static Locale getLocale() {
-    LangEnum lang = LangEnum.AL;
     Locale locale = lang == LangEnum.AL ? new Locale("al", "AL") : new Locale("en", "EN");
     return locale;
+  }
+
+  public static void setLang(LangEnum lang) {
+    SessionManager.lang = lang;
   }
 }

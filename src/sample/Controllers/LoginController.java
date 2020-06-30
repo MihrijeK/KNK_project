@@ -1,6 +1,7 @@
 package sample.Controllers;
 
 import DatabaseConnection.dbConnection;
+import Helpers.LangEnum;
 import Helpers.SecurityHelper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,14 +10,12 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import sample.utils.SessionManager;
 
 import javax.swing.*;
 import java.io.File;
@@ -28,6 +27,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
+    @FXML private ChoiceBox lang_CB;
     @FXML private Label ADMINLOGIN;
 
     @FXML private Button login;
@@ -37,6 +37,7 @@ public class LoginController implements Initializable {
     PreparedStatement pst;
     @FXML
     void login(ActionEvent event) throws Exception {
+        SessionManager.setLang((LangEnum) lang_CB.getValue());
         String uname=username.getText();
         String pass=password.getText();
         Connection con= dbConnection.getConnection();
@@ -122,7 +123,8 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
-
+        lang_CB.getItems().setAll(LangEnum.EN,LangEnum.AL);
+        lang_CB.setValue(LangEnum.EN);
     }
 
 
