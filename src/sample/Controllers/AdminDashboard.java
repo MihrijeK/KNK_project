@@ -5,13 +5,16 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import sample.Components.ErrorPopupComponent;
 import sample.Controllers.Admin.RoomControllers.AddNewRoomView;
 import sample.Controllers.Admin.Services.AddServicesType;
 import sample.Controllers.Admin.StaffControllers.CreateStaffMemberView;
 import sample.Controllers.Partials.AddButton;
+import sample.Models.View.ChartsView;
 import sample.Models.View.TableViewContent;
 import sample.Models.View.PaymentModel;
 
@@ -34,13 +37,21 @@ public class AdminDashboard implements Initializable {
     @FXML private Button settingsBtn;
     @FXML private Button logoutBtn;
 
-    @FXML private AnchorPane overviewPane;
 
     @FXML private AnchorPane staffPane;
     @FXML private Button CreateMemberBtn;
     @FXML private Button refreshTableView;
 
-    
+    @FXML private AnchorPane overviewPane;
+    @FXML private GridPane chartGridPane;
+    @FXML private PieChart serviceChart;
+    @FXML private PieChart staffChart;
+    @FXML private PieChart roomsChart;
+    @FXML private PieChart roomsChart2;
+    @FXML private Label statusi3;
+    @FXML private Label statusi1;
+    @FXML private Label statusi;
+    @FXML private Label statusi2;
     
     
     @FXML private AnchorPane paymentsPane;
@@ -192,6 +203,15 @@ public class AdminDashboard implements Initializable {
         
         paymentsObservableList = TableViewContent.setPayments(payment_id,firstname,lastname,date,price1,isPayed,paymentDtPickerFilter);
         paymentsTableView.setItems(paymentsObservableList);
+
+        try {
+            chartGridPane.add(ChartsView.serviceChart(serviceChart,statusi),0,0);
+            chartGridPane.add(ChartsView.staffChart(staffChart,statusi1),1,0);
+            chartGridPane.add(ChartsView.roomsChart(roomsChart,statusi2),0,1);
+            chartGridPane.add(ChartsView.roomFloorChart(roomsChart2,statusi3),1,1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 
