@@ -1,5 +1,18 @@
 package sample.Controllers;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class MainManagingController implements Initializable {
     @FXML private Button mainBtn;
     @FXML private Button reservationsBtn;
@@ -30,7 +43,7 @@ public class MainManagingController implements Initializable {
             }
             else if(actionEvent.getSource()==servicesBtn){
                 viewLoader("Services");
-            }lse{
+            }else{
                 //do smth
             }
         }catch(Exception e){
@@ -38,7 +51,7 @@ public class MainManagingController implements Initializable {
             alertBox.setContentText(e.getMessage());
             alertBox.showAndWait();
         }
-        }
+
     }
 
     public void viewLoader(String view) throws Exception{
