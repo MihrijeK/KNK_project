@@ -38,6 +38,8 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-            SessionManager.getLocale(languageCB.getValue());
+        languageCB.getItems().setAll(LangEnum.AL,LangEnum.EN);
+        languageCB.setValue(LangEnum.EN);
+        SessionManager.getLocale(languageCB.getValue());
     }
 }
