@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated rooms edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/EditRoomsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/EditRoomsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminDashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/Views/AdminViews/StaffViews" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/Models/View" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />

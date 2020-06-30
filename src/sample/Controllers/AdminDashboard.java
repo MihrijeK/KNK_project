@@ -10,6 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import sample.Components.ErrorPopupComponent;
 import sample.Controllers.Admin.RoomControllers.AddNewRoomView;
 import sample.Controllers.Admin.Services.AddServicesType;
 import sample.Controllers.Admin.StaffControllers.CreateStaffMemberView;
@@ -159,7 +160,7 @@ public class AdminDashboard implements Initializable {
                     ex.printStackTrace();
                 }
             });
-            else if (actionEvent.getSource() == paymentsBtn){
+        }else if (actionEvent.getSource() == paymentsBtn){
             paymentsPane.toFront();
             paymentFilterBtn.setOnAction(e->{
                 if(paymentDtPickerFilter.getValue() != null){
@@ -169,7 +170,6 @@ public class AdminDashboard implements Initializable {
                     ErrorPopupComponent.show("DatePicker is null","DATEPICKER ERROR");
                 }
             });
-        }
         }
 
     }
