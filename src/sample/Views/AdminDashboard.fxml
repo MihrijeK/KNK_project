@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -17,21 +19,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
+<AnchorPane prefHeight="850.0" prefWidth="1000.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
     <children>
-        <AnchorPane prefHeight="842.0" prefWidth="294.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane prefHeight="842.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <VBox prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #EBE8F9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <ImageView fitHeight="175.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../images/admin.png" />
                             </image>
                             <VBox.margin>
-                                <Insets bottom="10.0" />
+                                <Insets bottom="10.0" left="50.0" />
                             </VBox.margin>
                         </ImageView>
-                        <Button fx:id="overviewBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Overview">
+                        <Button fx:id="overviewBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Overview">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -43,7 +45,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="staffBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Staff">
+                        <Button fx:id="staffBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Staff">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -55,7 +57,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="roomsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Rooms">
+                        <Button fx:id="roomsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Rooms">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -67,7 +69,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="paymentsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Payments">
+                        <Button fx:id="paymentsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Payments">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -79,19 +81,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="reservationsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Reservations">
-                            <padding>
-                                <Insets left="50.0" />
-                            </padding>
-                            <graphic>
-                                <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../images/reservations.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button fx:id="sevicesBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Service Types">
+                        <Button fx:id="sevicesBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Service Types">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -103,7 +93,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a; -fx-text-fill: #A38995;" text="Log Out">
+                        <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Log Out">
                             <padding>
                                 <Insets left="50.0" />
                             </padding>
@@ -119,18 +109,41 @@
                 </VBox>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: #b8f2d2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <BorderPane prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <GridPane fx:id="chartGridPane" prefHeight="850.0" prefWidth="942.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <PieChart fx:id="serviceChart" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" />
+                                <Label fx:id="statusi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="309.0" text="" />
+                                <PieChart fx:id="staffChart" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" GridPane.columnIndex="1" />
+                                <Label fx:id="statusi1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="309.0" text="" GridPane.columnIndex="1" />
+                                <PieChart fx:id="roomsChart" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" GridPane.rowIndex="1" />
+                                <Label fx:id="statusi2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="309.0" text="" GridPane.rowIndex="1" />
+                                <PieChart fx:id="roomsChart2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label fx:id="statusi3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="309.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #ecdad1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
-                                <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0" spacing="15.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
+                                <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0" spacing="15.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
                                     <children>
-                                        <Button fx:id="CreateMemberBtn" alignment="BASELINE_LEFT" contentDisplay="CENTER" graphicTextGap="20.0" mnemonicParsing="false" text="Add staff member">
+                                        <Button fx:id="CreateMemberBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Add staff member">
                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                <Insets left="50.0" />
                                             </padding>
                                             <graphic>
                                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -139,9 +152,6 @@
                                                     </image>
                                                 </ImageView>
                                             </graphic>
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
                                         </Button>
                                     </children>
                                     <opaqueInsets>
@@ -153,7 +163,7 @@
                                 </HBox>
                             </bottom>
                             <center>
-                                <AnchorPane fx:id="showStaffPane" prefHeight="672.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
+                                <AnchorPane fx:id="showStaffPane" prefHeight="672.0" prefWidth="942.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
                                     <children>
                                         <TableView fx:id="showStaffTable" prefHeight="673.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columns>
@@ -182,9 +192,9 @@
                                                     </font>
                                                 </Label>
                                                 <ChoiceBox fx:id="positionCB" prefWidth="150.0" />
-                                                <Button fx:id="positionFilterBtn" alignment="BASELINE_LEFT" contentDisplay="CENTER" graphicTextGap="20.0" mnemonicParsing="false" stylesheets="@../../Style/hotel-stylesheet.css" text="Search">
+                                                <Button fx:id="positionFilterBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #EBE8F9;" text="Search">
                                                     <padding>
-                                                        <Insets left="10.0" right="10.0" />
+                                                        <Insets left="50.0" />
                                                     </padding>
                                                     <graphic>
                                                         <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -208,7 +218,7 @@
                         </BorderPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
@@ -216,7 +226,6 @@
                                     <children>
                                         <Button fx:id="btnAddNewRoom" mnemonicParsing="false" text="Add New" />
                                         <Button fx:id="btnRefresh" mnemonicParsing="false" text="Refresh" />
-                                        <Button fx:id="btnDelete" mnemonicParsing="false" text="Delete" />
                                     </children>
                                 </HBox>
                             </bottom>
@@ -281,24 +290,15 @@
                         </BorderPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="servicesPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="servicesPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: purple;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
-                                <HBox alignment="CENTER" prefHeight="69.0" prefWidth="1011.0" spacing="30.0" BorderPane.alignment="CENTER">
+                                <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <Button fx:id="addNewServiceBtn" mnemonicParsing="false" text="Add New">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding></Button>
-                                        <Button fx:id="updateServiceBtn" mnemonicParsing="false" text="Update">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding></Button>
-                                        <Button fx:id="btnDelete1" mnemonicParsing="false" text="Delete">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding></Button>
+                                        <Button fx:id="addNewServiceBtn" mnemonicParsing="false" text="Add New" />
+                                        <Button fx:id="updateServiceBtn" mnemonicParsing="false" text="Update" />
+                                        <Button fx:id="btnDelete1" mnemonicParsing="false" text="Delete" />
                                     </children>
                                 </HBox>
                             </bottom>
@@ -326,11 +326,6 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
-                                            <children>
-                                                <ChoiceBox prefHeight="25.0" prefWidth="165.0" GridPane.rowIndex="1" />
-                                                <ChoiceBox prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <ChoiceBox prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                            </children>
                                         </GridPane>
                                         <Label layoutX="14.0" layoutY="18.0" text="Services" />
                                     </children>
@@ -338,6 +333,35 @@
                             </top>
                         </BorderPane>
                     </children></AnchorPane>
+                <AnchorPane fx:id="paymentsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: green;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <top>
+                                <AnchorPane prefHeight="97.0" prefWidth="942.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <DatePicker fx:id="paymentDtPickerFilter" layoutX="153.0" layoutY="31.0" prefHeight="36.0" prefWidth="277.0" />
+                                        <Button fx:id="paymentFilterBtn" layoutX="499.0" layoutY="32.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="93.0" text="Search" />
+                                    </children>
+                                </AnchorPane>
+                            </top>
+                            <center>
+                                <TableView fx:id="paymentsTableView" prefHeight="750.0" prefWidth="942.0" BorderPane.alignment="CENTER">
+                                    <columns>
+                                        <TableColumn fx:id="payment_id" prefWidth="164.22216796875" text="payment_id" />
+                                        <TableColumn fx:id="firstname" prefWidth="156.0" text="firstname" />
+                                        <TableColumn fx:id="lastname" prefWidth="115.11102294921875" text="lastname" />
+                                        <TableColumn fx:id="date" minWidth="0.0" prefWidth="156.888916015625" text="date" />
+                                        <TableColumn fx:id="price1" minWidth="0.0" prefWidth="156.44451904296875" text="price" />
+                                        <TableColumn fx:id="isPayed" prefWidth="190.666748046875" text="isPayed" />
+                                    </columns>
+                                </TableView>
+                            </center>
+                            <bottom>
+                                <HBox prefHeight="82.0" prefWidth="942.0" BorderPane.alignment="CENTER" />
+                            </bottom>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
             </children>
         </AnchorPane>
     </children>
