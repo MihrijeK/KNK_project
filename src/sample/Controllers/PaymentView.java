@@ -1,10 +1,18 @@
 package sample.Controllers;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import Helpers.Service_Type;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import sample.Repositories.*;
 import Helpers.Rooms;
 import javafx.fxml.Initializable;
@@ -42,6 +50,7 @@ public class PaymentView extends LanguageController {
     @FXML private RadioButton cash;
     @FXML private RadioButton creditCard;
     @FXML private RadioButton gift;
+    @FXML private AnchorPane anchor;
     private ToggleGroup toggle;
     private double total;
 
@@ -101,37 +110,38 @@ public class PaymentView extends LanguageController {
             RadioButton selectedMethod = (RadioButton) toggle.getSelectedToggle();
             String metodaEzgjedhur = selectedMethod.getText();
             PaymentsRepository.updatePayments(user, payment_id, metodaEzgjedhur); //query per te kryer pagesen
-
             if(total != 0) {
+                URL url = new File("src/sample/Views/main-manager.fxml").toURI().toURL();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(url);
+                Pane newScreen = loader.load();
+
+                Scene scene=new Scene(newScreen);
+                Stage stage=(Stage)anchor.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
                 Alert konfirmimi = new Alert(Alert.AlertType.INFORMATION);
                 konfirmimi.setTitle("Confirmation");
                 konfirmimi.setHeaderText("Payment Done");
                 konfirmimi.setContentText("Payment is completed successfully");
                 konfirmimi.showAndWait();
-
-                //Empty all the fields
-                emriMbiemri.setText("");
-                personalNr.setText("");
-                tableView.getItems().clear();
-                tableView1.getItems().clear();
-                totali.setText("");
-                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
-                toggle.getToggles().clear();
             }else {
+                URL url = new File("src/sample/Views/main-manager.fxml").toURI().toURL();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(url);
+                Pane newScreen = loader.load();
+
+                Scene scene=new Scene(newScreen);
+                Stage stage=(Stage)anchor.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
                 Alert nothing = new Alert(Alert.AlertType.WARNING);
                 nothing.setTitle("Empty");
                 nothing.setHeaderText(null);
                 nothing.setContentText("Nothing to pay");
                 nothing.showAndWait();
-
-                //Empty all the fields
-                emriMbiemri.setText("");
-                personalNr.setText("");
-                tableView.getItems().clear();
-                tableView1.getItems().clear();
-                totali.setText("");
-                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
-                toggle.getToggles().clear();
             }
 
         } catch (IOException e) {
