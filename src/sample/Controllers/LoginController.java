@@ -1,16 +1,23 @@
-package sample;
+package sample.Controllers;
 
 import DatabaseConnection.dbConnection;
+import Helpers.SecurityHelper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -64,6 +71,9 @@ public class LoginController implements Initializable {
                                    FXMLLoader loader1 = new FXMLLoader();
                                    loader1.setLocation(url1);
                                    Pane newScreen1 = loader1.load();
+                                   MainManagingController mainController=loader1.getController();
+                                   mainController.getUser(rs.getString("first_name"),rs.getString("last_name"));
+
                                    Scene scene1=new Scene(newScreen1);
                                    Stage stage1=(Stage)((Node)event.getSource()).getScene().getWindow();
                                    stage1.setScene(scene1);
