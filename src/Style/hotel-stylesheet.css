@@ -44,3 +44,7 @@
     -fx-text-fill:#A38995;
     -fx-font-weight:bold;
 }
+.date-picker{
+    -fx-border-color:transparent;
+    -fx-cursor:hand;
+}
