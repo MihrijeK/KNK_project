@@ -87,3 +87,11 @@
     -fx-text-fill:white;
     -fx-cursor:hand;
 }
+.choice-box .menu-item:hover{
+    -fx-background-color:#DA9100;
+    -fx-text-fill:#1d1f2a;
+    -fx-font-weight:bold;
+}
+.choice-box .menu-item:hover .label{
+    -fx-text-fill:#1d1f2a;
+}
