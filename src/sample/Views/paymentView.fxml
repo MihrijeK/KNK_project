@@ -9,121 +9,124 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.PaymentView">
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.PaymentView">
    <children>
-      <BorderPane style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <HBox style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
-               <children>
-                  <Label text="SUN HOTEL">
-                     <font>
-                        <Font name="Broadway" size="21.0" />
-                     </font>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </Label>
-                  <Region prefHeight="30.0" prefWidth="399.0" HBox.hgrow="ALWAYS" />
-               </children>
-            </HBox>
-         </top>
-         <center>
-            <AnchorPane style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
-               <children>
-                  <TableView fx:id="tableView" prefHeight="367.0" prefWidth="376.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="303.0" AnchorPane.topAnchor="0.0">
-                     <columns>
-                        <TableColumn fx:id="firstColumn" prefWidth="125.59997862577438" text="Room" />
-                        <TableColumn fx:id="secondColumn" prefWidth="149.6000213623047" text="Room type" />
-                        <TableColumn fx:id="thirdColumn" prefWidth="102.39996337890625" text="Price" />
-                     </columns>
-                  </TableView>
-                  <TableView fx:id="tableView1" layoutX="375.0" prefHeight="367.0" prefWidth="303.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <columns>
-                        <TableColumn fx:id="fourthColumn" prefWidth="172.79995727539062" text="Service name" />
-                        <TableColumn fx:id="fifthColumn" minWidth="0.0" prefWidth="129.60003662109375" text="Price" />
-                     </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
-         </center>
-         <right>
-            <AnchorPane prefHeight="367.0" prefWidth="304.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
-               <children>
-                  <Label layoutX="12.0" layoutY="-10.0" prefHeight="34.0" prefWidth="84.0" text="Name:" AnchorPane.bottomAnchor="339.6" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="-10.0">
-                     <font>
-                        <Font name="Bodoni MT Bold" size="22.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="emriMbiemri" layoutX="12.0" layoutY="24.0" prefHeight="37.0" prefWidth="272.0" text="Ylber Gashi" AnchorPane.bottomAnchor="306.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="24.0">
-                     <font>
-                        <Font name="Bodoni MT Bold Italic" size="27.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="errorHandle" layoutX="18.0" layoutY="182.0" prefHeight="114.0" prefWidth="203.0">
-                     <font>
-                        <Font name="Bell MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="emriMbiemri1" layoutX="14.0" layoutY="79.0" prefHeight="34.0" prefWidth="38.0" text="ID: " AnchorPane.bottomAnchor="251.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="79.0">
-                     <font>
-                        <Font name="Bodoni MT Bold" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="personalNr" layoutX="49.0" layoutY="79.0" prefHeight="34.0" prefWidth="179.0" text="13212321" AnchorPane.bottomAnchor="250.6" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="19.80000000000001" AnchorPane.topAnchor="79.0">
-                     <font>
-                        <Font name="Monospaced Bold" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </right>
-         <bottom>
-            <AnchorPane prefHeight="139.0" prefWidth="918.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
-               <children>
-                  <Label layoutX="14.0" layoutY="8.0" prefHeight="27.0" prefWidth="174.0" text="Payment details" textAlignment="CENTER" underline="true" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="730.0" AnchorPane.topAnchor="8.0">
-                     <font>
-                        <Font name="Bodoni MT Bold" size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </Label>
-                  <Label layoutX="14.0" layoutY="59.0" text="Total:" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="838.0" AnchorPane.topAnchor="59.0">
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <font>
-                        <Font name="Times New Roman Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="totali" layoutX="75.0" layoutY="59.0" text="00$" textAlignment="RIGHT" AnchorPane.bottomAnchor="28.200000000000003" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="792.1999999999999" AnchorPane.topAnchor="59.0">
-                     <font>
-                        <Font name="Times New Roman Bold" size="34.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="383.0" layoutY="59.0" prefHeight="39.0" prefWidth="126.0" text="Payment Type:" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="409.0" AnchorPane.topAnchor="59.0">
-                     <font>
-                        <Font name="Bodoni MT Bold" size="18.0" />
-                     </font>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </Label>
-                  <RadioButton fx:id="cash" layoutX="528.0" layoutY="44.0" mnemonicParsing="false" text="Cash" AnchorPane.bottomAnchor="64.80000000000001" AnchorPane.leftAnchor="528.0" AnchorPane.rightAnchor="311.19999999999993" AnchorPane.topAnchor="44.0" />
-                  <RadioButton fx:id="gift" layoutX="528.0" layoutY="96.0" mnemonicParsing="false" text="Gift Cupon" AnchorPane.bottomAnchor="12.799999999999997" AnchorPane.leftAnchor="528.0" AnchorPane.rightAnchor="311.19999999999993" AnchorPane.topAnchor="96.0" />
-                  <RadioButton fx:id="creditCard" layoutX="528.0" layoutY="70.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" text="Credit Card" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="528.0" AnchorPane.rightAnchor="297.0" AnchorPane.topAnchor="70.0" />
-                  <Pane layoutX="823.0" layoutY="69.0" prefHeight="53.0" prefWidth="89.0" AnchorPane.bottomAnchor="16.599999999999994" AnchorPane.leftAnchor="823.0" AnchorPane.rightAnchor="14.600000000000023" AnchorPane.topAnchor="69.0">
+      <VBox layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane style="-fx-background-color: #1d1f2a;">
+               <top>
+                  <HBox style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
                      <children>
-                        <Button fx:id="pay" layoutX="4.0" layoutY="3.0" mnemonicParsing="false" onAction="#paguaj" prefHeight="47.0" prefWidth="81.0" text="Pay" />
+                        <Region prefHeight="75.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" HBox.hgrow="ALWAYS" />
                      </children>
-                  </Pane>
-               </children>
-            </AnchorPane>
-         </bottom>
-      </BorderPane>
+                  </HBox>
+               </top>
+               <bottom>
+                  <HBox prefHeight="126.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="126.0" prefWidth="849.0" style="-fx-background-color: #1d1f2a;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="10.0" prefHeight="27.0" prefWidth="174.0" text="Payment details" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="70.0" text="Total:">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totali" layoutX="85.0" layoutY="59.0" text="00$" textAlignment="RIGHT">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="34.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="pay" layoutX="573.0" layoutY="85.0" mnemonicParsing="false" onAction="#paguaj" text="Pay" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Label layoutX="203.0" layoutY="69.0" text="Payment Type:">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <RadioButton fx:id="cash" layoutX="345.0" layoutY="47.0" mnemonicParsing="false" text="Cash" />
+                              <RadioButton fx:id="gift" layoutX="345.0" layoutY="97.0" mnemonicParsing="false" text="Gift Cupon" />
+                              <RadioButton fx:id="creditCard" layoutX="345.0" layoutY="72.0" mnemonicParsing="false" text="Credit Card" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </bottom>
+               <center>
+                  <HBox prefHeight="363.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="363.0" prefWidth="273.0">
+                           <columns>
+                              <TableColumn fx:id="firstColumn" prefWidth="96.79998624324799" text="Room" />
+                              <TableColumn fx:id="secondColumn" prefWidth="76.79999542236328" text="Room type" />
+                              <TableColumn fx:id="thirdColumn" prefWidth="111.19999694824219" text="Price" />
+                           </columns>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TableView>
+                        <TableView fx:id="tableView1" prefHeight="363.0" prefWidth="245.0">
+                           <columns>
+                              <TableColumn fx:id="fourthColumn" prefWidth="123.19995421171188" text="Service name" />
+                              <TableColumn fx:id="fifthColumn" prefWidth="120.80001831054688" text="Price" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="364.0" prefWidth="133.0" style="-fx-background-color: #1d1f2a;">
+                           <children>
+                              <Label layoutX="12.0" layoutY="-10.0" prefHeight="34.0" prefWidth="84.0" text="Name:">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="emriMbiemri" layoutX="9.0" layoutY="24.0" prefHeight="34.0" prefWidth="222.0" text="Ylber Gashi">
+                                 <font>
+                                    <Font name="Bodoni MT Bold Italic" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="errorHandle" layoutX="18.0" layoutY="182.0" prefHeight="114.0" prefWidth="203.0">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="emriMbiemri1" layoutX="14.0" layoutY="79.0" prefHeight="34.0" prefWidth="35.0" text="ID: ">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="personalNr" layoutX="49.0" layoutY="79.0" prefHeight="34.0" prefWidth="179.0" text="13212321">
+                                 <font>
+                                    <Font name="Monospaced Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
