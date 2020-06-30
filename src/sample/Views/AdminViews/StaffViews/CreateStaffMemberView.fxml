@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="createStaffPane" prefHeight="661.0" prefWidth="1045.0" stylesheets="@../../../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="createStaffPane" prefHeight="661.0" prefWidth="1045.0" stylesheets="@../../../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <GridPane layoutX="126.0" layoutY="90.0" prefHeight="482.0" prefWidth="794.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="90.0">
             <columnConstraints>
@@ -38,43 +29,43 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label text="First Name:" GridPane.columnIndex="1">
+                <Label fx:id="lbl_fName" text="First Name:" GridPane.columnIndex="1">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <TextField fx:id="first_name" promptText="First Name" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-                <Label text="Last Name:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label fx:id="lbl_lName" text="Last Name:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <TextField fx:id="last_name" promptText="Last Name" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                 <TextField fx:id="personal_number" promptText="Personal Number" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                <Label text="Personal Number:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <Label fx:id="lbl_persNum" text="Personal Number:" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <Label text="Phone Number:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Label fx:id="lbl_phoneNum" text="Phone Number:" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <TextField fx:id="phone_number" promptText="Phone Number" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                <Label text="Birthdate:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <Label fx:id="lbl_bday" text="Birthdate:" GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <DatePicker fx:id="birthday" promptText="Birthdate" style="-fx-background-color: #343742;" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-                <Label text="Position:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                <Label fx:id="lbl_position" text="Position:" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <ChoiceBox fx:id="position" prefWidth="150.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-                <Label text="Salary:" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <Label fx:id="lbl_salary" text="Salary:" GridPane.columnIndex="1" GridPane.rowIndex="7">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -84,7 +75,7 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <Label text="Password:" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                <Label fx:id="lbl_pw" text="Password:" GridPane.columnIndex="1" GridPane.rowIndex="8">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -100,7 +91,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </GridPane.margin>
                 </Button>
-                <Label text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <Label fx:id="lbl_gender" text="Gender:" GridPane.columnIndex="1" GridPane.rowIndex="5">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>

@@ -12,18 +12,21 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Components.ErrorPopupComponent;
 import sample.Controllers.AdminDashboard;
+import sample.Controllers.LanguageController;
 import sample.Controllers.Partials.UserCardController;
 import sample.Models.StaffRoleModel;
 import sample.Repositories.StaffRepository;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.ResourceBundle;
 
-public class CreateStaffMemberView {
+public class CreateStaffMemberView extends LanguageController {
     @FXML private TextField first_name;
     @FXML private TextField last_name;
     @FXML private TextField personal_number;
@@ -36,6 +39,16 @@ public class CreateStaffMemberView {
     @FXML private Button cancleCreation;
     @FXML private RadioButton Male;
     @FXML private RadioButton Female;
+
+    @FXML private Label lbl_fName;
+    @FXML private Label lbl_lName;
+    @FXML private Label lbl_persNum;
+    @FXML private Label lbl_phoneNum;
+    @FXML private Label lbl_bday;
+    @FXML private Label lbl_gender;
+    @FXML private Label lbl_position;
+    @FXML private Label lbl_salary;
+    @FXML private Label lbl_pw;
 
     private final Stage stage;
     private ArrayList<StaffRoleModel> roleList = new ArrayList<>(Arrays.asList(new StaffRoleModel("Manager",1550.2),
@@ -142,5 +155,24 @@ public class CreateStaffMemberView {
         LocalDate localDate = dt.getValue();
         Date date = java.sql.Date.valueOf(localDate);
         return date;
+    }
+
+    @Override
+    public void loadLangTexts(ResourceBundle langBundle) {
+        lbl_fName.setText(langBundle.getString("first_name"));
+        lbl_lName.setText(langBundle.getString("last_name"));
+        lbl_persNum.setText(langBundle.getString("personal_number"));
+        lbl_phoneNum.setText(langBundle.getString("phone_number"));
+        lbl_bday.setText(langBundle.getString("bday"));
+        lbl_position.setText(langBundle.getString("position"));
+        lbl_salary.setText(langBundle.getString("salary"));
+        lbl_pw.setText(langBundle.getString("password"));
+        lbl_gender.setText(langBundle.getString("gender"));
+        createNewStaffMember.setText(langBundle.getString("Add"));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadLangTexts(getLangBundle());
     }
 }
