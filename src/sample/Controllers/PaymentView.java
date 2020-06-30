@@ -41,21 +41,17 @@ public class PaymentView implements Initializable {
     private double total;
 
     //klienti qe po paguan
-    private int user =1;
-    private int payment_id=1;
+    private static int user;
+    private static int payment_id;
 
-//    public void setUser(int user) {
-//        this.user = user;
-//    }
-//
-   public void setPaymentID(int id) {
-       this.payment_id = id;
+    public static void setUser(int user) {
+        user = user;
+    }
+
+   public static void setPaymentID(int id) {
+       payment_id = id;
    }
-
-//
-//    public static void incrementTotal(double total){
-//        total += total;
-//    }
+   
 
 
 
@@ -116,7 +112,7 @@ public class PaymentView implements Initializable {
                 tableView.getItems().clear();
                 tableView1.getItems().clear();
                 totali.setText("");
-                //total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
+                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
                 toggle.getToggles().clear();
             }else {
                 Alert nothing = new Alert(Alert.AlertType.WARNING);
@@ -131,7 +127,7 @@ public class PaymentView implements Initializable {
                 tableView.getItems().clear();
                 tableView1.getItems().clear();
                 totali.setText("");
-                //total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
+                total = 0; //nevojitet per te verifikuar se nuk ka asnje rezultat nga db
                 toggle.getToggles().clear();
             }
 

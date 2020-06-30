@@ -303,12 +303,13 @@ public class AddButton {
                             alert.showAndWait();
                             try {
                                 GuestPayment guestPayment=paymentTable.getItems().get(getIndex());
+                                PaymentView.setPaymentID(guestPayment.getId());
                                 URL url = new File("src/sample/Views/paymentView.fxml").toURI().toURL();
                                 FXMLLoader loader = new FXMLLoader();
                                 loader.setLocation(url);
                                 Pane newScreen = loader.load();
                                 PaymentView controller=loader.getController();
-                                controller.setPaymentID(guestPayment.getId());
+                                //controller.setPaymentID(guestPayment.getId());
 
                                 Scene scene=new Scene(newScreen);
                                 Stage stage=(Stage)anchor.getScene().getWindow();
