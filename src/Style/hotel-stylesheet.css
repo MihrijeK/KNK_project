@@ -95,3 +95,12 @@
 .choice-box .menu-item:hover .label{
     -fx-text-fill:#1d1f2a;
 }
+#pane > *{
+    -fx-background-color:#1d1f2a;
+}
+.text-field{
+    -fx-background-color:#343742;
+    -fx-text-inner-color:white;
+    -fx-highlight-fill:#DA9100;
+    -fx-highlight-text-fill:#1d1f2a;
+}
