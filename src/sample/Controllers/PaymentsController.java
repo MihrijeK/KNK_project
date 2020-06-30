@@ -69,4 +69,14 @@ public class PaymentsController implements Initializable {
             System.out.println(e.getMessage());
         }
     }
+
+    public void onSerchButtonClicked(ActionEvent actionEvent) {
+        System.out.println("Button Clicked!");
+        loadPayments(anchor);
+    }
+
+    private void setDefaultDate(){
+        LocalDate currentLocalDate=LocalDate.now();
+        datePicker.setValue(currentLocalDate);
+    }
     }
