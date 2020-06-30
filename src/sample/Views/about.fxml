@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../out/production/hotel-style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AboutController">
+   <children>
+      <ImageView fitHeight="195.0" fitWidth="298.0" layoutX="320.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../out/production/logo3.png" />
+         </image></ImageView>
+<Label layoutX="48.0" layoutY="151.0" prefHeight="18.0" prefWidth="570.0" text="SUN HOTEL- me lokacion ne Dhermi,Shqiperi eshte nder hotelet me luksoze te zones. " />
+      <Label layoutX="49.0" layoutY="173.0" text="Me vetem 5 minuta ecje nga plazhi hoteli yne ofron pamje perfekte nga brigjet e detit Jon.  " />
+      <Label layoutX="48.0" layoutY="191.0" text="Gjithsej 12 dhoma private, ku secila nga to ka banjon e saj private dhe ballkonin . " />
+      <Label layoutX="50.0" layoutY="210.0" text="Sherbim 24 ore ne restaurantin dhe bar te hotelit si dhe mbramje me muzike argetuese . " />
+      <Label layoutX="48.0" layoutY="228.0" text="E pervec kesaj hoteli ofron edhe parking privat per te gjithe mysafiret tane" />
+      <Label layoutX="48.0" layoutY="246.0" text="Jashte sherbimeve te permendura kemi edhe sherbimin ne dhome e ajo cka e ben te vecante" />
+      <Label layoutX="49.0" layoutY="264.0" text="eshte se kemi 20 vite si hoteli me i mire i rajonit dhe vazhdojme se bashku edhe shume vite tjera" />
+      <Label layoutX="46.0" layoutY="308.0" text="Cdo ankese dhe verejtje nga klientet tane merret parasysh, andaj mos hezitoni te na shkruani..." />
+      <Label layoutX="49.0" layoutY="326.0" text="Se bashku jemi me te miret!!!Faleminderit per besimin!!!" />
+      <Label layoutX="48.0" layoutY="90.0" text="ME SHUME PER NE...." />
+   </children>
+</AnchorPane>

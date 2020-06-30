@@ -123,5 +123,14 @@
 .menu-bar .label{
     -fx-text-fill:white;
 }
+.menu-bar .menu-button{
+    -fx-background-color:#1d1f2a;
+}
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused{
+    -fx-background-color:#DA9100;
+}
+.menu-bar .context-menu{
+    -fx-background-color:#1d1f2a;
+}
 
 
