@@ -8,6 +8,8 @@ public class PaymentModel {
         private Date date;
         private double price;
         private int isPayed;
+        
+         public PaymentModel(){}
 
 
 }
