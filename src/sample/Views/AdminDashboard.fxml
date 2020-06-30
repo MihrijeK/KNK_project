@@ -19,11 +19,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
+<AnchorPane prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
     <children>
-        <AnchorPane prefHeight="842.0" prefWidth="294.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane prefHeight="700.0" prefWidth="294.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox prefHeight="850.0" prefWidth="300.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <VBox prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                         <ImageView fitHeight="175.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -109,11 +109,11 @@
                 </VBox>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="300.0" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane layoutX="300.0" prefHeight="700.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="overviewPane" layoutX="-8.0" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <GridPane fx:id="chartGridPane" prefHeight="850.0" prefWidth="942.0">
+                        <GridPane fx:id="chartGridPane" prefHeight="700.0" prefWidth="942.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -135,9 +135,9 @@
                         </GridPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="staffPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="staffPane" prefHeight="700.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <BorderPane prefHeight="700.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
                                 <HBox alignment="CENTER_RIGHT" cache="true" prefHeight="90.0" prefWidth="942.0" spacing="15.0" style="-fx-background-color: #1d1f2a;" BorderPane.alignment="CENTER">
                                     <children>
@@ -224,9 +224,9 @@
                         </BorderPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="roomsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="roomsPane" prefHeight="700.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <BorderPane prefHeight="700.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
                                 <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0" BorderPane.alignment="CENTER">
                                     <children>
@@ -296,9 +296,9 @@
                         </BorderPane>
                     </children>
                 </AnchorPane>
-                <AnchorPane fx:id="servicesPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="servicesPane" prefHeight="700.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <BorderPane prefHeight="700.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <bottom>
                                 <HBox alignment="CENTER_RIGHT" prefHeight="72.0" prefWidth="729.0" spacing="30.0" BorderPane.alignment="CENTER">
                                     <children>
@@ -339,9 +339,9 @@
                             </top>
                         </BorderPane>
                     </children></AnchorPane>
-                <AnchorPane fx:id="paymentsPane" prefHeight="850.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="paymentsPane" prefHeight="700.0" prefWidth="942.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <BorderPane prefHeight="850.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <BorderPane prefHeight="700.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <top>
                                 <AnchorPane prefHeight="97.0" prefWidth="942.0" BorderPane.alignment="CENTER">
                                     <children>
