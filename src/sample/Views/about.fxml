@@ -9,7 +9,7 @@
     <children>
         <ImageView fitHeight="195.0" fitWidth="298.0" layoutX="320.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../out/production/logo3.png" />
+                <Image url="@../../src/Style/logo3.png" />
             </image></ImageView>
         <Label layoutX="48.0" layoutY="151.0" prefHeight="18.0" prefWidth="570.0" text="SUN HOTEL- me lokacion ne Dhermi,Shqiperi eshte nder hotelet me luksoze te zones. " />
         <Label layoutX="49.0" layoutY="173.0" text="Me vetem 5 minuta ecje nga plazhi hoteli yne ofron pamje perfekte nga brigjet e detit Jon.  " />
