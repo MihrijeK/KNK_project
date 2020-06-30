@@ -41,7 +41,14 @@ public class PaymentsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setDefaultDate();
-        loadPayments(anchor);
+
+        payment_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        firstname.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+        lastname.setCellValueFactory(new PropertyValueFactory<>("lastname"));
+        date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        price.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        loadDefault();
         AddButton.addPayButton(paymentsTableView,"Pay",anchor);
     }
 
@@ -58,11 +65,24 @@ public class PaymentsController implements Initializable {
 
             paymentsTableView.setPlaceholder(new Label("No payments to be made"));
 
-            payment_id.setCellValueFactory(new PropertyValueFactory<>("id"));
-            firstname.setCellValueFactory(new PropertyValueFactory<>("firstname"));
-            lastname.setCellValueFactory(new PropertyValueFactory<>("lastname"));
-            date.setCellValueFactory(new PropertyValueFactory<>("date"));
-            price.setCellValueFactory(new PropertyValueFactory<>("price"));
+            paymentsTableView.setItems(paymentList);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void loadDefault(){
+        try{
+            paymentList.clear();
+
+            ResultSet rs=paymentsRepository.getDefaultUnpaid();
+
+            while(rs.next()){
+                paymentList.add(new GuestPayment(rs.getInt("id"),rs.getString("first_name"),rs.getString("last_name"),
+                        rs.getString("checkout_date"),rs.getDouble("price")));
+            }
+
+            paymentsTableView.setPlaceholder(new Label("No payments to be made"));
 
             paymentsTableView.setItems(paymentList);
         }catch(Exception e){
