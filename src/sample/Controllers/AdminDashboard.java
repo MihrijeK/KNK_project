@@ -170,6 +170,16 @@ public class AdminDashboard implements Initializable {
                     ErrorPopupComponent.show("DatePicker is null","DATEPICKER ERROR");
                 }
             });
+        }else if(actionEvent.getSource()==logoutBtn){
+            FXMLLoader loader=new FXMLLoader();
+            URL url=new File("src/sample/Views/login.fxml").toURI().toURL();
+            loader.setLocation(url);
+            Pane pane=loader.load();
+            Scene scene=new Scene(pane);
+            Stage stage=(Stage)((javafx.scene.Node)actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Sun Hotel");
+            stage.show();
         }
 
     }

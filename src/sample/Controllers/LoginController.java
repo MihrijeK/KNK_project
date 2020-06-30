@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,6 +15,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -61,11 +63,18 @@ public class LoginController implements Initializable {
                                    loader.setLocation(url);
                                    Pane newScreen = loader.load();
                                    Scene scene=new Scene(newScreen);
+
                                    Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
                                    stage.setScene(scene);
                                    stage.show();
+
+                                   Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+                                   stage.setX((screenBounds.getWidth() - stage.getWidth()) / 2);
+                                   stage.setY((screenBounds.getHeight() - stage.getHeight()) / 2);
+
+
                                    break;
-                               case "Staff":
+                               case "Recepsionist":
                                   // JOptionPane.showMessageDialog(null,"Jeni loguar si staff");
                                   URL url1 = new File("src/sample/Views/main-manager.fxml").toURI().toURL();
                                    FXMLLoader loader1 = new FXMLLoader();
@@ -75,9 +84,13 @@ public class LoginController implements Initializable {
                                    mainController.getUser(rs.getString("first_name"),rs.getString("last_name"));
 
                                    Scene scene1=new Scene(newScreen1);
-                                   Stage stage1=(Stage)((Node)event.getSource()).getScene().getWindow();
-                                   stage1.setScene(scene1);
-                                   stage1.show();
+                                   Stage stageMain=(Stage)((Node)event.getSource()).getScene().getWindow();
+                                   stageMain.setScene(scene1);
+                                   stageMain.show();
+
+                                   Rectangle2D screenBoundsMain = Screen.getPrimary().getVisualBounds();
+                                   stageMain.setX((screenBoundsMain.getWidth() - stageMain.getWidth()) / 2);
+                                   stageMain.setY((screenBoundsMain.getHeight() - stageMain.getHeight()) / 2);
                                    break;
                            }
                        }
