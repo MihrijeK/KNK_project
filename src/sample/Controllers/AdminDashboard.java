@@ -32,9 +32,7 @@ public class AdminDashboard implements Initializable {
     @FXML private Button staffBtn;
     @FXML private Button roomsBtn;
     @FXML private Button paymentsBtn;
-    @FXML private Button reservationsBtn;
     @FXML private Button sevicesBtn;
-    @FXML private Button settingsBtn;
     @FXML private Button logoutBtn;
 
 

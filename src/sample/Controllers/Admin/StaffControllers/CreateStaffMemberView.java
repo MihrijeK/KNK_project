@@ -1,5 +1,6 @@
 package sample.Controllers.Admin.StaffControllers;
 
+import Helpers.SecurityHelper;
 import Helpers.Staff;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -76,6 +77,7 @@ public class CreateStaffMemberView {
 
     public Staff createStaffObj(TextField firstname, TextField lastname, TextField personalnumber, TextField phonenumber, Label salary, PasswordField passwordd,
                                 DatePicker bday,ChoiceBox position,RadioButton male, RadioButton female) throws Exception {
+        SecurityHelper sc = new SecurityHelper();
         Staff staff = null;
         if (firstname.getText().trim().isEmpty() || lastname.getText().trim().isEmpty() || personalnumber.getText().trim().isEmpty() || phonenumber.getText().trim().isEmpty() ||
                 passwordd.getText().trim().isEmpty()) {
@@ -87,7 +89,7 @@ public class CreateStaffMemberView {
             int prs = Integer.parseInt(persNumber);
             String phnNumber = phonenumber.getText();
             double sal = Double.parseDouble(getSalary(position.getValue().toString()));
-            String psw = passwordd.getText();
+            String psw = sc.hashPassword(passwordd.getText());
             Date dt = getDate(bday);
             String positionn = position.getValue().toString();
             String gendeer = "";
