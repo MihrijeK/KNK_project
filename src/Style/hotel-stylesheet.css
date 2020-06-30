@@ -77,3 +77,8 @@
     -fx-background-color:#DA9100;
     -fx-text-fill:#1d1f2a;
 }
+.date-picker > * > .previous-month,
+.date-picker > * > .next-month{
+    -fx-background-color:#89609e;
+    -fx-text-fill:#1d1f2a;
+}
