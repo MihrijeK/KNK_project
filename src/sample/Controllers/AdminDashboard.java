@@ -165,7 +165,9 @@ public class AdminDashboard implements Initializable {
                 if(paymentDtPickerFilter.getValue() != null){
                     paymentsTableView.setItems(TableViewContent.setPayments(payment_id,firstname,lastname,date,price1,isPayed,paymentDtPickerFilter));
                 }
-                
+                else{
+                    ErrorPopupComponent.show("DatePicker is null","DATEPICKER ERROR");
+                }
             });
         }
         }
