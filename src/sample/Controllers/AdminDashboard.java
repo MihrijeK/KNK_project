@@ -42,6 +42,14 @@ public class AdminDashboard implements Initializable {
     @FXML private Button CreateMemberBtn;
     @FXML private Button refreshTableView;
 
+    
+    
+    
+    @FXML private AnchorPane paymentsPane;
+    @FXML private TableView<PaymentModel> paymentsTableView;
+    
+    
+    
     @FXML private TableView<Staff> showStaffTable;
     @FXML private TableColumn<Staff, Integer> col_id;
     @FXML private TableColumn<Staff, String> col_fname;
