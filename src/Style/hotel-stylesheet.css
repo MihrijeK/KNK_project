@@ -68,3 +68,8 @@
     -fx-text-fill:#DA9100;
     -fx-font-weight:bold;
 }
+.date-picker-popup > * > .selected{
+    -fx-background-color:#DA9100;
+    -fx-text-fill:#1d1f2a;
+    -fx-font-weight:bold;
+}
