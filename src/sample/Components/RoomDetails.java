@@ -1,4 +1,4 @@
-package controllers;
+package sample.Components;
 
 import Helpers.Rooms;
 import javafx.event.ActionEvent;
@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sample.Controllers.Partials.RoomDetailsController;
 
 import java.io.File;
 import java.net.URL;
