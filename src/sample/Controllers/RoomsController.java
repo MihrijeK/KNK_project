@@ -2,9 +2,7 @@ package sample.Controllers;
 
 import DatabaseConnection.dbConnection;
 import Helpers.Rooms;
-import Repositories.RoomRepository;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.value.ObservableValue;
+import sample.Repositories.RoomRespository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -56,16 +54,15 @@ public class RoomsController implements Initializable {
     @FXML private Button makeReservation;
     @FXML private Button cancelButton;
 
-    dbConnection connectionClass = new dbConnection();
     Connection connection;
-    RoomsRepository roomsRepository=new RoomsRepository();
+    RoomRespository roomsRepository=new RoomRespository();
 
     ObservableList<Rooms> roomList=FXCollections.observableArrayList();
     ObservableList<String> roomTypesList=FXCollections.observableArrayList("All","Single","Double","Triple","Quad","Suite");
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            connection= connectionClass.getConnection();
+            connection= dbConnection.getConnection();
 
             setDefaultDate();
             roomTypeSelector.setItems(roomTypesList);
@@ -111,7 +108,7 @@ public class RoomsController implements Initializable {
             noRoomsSelected.showAndWait();
         }else{
             try {
-                URL url = new File("src/views/reservation.fxml").toURI().toURL();
+                URL url = new File("src/sample/Views/reservation.fxml").toURI().toURL();
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(url);
                 Pane newScreen = loader.load();
@@ -184,7 +181,7 @@ public class RoomsController implements Initializable {
 
                 if (!row.isEmpty()) {
                     int index = row.getIndex();
-                        tv.getSelectionModel().select(index);
+                    tv.getSelectionModel().select(index);
                 }
             }
         });
