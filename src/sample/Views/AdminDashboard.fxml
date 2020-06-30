@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.PieChart?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
+<AnchorPane prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminDashboard">
     <children>
         <AnchorPane prefHeight="700.0" prefWidth="294.0" style="-fx-background-color: #1d1f2a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -27,10 +15,10 @@
                     <children>
                         <ImageView fitHeight="175.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../images/admin.png" />
+                                <Image url="@images/admin.png" />
                             </image>
                             <VBox.margin>
-                                <Insets bottom="10.0" />
+                                <Insets bottom="10.0" left="50.0" />
                             </VBox.margin>
                         </ImageView>
                         <Button fx:id="overviewBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="52.0" prefWidth="317.0" style="-fx-background-color: #1d1f2a;" stylesheets="@../../Style/hotel-stylesheet.css" text="Overview">
@@ -40,7 +28,7 @@
                             <graphic>
                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../images/home.png" />
+                                        <Image url="@images/home.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -52,7 +40,7 @@
                             <graphic>
                                 <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../images/staff.png" />
+                                        <Image url="@images/staff.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -64,7 +52,7 @@
                             <graphic>
                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../images/rooms.png" />
+                                        <Image url="@images/rooms.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -76,7 +64,7 @@
                             <graphic>
                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../images/bills.png" />
+                                        <Image url="@images/bills.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -88,7 +76,7 @@
                             <graphic>
                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../images/home.png" />
+                                        <Image url="@images/reservations.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -100,7 +88,7 @@
                             <graphic>
                                 <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../images/logout.png" />
+                                        <Image url="@images/logout.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
