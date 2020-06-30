@@ -73,7 +73,6 @@ public class EditStaffMemberView {
         personal_number.setText(Integer.toString(staff.getPersonalNumber()));
         phone_number.setText(staff.getPhoneNumber());
         salary.setText(Double.toString(staff.getSalary()));
-        password.setText(staff.getPassword());
         birthdate.setValue(setDate(staff.getBirthdate()));
         position.getItems().addAll("Manager","Waiter","Recepsionist");
         position.setValue(staff.getPosition());
@@ -110,6 +109,7 @@ public class EditStaffMemberView {
             }
         });
         cancleCreation.setOnAction(e -> stage.close());
+        staffi.addAll(staff);
         stage.showAndWait();
     }
 

@@ -77,7 +77,10 @@ public class EditRoomsView {
             }
         });
 
-        cancleButton.setOnAction(e -> stage.close());
+        cancleButton.setOnAction(e -> {
+            room.addAll(rooms);
+            stage.close();
+        });
         stage.showAndWait();
     }
 
