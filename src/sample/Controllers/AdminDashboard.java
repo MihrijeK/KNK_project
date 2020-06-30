@@ -15,6 +15,7 @@ import sample.Controllers.Admin.Services.AddServicesType;
 import sample.Controllers.Admin.StaffControllers.CreateStaffMemberView;
 import sample.Controllers.Partials.AddButton;
 import sample.Models.View.TableViewContent;
+import sample.Models.View.PaymentModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -41,6 +42,22 @@ public class AdminDashboard implements Initializable {
     @FXML private Button CreateMemberBtn;
     @FXML private Button refreshTableView;
 
+    
+    
+    
+    @FXML private AnchorPane paymentsPane;
+    @FXML private TableView<PaymentModel> paymentsTableView;
+    @FXML private TableColumn<PaymentModel,Integer> payment_id;
+    @FXML private TableColumn<PaymentModel,String> firstname;
+    @FXML private TableColumn<PaymentModel,String> lastname;
+    @FXML private TableColumn<PaymentModel,Date> date;
+    @FXML private TableColumn<PaymentModel,Double> price1;
+    @FXML private TableColumn<PaymentModel,Boolean> isPayed;
+    @FXML private DatePicker paymentDtPickerFilter;
+    @FXML private Button paymentFilterBtn;
+    public ObservableList<PaymentModel> paymentsObservableList = null;
+    
+    
     @FXML private TableView<Staff> showStaffTable;
     @FXML private TableColumn<Staff, Integer> col_id;
     @FXML private TableColumn<Staff, String> col_fname;
@@ -142,6 +159,12 @@ public class AdminDashboard implements Initializable {
                     ex.printStackTrace();
                 }
             });
+            else if (actionEvent.getSource() == paymentsBtn){
+            paymentsPane.toFront();
+            paymentFilterBtn.setOnAction(e->{
+                
+            });
+        }
         }
 
     }
