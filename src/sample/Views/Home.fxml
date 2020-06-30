@@ -21,7 +21,5 @@
             </Button>
          </children>
       </AnchorPane>
-      <ChoiceBox fx:id="languageCB" layoutX="492.0" layoutY="441.0" prefHeight="25.0" prefWidth="86.0" />
-      <Label layoutX="427.0" layoutY="445.0" text="Language" />
    </children>
 </AnchorPane>

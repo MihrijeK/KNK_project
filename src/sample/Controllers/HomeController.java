@@ -1,6 +1,5 @@
-package sample.Controllers;
+package sample;
 
-import Helpers.LangEnum;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,10 +8,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import sample.utils.SessionManager;
 
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
@@ -22,12 +19,11 @@ import java.util.ResourceBundle;
 public class HomeController implements Initializable {
 
 
-    @FXML private ChoiceBox<LangEnum> languageCB;
     @FXML private ImageView building;
     @FXML private Label sunhotel;
     @FXML private Button login_button;
     
-    public void changeScreen(ActionEvent event) throws IOException {
+        public void changeScreen(ActionEvent event) throws IOException {
        Parent loginParent= FXMLLoader.load(getClass().getResource("login.fxml"));
        Scene loginscene=new Scene(loginParent);
             
@@ -36,11 +32,8 @@ public class HomeController implements Initializable {
         window.show();
     }
 
-    @Override
+        @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        languageCB.getItems().setAll(LangEnum.AL,LangEnum.EN);
-        languageCB.setValue(LangEnum.EN);
-        SessionManager sessionManager = new SessionManager();
-        sessionManager.setLang(languageCB.getValue());
+
     }
 }
