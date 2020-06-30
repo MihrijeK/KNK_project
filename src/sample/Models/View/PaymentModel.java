@@ -48,5 +48,12 @@ public class PaymentModel {
         public void setDate(Date date) {
             this.date = date;
         }
+                public double getPrice() {
+            return price;
+        }
+
+        public void setPrice(double price) {
+            this.price = price;
+        }
 
 }
