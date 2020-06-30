@@ -86,7 +86,7 @@ public class RoomRespository {
         return find(id);
     }
 
-    public static Rooms update(Rooms model) throws Exception {
+    public static Rooms update(Rooms model,int roomNumber) throws Exception {
         Connection conn = dbConnection.getConnection();
 
         PreparedStatement stmt = conn
@@ -97,7 +97,7 @@ public class RoomRespository {
         stmt.setInt(3, model.getBed_number());
         stmt.setString(4, model.getRoom_type());
         stmt.setDouble(5, model.getPrice());
-        stmt.setInt(6, model.getRoom_number());
+        stmt.setInt(6, roomNumber);
         stmt.executeUpdate();
 
         return find(model.getRoom_number());

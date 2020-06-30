@@ -21,12 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Components/RoomDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Components/RoomDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/InsertGuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/InsertGuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/PaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/PaymentView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/PieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/PieChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Repositories/PaymentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Repositories/PaymentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/EditRoomsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Admin/RoomControllers/EditRoomsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Repositories/RoomRespository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +194,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="KnkProject" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -211,7 +207,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
       <module name="KnkProject" />
       <option name="filePath" />
       <option name="vmParameters" />
@@ -632,12 +628,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />

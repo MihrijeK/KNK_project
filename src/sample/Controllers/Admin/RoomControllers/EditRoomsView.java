@@ -63,13 +63,13 @@ public class EditRoomsView {
         bedNumber.setText(Integer.toString(rooms.getBed_number()));
         roomTypeBox.setValue(rooms.getRoom_type());
         Price.setText(Double.toString(rooms.getPrice()));
-
+        int roomNum = rooms.getRoom_number();
         updateRoom.setOnAction(e -> {
             try {
                 Rooms rooms = new Rooms(Integer.parseInt(roomNumber.getText()), Integer.parseInt(floorNumber.getText()), Integer.parseInt(roomCapacity.getText()), Integer.parseInt(bedNumber.getText()), roomTypeBox.getValue().toString(),
                         Double.parseDouble(Price.getText()));
                 room.addAll(rooms);
-                RoomRespository.update(rooms);
+                RoomRespository.update(rooms,roomNum);
                 System.out.println("Updated");
                 stage.close();
             } catch (Exception ex) {
