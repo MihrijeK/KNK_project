@@ -40,3 +40,7 @@
     -fx-pref-height: 0;
     -fx-max-height: 0;
 }
+.label{
+    -fx-text-fill:#A38995;
+    -fx-font-weight:bold;
+}
