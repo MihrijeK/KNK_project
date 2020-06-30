@@ -135,7 +135,7 @@ public class MainManagingController extends LanguageController{
 
     @Override
     public void loadLangTexts(ResourceBundle langBundle) {
-        mainBtn.setText(langBundle.getString("overviewButton"));
+        //mainBtn.setText(langBundle.getString("overviewButton"));
         reservationsBtn.setText(langBundle.getString("reservationButton"));
         paymentsBtn.setText(langBundle.getString("paymentsButton"));
         logOutBtn.setText(langBundle.getString("logoutButton"));
