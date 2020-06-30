@@ -39,7 +39,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 
-public class RoomsController extends LanguageController {
+public class RoomsController extends LanguageController implements Initializable{
 
     @FXML private DatePicker firstDatePickerField;
     @FXML private DatePicker lastDatePickerField;
