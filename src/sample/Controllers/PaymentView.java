@@ -38,7 +38,7 @@ public class PaymentView implements Initializable {
     @FXML private RadioButton creditCard;
     @FXML private RadioButton gift;
     private ToggleGroup toggle;
-    private double total = 0;
+    private double total;
 
     //klienti qe po paguan
     private int user =1;
@@ -52,6 +52,12 @@ public class PaymentView implements Initializable {
 //        this.payment_id = id;
 //    }
 
+//
+//    public static void incrementTotal(double total){
+//        total += total;
+//    }
+
+
 
     ObservableList<Rooms> oblist = FXCollections.observableArrayList();
     ObservableList<Service_Type> oblist1 = FXCollections.observableArrayList();
@@ -62,14 +68,15 @@ public class PaymentView implements Initializable {
         try {
             connection = dbConnection.getConnection();
             //Fatura per dhomat
-            PaymentsRepository.roomsBill(user, payment_id,  oblist, total);
+            double total1 = PaymentsRepository.roomsBill(user, payment_id,  oblist);
 
             //Fatura per sherbimet
-            PaymentsRepository.servicesBill(user, payment_id, oblist1, total);
+            double total2 = PaymentsRepository.servicesBill(user, payment_id, oblist1);
 
             //Te dhenat e klientit
             PaymentsRepository.guestInfo(user, personalNr, emriMbiemri);
 
+            total = total1 + total2;
             totali.setText(total + "€");
         } catch (Exception ex) {
             Logger.getLogger(PaymentView.class.getName()).log(Level.SEVERE, null, ex);
