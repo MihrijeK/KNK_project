@@ -47,6 +47,20 @@ public class PaymentsRepository {
         }
         return pModel;
     }
+       public static List<PaymentModel> selectAllByDate(Date date) throws Exception {
+        Connection connection = dbConnection.getConnection();
+        ArrayList<PaymentModel> pModel = new ArrayList<>();
+
+        PreparedStatement stmt = connection.prepareStatement("SELECT r.payment_id,g.first_name,g.last_name,r.checkin_date,r.checkout_date,p.price,p.is_payed \n" +
+                "FROM reservations r INNER JOIN payments p ON r.payment_id = p.id\n" +
+                "INNER JOIN guests g ON r.guest_id = g.id \n" +
+                "WHERE r.checkin_date = '"+ date +"';");
+        ResultSet res = stmt.executeQuery();
+        while (res.next()) {
+            pModel.add(parseFromRes(res));
+        }
+        return pModel;
+    }
     
     public static void guestInfo(int user, Label personalNr, Label emriMbiemri) throws Exception {
         connection=dbconnection.getConnection();
