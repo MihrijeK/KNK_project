@@ -60,3 +60,7 @@
     -fx-opacity:1;
     -fx-background-color:#89609e;
 }
+.date-picker-popup > * > .date-cell{
+    -fx-background-color:#343742;
+    -fx-text-fill:#A38995;
+}
