@@ -2,8 +2,7 @@ package sample.Controllers;
 
 import Helpers.Person;
 import Helpers.Rooms;
-import Repositories.ReservationsRepository;
-import javafx.application.Platform;
+import sample.Repositories.ReservationsRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
