@@ -162,6 +162,9 @@ public class AdminDashboard implements Initializable {
             else if (actionEvent.getSource() == paymentsBtn){
             paymentsPane.toFront();
             paymentFilterBtn.setOnAction(e->{
+                if(paymentDtPickerFilter.getValue() != null){
+                    paymentsTableView.setItems(TableViewContent.setPayments(payment_id,firstname,lastname,date,price1,isPayed,paymentDtPickerFilter));
+                }
                 
             });
         }
