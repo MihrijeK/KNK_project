@@ -7,11 +7,11 @@ public class PaymentModel {
         private String lastname;
         private Date date;
         private double price;
-        private int isPayed;
+           private String isPayed;
         
          public PaymentModel(){}
 
-        public PaymentModel(int payment_id, String firstname,String lastname,Date date,double price,int isPayed){
+        public PaymentModel(int payment_id, String firstname,String lastname,Date date,double price, String isPayed;){
             this.payment_id=payment_id;
             this.firstname=firstname;
             this.lastname=lastname;
@@ -55,11 +55,11 @@ public class PaymentModel {
         public void setPrice(double price) {
             this.price = price;
         }
-         public int getIsPayed() {
+         public String getIsPayed() {
             return isPayed;
         }
 
-        public void setIsPayed(int isPayed) {
+        public void setIsPayed(String isPayed) {
             this.isPayed = isPayed;
         }
 

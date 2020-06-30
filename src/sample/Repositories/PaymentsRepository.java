@@ -28,9 +28,15 @@ public class PaymentsRepository {
         Date date = res.getDate("checkin_date");
         double price = res.getDouble("price");
         int is_payed = res.getInt("is_payed");
+        String isPayed = null;
+            if (is_payed==0){
+                isPayed="Jo e paguar";
+            }
+            else if (is_payed==1){
+            isPayed="E paguar";
+            }
 
-
-        return new PaymentModel(payment_id, firstname, lastname, date, price, is_payed);
+        return new PaymentModel(payment_id, firstname, lastname, date, price, isPayed);
     }
 
         public static List<PaymentModel> selectAll() throws Exception {
