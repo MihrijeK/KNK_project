@@ -44,4 +44,29 @@ public class PaymentsController implements Initializable {
         loadPayments(anchor);
         AddButton.addPayButton(paymentsTableView,"Pay",anchor);
     }
+
+    private void loadPayments(AnchorPane anchor){
+        try{
+            paymentList.clear();
+
+            ResultSet rs=paymentsRepository.getUnpaidByDate(datePicker.getValue().toString());
+
+            while(rs.next()){
+                paymentList.add(new GuestPayment(rs.getInt("id"),rs.getString("first_name"),rs.getString("last_name"),
+                        rs.getString("checkout_date"),rs.getDouble("price")));
+            }
+
+            paymentsTableView.setPlaceholder(new Label("No payments to be made"));
+
+            payment_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+            firstname.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+            lastname.setCellValueFactory(new PropertyValueFactory<>("lastname"));
+            date.setCellValueFactory(new PropertyValueFactory<>("date"));
+            price.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+            paymentsTableView.setItems(paymentList);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
     }
