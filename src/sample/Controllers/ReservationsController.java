@@ -1,5 +1,6 @@
 package sample.Controllers;
 
+import sample.Components.RoomDetails;
 import Helpers.Person;
 import Helpers.Rooms;
 import sample.Repositories.ReservationsRepository;
@@ -64,7 +65,7 @@ public class ReservationsController implements Initializable {
                         Person person=reservationsRepository.getGuest(ID);
                         if(person==null){
                             FXMLLoader loader=new FXMLLoader();
-                            URL url1 = new File("src/views/InsertGuest.fxml").toURI().toURL();
+                            URL url1 = new File("src/sample/Views/InsertGuest.fxml").toURI().toURL();
                             loader.setLocation(url1);
                             Pane pane=loader.load();
                             Scene scene=new Scene(pane);
@@ -181,7 +182,7 @@ public class ReservationsController implements Initializable {
     }
 
     private void returnToMain(ActionEvent actionEvent) throws Exception{
-        URL url=new File("src/views/main-manager.fxml").toURI().toURL();
+        URL url=new File("src/sample/Views/main-manager.fxml").toURI().toURL();
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(url);
         Pane pane=loader.load();
