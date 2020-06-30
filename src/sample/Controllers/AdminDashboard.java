@@ -47,7 +47,15 @@ public class AdminDashboard implements Initializable {
     
     @FXML private AnchorPane paymentsPane;
     @FXML private TableView<PaymentModel> paymentsTableView;
-    
+    @FXML private TableColumn<PaymentModel,Integer> payment_id;
+    @FXML private TableColumn<PaymentModel,String> firstname;
+    @FXML private TableColumn<PaymentModel,String> lastname;
+    @FXML private TableColumn<PaymentModel,Date> date;
+    @FXML private TableColumn<PaymentModel,Double> price1;
+    @FXML private TableColumn<PaymentModel,Boolean> isPayed;
+    @FXML private DatePicker paymentDtPickerFilter;
+    @FXML private Button paymentFilterBtn;
+    public ObservableList<PaymentModel> paymentsObservableList = null;
     
     
     @FXML private TableView<Staff> showStaffTable;
