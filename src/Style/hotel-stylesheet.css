@@ -18,3 +18,8 @@
     -fx-text-fill:#A38995;
     -fx-font-size:15px;
 }
+.table-view .table-row-cell{
+    -fx-background:#343742;
+    /*-fx-selection-bar:#DA9100;*/
+    -fx-text-fill:#1d1f2a;
+}
