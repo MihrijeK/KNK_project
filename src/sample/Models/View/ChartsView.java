@@ -83,7 +83,7 @@ public class ChartsView {
     }
 
     public static PieChart roomsChart(PieChart pieChart, Label statusi) throws Exception {
-        List<RoomChartModel> rooms_list = RoomRespository.selectAllOrdeByRoomType();
+        List<RoomChartModel> rooms_list = RoomRespository.selectAllGroupByRoomType();
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
         int total = 0;
 
