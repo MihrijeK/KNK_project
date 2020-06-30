@@ -55,5 +55,12 @@ public class PaymentModel {
         public void setPrice(double price) {
             this.price = price;
         }
+         public int getIsPayed() {
+            return isPayed;
+        }
+
+        public void setIsPayed(int isPayed) {
+            this.isPayed = isPayed;
+        }
 
 }
